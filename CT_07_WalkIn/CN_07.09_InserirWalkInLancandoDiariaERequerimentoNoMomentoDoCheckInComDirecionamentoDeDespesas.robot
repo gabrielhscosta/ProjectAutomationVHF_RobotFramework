@@ -34,7 +34,7 @@ Add Needed Image Path
 ### Ações ###
 Acessar a tela de reserva WalkIn
     Sleep                           1 seconds
-    Click                           ${IMAGE_WALKIN}
+    Click                           ${IMAGE_WALKIN1}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Sleep                           2 seconds

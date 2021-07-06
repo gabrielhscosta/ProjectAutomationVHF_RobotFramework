@@ -27,7 +27,7 @@ Library                          SikuliLibrary       mode=NEW
 ...                               uh070106=806    uh070107=807    uh070108=905    uh070109=906    uh070110=907
 ...                               valordiar=609   valorpgtodin=20  valorpgtocc=120  uhextra1=605  uhextra2=606
 
-### Butões e Telas ###
+### Titles ###
 ${TITLE_RESINDIVID}                 Reserva Individual
 ${TITLE_WALKIN}                     Walk-in
 ${TITLE_SITUACAORES}                Situação da Reserva
@@ -40,6 +40,7 @@ ${TITLE_NOVACONTA}                  Operação de Caixa - Nova Conta
 ${TITLE_ENCERCONTAS}                Encerrar Contas
 ${TITLE_DETALLANC}                  Detalhes do Lançamento
 ${TITLE_CHECKIN}                    [Check-In]
+### Buttons ###
 ${BUTTON_PROCURAR}                  text:Procurar
 ${BUTTON_CONFIRMAR}                 text:Confirmar
 ${BUTTON_OK}                        text:OK
@@ -58,7 +59,10 @@ ${BUTTON_ENCERCONTAS}               text:Encerrar contas
 ${BUTTON_ENCERPARCIAL}              text:Encerrar parcial
 ${BUTTON_CHECKIN}                   text:Checkin
 ${BUTTON_EDITAR}                    text:Editar
-${SCREEN_TELAPRINCIPAL}             class_name:TFrmPrincipal
+${BUTTON_SELECTODASGOV}             text:Seleciona todas
+${BUTTON_LIMPOGOV}                  text:Limpo
+### Screens ###
+${SCREEN_TELAPRINCIPAL}             class_name:TfrmPrincipal
 ${SCREEN_VHFCAIXA}                  class_name:TfrmPrincipalCAIXA
 ${SCREEN_SELECGERAL}                class_name:TfrmSelecaoGeral
 ${SCREEN_MONTASELEC}                class_name:TfrmMontaSelect

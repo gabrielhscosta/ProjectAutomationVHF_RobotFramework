@@ -79,3 +79,4 @@ ${IMAGE_DESIGNACAOCONTA}          designacaocontacaixa.png
 ${IMAGE_FORMAPAGDIN}              formpagdinheirocaixa.png
 ${IMAGE_CONTAENCERCAIXA}          contaencerradacaixa.png
 ${IMAGE_FORMAPAGAFATURAR}         formpagafaturarcaixa.png
+${IMAGE_STATUSDAGOV}              statusdagov.png
