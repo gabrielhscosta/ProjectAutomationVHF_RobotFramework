@@ -18,6 +18,7 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 07.01: Inserir um Walk-in com 01 Hospede novo sem histórico e Empresa (Validar FRNH)
+    [Tags]  TS
     Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL

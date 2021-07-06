@@ -25,7 +25,7 @@ Library                          SikuliLibrary       mode=NEW
 &{DADOS_RES}                      noites=3        adultos=2       cria1=1         cria2=1         categ=STND      categ1=FRUA
 ...                               uh070101=607    uh070102=705    uh070103=706    uh070104=707    uh070105=805
 ...                               uh070106=806    uh070107=807    uh070108=905    uh070109=906    uh070110=907
-...                               valordiar=609   uhextra1=605    uhextra2=606
+...                               valordiar=609   valorpgtodin=20  valorpgtocc=120  uhextra1=605  uhextra2=606
 
 ### Butões e Telas ###
 ${TITLE_RESINDIVID}                 Reserva Individual
@@ -58,7 +58,7 @@ ${BUTTON_ENCERCONTAS}               text:Encerrar contas
 ${BUTTON_ENCERPARCIAL}              text:Encerrar parcial
 ${BUTTON_CHECKIN}                   text:Checkin
 ${BUTTON_EDITAR}                    text:Editar
-${SCREEN_TELAPRINCIPAL}             class_name:TfrmPrincipal
+${SCREEN_TELAPRINCIPAL}             class_name:TFrmPrincipal
 ${SCREEN_VHFCAIXA}                  class_name:TfrmPrincipalCAIXA
 ${SCREEN_SELECGERAL}                class_name:TfrmSelecaoGeral
 ${SCREEN_MONTASELEC}                class_name:TfrmMontaSelect

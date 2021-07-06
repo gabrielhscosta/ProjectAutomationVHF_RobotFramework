@@ -16,6 +16,7 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 07.09: Inserir um Walk-in Lancando Diária e Requerimento no Momento do Check-in
+    [Tags]  TS
     Disables automatic screenshot capturing on failure
     Acessar a tela de reserva WalkIn
     Inserir Cliente(Empresa) com Contrato

@@ -18,17 +18,19 @@ Test Setup      Add Needed Image Path
 
 
 *** Test Case ***
-Test Case 12.02: Encerrar em Dinheiro contas usando dois Modelos de Notas
-    # Abrir Modulo VHF
-    # Acessar a página de login da aplicação - SQL
-    # Realizar login na aplicação - SQL
-    # Selecionar Empresa - VHF
-    # Conferir se a tela principal do modulo VHF foi exibida
+Test Case 12.04: Encerrar a faturar usando dois modelos de notas (Serviço e Produto) que tenha depósito antecipado e outra forma de pagamento (dinheiro, cartão).
+    Abrir Modulo VHF
+    Acessar a página de login da aplicação - SQL
+    Realizar login na aplicação - SQL
+    Selecionar Empresa - VHF
+    Conferir se a tela principal do modulo VHF foi exibida
     Acessar a tela de Consulta Geral
     Preencher os campos necessários para buscar o resultado esperado
     Acessar a Operação de Caixa da Reserva
     Realizar Lançamento do Item de PDV na Conta
     Realizar Lançamento de Diária Antecipada
+    Realizar Lançamento da Forma de Pgto Dinheiro
+    Realizar Lançamento da Forma de Pgto Cartão de Crédito
     Realizar o Encerramento de Conta
     Sair da Tela de Operação de Caixa
     Sair da Tela de Consulta Geral
@@ -56,7 +58,7 @@ Preencher os campos necessários para buscar o resultado esperado
     Mouse Click                     248    232
     Sleep                           1 seconds
     Mouse Click                     345    175
-    Input Text                      ${IMAGE_NUMEROUHCG}    ${DADOS_RES.uh070102}
+    Input Text                      ${IMAGE_NUMEROUHCG}    ${DADOS_RES.uh070109}
     Mouse Click                     1122   652
     Click Button                    ${BUTTON_PROCURAR}
 
@@ -104,6 +106,32 @@ Realizar Lançamento de Diária Antecipada
     Sleep                           2 seconds
     Click Button                    ${BUTTON_LANCAR}
     Sleep                           4 seconds
+
+Realizar Lançamento da Forma de Pgto Dinheiro
+    Mouse Click                     58    390
+    Sleep                           2 seconds
+    Mouse Click                     246    433
+    Sleep                           2 seconds
+    Move Mouse                      1012   364
+    Input Text                      ${IMAGE_VALORITEMCAIXA}  ${DADOS_RES.valorpgtodin}
+    Sleep                           2 seconds
+    Click Button                    ${BUTTON_LANCAR}
+    Sleep                           4 seconds
+
+Realizar Lançamento da Forma de Pgto Dinheiro
+    Mouse Click                     58    390
+    Sleep                           2 seconds
+    Mouse Click                     246    473
+    Sleep                           2 seconds
+    Move Mouse                      1012   364
+    Input Text                      ${IMAGE_VALORITEMCAIXA}  ${DADOS_RES.valorpgtocc}
+    Sleep                           2 seconds
+    Click Button                    ${BUTTON_LANCAR}
+    Sleep                           2 seconds
+    @{NUMEROPARCCC}                 Get Application Windows
+    Attach Window                   ${NUMEROPARCCC[0]}
+    Click Button                    ${BUTTON_CONFIRMAR}
+    Sleep                           2 seconds
     Click Button                    ${BUTTON_VOLTAR}
 
 Realizar o Encerramento de Conta
@@ -118,7 +146,7 @@ Realizar o Encerramento de Conta
     Attach Window                   ${SCREEN_OPERACAOLANCENC}
     Window Title Should Contain     ${TITLE_ENCERCONTAS}
     Sleep                           2 seconds
-    Click                           ${IMAGE_FORMAPAGDIN}
+    Click                           ${IMAGE_FORMAPAGAFATURAR}
     Sleep                           2 seconds
     Click Button                    ${BUTTON_LANCAR}
     Sleep                           6 seconds

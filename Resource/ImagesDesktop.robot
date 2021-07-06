@@ -78,3 +78,4 @@ ${IMAGE_LANCREST}                 lancrestaurante.png
 ${IMAGE_DESIGNACAOCONTA}          designacaocontacaixa.png
 ${IMAGE_FORMAPAGDIN}              formpagdinheirocaixa.png
 ${IMAGE_CONTAENCERCAIXA}          contaencerradacaixa.png
+${IMAGE_FORMAPAGAFATURAR}         formpagafaturarcaixa.png
