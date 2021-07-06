@@ -1,1 +1,2 @@
 C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\Results
+*.txt
