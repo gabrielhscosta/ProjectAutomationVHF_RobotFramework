@@ -1,2 +1,7 @@
 # ProjectAutomationVHF
-Projeto Real de Automação dos Módulos VHF e VHF Caixa de Integração com o Atom.
+
+Projeto Real de Automatização dos Módulos VHF e VHF Caixa da Empresa TOTVS HOSPITALITY LTDA.
+
+Arquitetura sendo desenvolvida com o Robot Framework, através do Editor ATOM.
+
+Sendo utilizadas as Libraries: White e Sikuli.
