@@ -5,7 +5,7 @@ Library                          SikuliLibrary
 
 *** Variable ***
 ### Diretório das Imagens ###
-${IMAGE_DIR}                      C:/ProjectAutomationVHF/Img
+${IMAGE_DIR}                      C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\Img
 
 ### Imagens Sikuli ###
 ${IMAGE_RESINDIV}                 resindividual.png
@@ -79,4 +79,4 @@ ${IMAGE_DESIGNACAOCONTA}          designacaocontacaixa.png
 ${IMAGE_FORMAPAGDIN}              formpagdinheirocaixa.png
 ${IMAGE_CONTAENCERCAIXA}          contaencerradacaixa.png
 ${IMAGE_FORMAPAGAFATURAR}         formpagafaturarcaixa.png
-${IMAGE_STATUSDAGOV}              statusdagov.png
+${IMAGE_STATUSDAGOV}              statusdagov.PNG
