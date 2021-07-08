@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20210708 19:50:58.940" rpa="false">
+<suite id="s1" name="CT 09 StatusdaGovernanca" source="C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\CT_09_StatusdaGovernanca">
+<suite id="s1-s1" name="CN 09.01 AlterarOStatusDaGovernaça" source="C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\CT_09_StatusdaGovernanca\CN_09.01_AlterarOStatusDaGovernaça.robot">
+<kw name="Start Sikuli Process" library="SikuliLibrary" type="setup">
+<msg timestamp="20210708 19:51:03.174" level="INFO">Starting process:
+java -jar c:\users\gabriel.dacosta\appdata\local\programs\python\python38\lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar 1065 C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\results</msg>
+<msg timestamp="20210708 19:51:03.182" level="INFO">Start sikuli java process on port 1065</msg>
+<msg timestamp="20210708 19:51:04.243" level="INFO">Sikuli java process is started</msg>
+<status status="PASS" starttime="20210708 19:51:03.169" endtime="20210708 19:51:06.021"></status>
+</kw>
+<test id="s1-s1-t1" name="Test Case 09.01: Alterar o Status de Governança da UH">
+<kw name="Add Needed Image Path" type="setup">
+<kw name="Add Image Path" library="SikuliLibrary">
+<doc>Add image path</doc>
+<arguments>
+<arg>${IMAGE_DIR}</arg>
+</arguments>
+<msg timestamp="20210708 19:51:06.039" level="INFO">Params: [C:/ProjectAutomationVHF/Img]</msg>
+<status status="PASS" starttime="20210708 19:51:06.023" endtime="20210708 19:51:06.039"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:06.022" endtime="20210708 19:51:06.039"></status>
+</kw>
+<kw name="Disables automatic screenshot capturing on failure" library="ResourceDesktop">
+<kw name="Take Screenshots On Failure" library="WhiteLibrary">
+<doc>Disables or enables automatic screenshot capturing on failure.</doc>
+<arguments>
+<arg>FALSE</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:06.040" endtime="20210708 19:51:06.040"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:06.040" endtime="20210708 19:51:06.041"></status>
+</kw>
+<kw name="Abrir Modulo VHF" library="ResourceDesktop">
+<kw name="Launch Application" library="WhiteLibrary">
+<doc>Launches an application.</doc>
+<arguments>
+<arg>${DIR.VHF}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:06.042" endtime="20210708 19:51:06.488"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:06.041" endtime="20210708 19:51:06.488"></status>
+</kw>
+<kw name="Acessar a página de login da aplicação - SQL" library="LoginDesktop">
+<kw name="Attach Window" library="WhiteLibrary">
+<doc>Attaches WhiteLibrary to a window.</doc>
+<arguments>
+<arg>class_name:TFrmParamSysPadrao</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:06.490" endtime="20210708 19:51:09.396"></status>
+</kw>
+<kw name="Wait Until Item Exists" library="WhiteLibrary">
+<doc>Waits until an item with given locator exists in the attached window.</doc>
+<arguments>
+<arg>${LOGIN_PARAMCONEX0}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:09.396" endtime="20210708 19:51:09.687"></status>
+</kw>
+<kw name="Double Click Item" library="WhiteLibrary">
+<doc>Double clicks an item.</doc>
+<arguments>
+<arg>${LOGIN_PARAMCONEX1}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:09.687" endtime="20210708 19:51:09.964"></status>
+</kw>
+<kw name="Double Click Item" library="WhiteLibrary">
+<doc>Double clicks an item.</doc>
+<arguments>
+<arg>text:Configurações</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:09.964" endtime="20210708 19:51:10.170"></status>
+</kw>
+<kw name="Click Item" library="WhiteLibrary">
+<doc>Clicks an item.</doc>
+<arguments>
+<arg>text:SQL Server</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:10.170" endtime="20210708 19:51:10.351"></status>
+</kw>
+<kw name="Button Text Should Be" library="WhiteLibrary">
+<doc>Verifies exact text in a button.</doc>
+<arguments>
+<arg>${LOGIN_BUTTONCONFIR}</arg>
+<arg>Confirmar</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:10.351" endtime="20210708 19:51:10.416"></status>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<doc>Clicks a button.</doc>
+<arguments>
+<arg>${LOGIN_BUTTONCONFIR}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:10.417" endtime="20210708 19:51:10.795"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:06.489" endtime="20210708 19:51:10.796"></status>
+</kw>
+<kw name="Realizar login na aplicação - SQL" library="LoginDesktop">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<arguments>
+<arg>10 seconds</arg>
+</arguments>
+<msg timestamp="20210708 19:51:10.801" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20210708 19:51:10.798" endtime="20210708 19:51:10.801"></status>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<doc>Attaches WhiteLibrary to a window.</doc>
+<arguments>
+<arg>${LOGIN_TELALOGIN}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:10.801" endtime="20210708 19:51:12.644"></status>
+</kw>
+<kw name="Window Title Should Be" library="WhiteLibrary">
+<doc>Verifies that the title of the currently attached window is ``expected``.</doc>
+<arguments>
+<arg>${LOGIN_TITLELOGIN}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:12.644" endtime="20210708 19:51:12.652"></status>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<arguments>
+<arg>class_name:TEdit</arg>
+</arguments>
+<assign>
+<var>@{CAIXA_LOGIN}</var>
+</assign>
+<msg timestamp="20210708 19:51:12.716" level="INFO">@{CAIXA_LOGIN} = [ TextBox. AutomationId:16782512, Name:, ControlType:editar, FrameworkId:Win32 | TextBox. AutomationId:17503924, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20210708 19:51:12.653" endtime="20210708 19:51:12.716"></status>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20210708 19:51:12.716" endtime="20210708 19:51:13.057"></status>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<doc>Writes text to a textbox.</doc>
+<arguments>
+<arg>${CAIXA_LOGIN[0]}</arg>
+<arg>${LOGIN.usersql}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.057" endtime="20210708 19:51:13.196"></status>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<arguments>
+<arg>704</arg>
+<arg>375</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.197" endtime="20210708 19:51:13.200"></status>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<doc>Writes text to a textbox.</doc>
+<arguments>
+<arg>${CAIXA_LOGIN[1]}</arg>
+<arg>${LOGIN.senhasql}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.201" endtime="20210708 19:51:13.315"></status>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<doc>Clicks a button.</doc>
+<arguments>
+<arg>${LOGIN_BUTTONCONFIR}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.315" endtime="20210708 19:51:13.780"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:10.797" endtime="20210708 19:51:13.781"></status>
+</kw>
+<kw name="Selecionar Empresa - VHF" library="LoginDesktop">
+<kw name="Attach Window" library="WhiteLibrary">
+<doc>Attaches WhiteLibrary to a window.</doc>
+<arguments>
+<arg>${LOGIN_SELECEMPRESA}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.782" endtime="20210708 19:51:13.786"></status>
+</kw>
+<kw name="Window Title Should Be" library="WhiteLibrary">
+<doc>Verifies that the title of the currently attached window is ``expected``.</doc>
+<arguments>
+<arg>${LOGIN_TITLEEMPRESA}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.786" endtime="20210708 19:51:13.800"></status>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<doc>Clicks mouse at given position.</doc>
+<arguments>
+<arg>909</arg>
+<arg>363</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.869" endtime="20210708 19:51:13.893"></status>
+</kw>
+<kw name="Click Item" library="WhiteLibrary">
+<doc>Clicks an item.</doc>
+<arguments>
+<arg>${LOGIN_COMBOEMPRESA}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:13.894" endtime="20210708 19:51:14.016"></status>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<doc>Clicks mouse at given position.</doc>
+<arguments>
+<arg>546</arg>
+<arg>400</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:14.016" endtime="20210708 19:51:14.021"></status>
+</kw>
+<kw name="Verify Text In Textbox" library="WhiteLibrary">
+<doc>Verifies text in a text box.</doc>
+<arguments>
+<arg>${LOGIN_DESCREMPRESA}</arg>
+<arg>${LOGIN_EMPRESA_QA_FRONT}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:14.021" endtime="20210708 19:51:14.084"></status>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<doc>Clicks a button.</doc>
+<arguments>
+<arg>${LOGIN_BUTTONCONFIR}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:14.084" endtime="20210708 19:51:14.763"></status>
+</kw>
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<arguments>
+<arg>120 seconds</arg>
+</arguments>
+<msg timestamp="20210708 19:51:14.764" level="INFO">White Busy Timeout set to 120000</msg>
+<status status="PASS" starttime="20210708 19:51:14.764" endtime="20210708 19:51:14.764"></status>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<assign>
+<var>@{ATENCAO}</var>
+</assign>
+<msg timestamp="20210708 19:51:57.409" level="INFO">@{ATENCAO} = [ Visual Hotal FrontOffice v6.11.24.00 ]</msg>
+<status status="PASS" starttime="20210708 19:51:14.764" endtime="20210708 19:51:57.409"></status>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<doc>Attaches WhiteLibrary to a window.</doc>
+<arguments>
+<arg>${ATENCAO[0]}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:57.410" endtime="20210708 19:51:57.411"></status>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<doc>Clicks a button.</doc>
+<arguments>
+<arg>${BUTTON_OK}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:57.411" endtime="20210708 19:51:59.650"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:13.781" endtime="20210708 19:51:59.650"></status>
+</kw>
+<kw name="Conferir se a tela principal do modulo VHF foi exibida" library="ConferenceDesktop">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<arguments>
+<arg>${CONFERENCIA_TIMEOUT}</arg>
+</arguments>
+<msg timestamp="20210708 19:51:59.651" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20210708 19:51:59.651" endtime="20210708 19:51:59.652"></status>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<doc>Attaches WhiteLibrary to a window.</doc>
+<arguments>
+<arg>${SCREEN_TELAPRINCIPAL}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:59.652" endtime="20210708 19:51:59.675"></status>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<arguments>
+<arg>Visual Hotal FrontOffice</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:51:59.675" endtime="20210708 19:51:59.685"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:59.651" endtime="20210708 19:51:59.685"></status>
+</kw>
+<kw name="Acessar a tela de status da governança">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<arguments>
+<arg>10 seconds</arg>
+</arguments>
+<msg timestamp="20210708 19:51:59.686" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20210708 19:51:59.686" endtime="20210708 19:51:59.687"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click</doc>
+<arguments>
+<arg>${IMAGE_GOVERNANCA}</arg>
+</arguments>
+<msg timestamp="20210708 19:52:02.779" level="INFO">Params: [governanca.png]</msg>
+<msg timestamp="20210708 19:52:02.779" level="INFO" html="yes">&lt;img src='sikuli_captured/sikuliximage-1625784722038.png'/&gt;
+[log] CLICK on L[721,65]@S(0) (553 msec)</msg>
+<status status="PASS" starttime="20210708 19:51:59.687" endtime="20210708 19:52:02.779"></status>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<assign>
+<var>@{WALKIN}</var>
+</assign>
+<msg timestamp="20210708 19:52:04.418" level="INFO">@{WALKIN} = [ Visual Hotal FrontOffice v6.11.24.00 - [Status da Governança] ]</msg>
+<status status="PASS" starttime="20210708 19:52:02.780" endtime="20210708 19:52:04.418"></status>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<doc>Attaches WhiteLibrary to a window.</doc>
+<arguments>
+<arg>${WALKIN[0]}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:52:04.418" endtime="20210708 19:52:04.419"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20210708 19:52:06.427" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210708 19:52:04.419" endtime="20210708 19:52:06.427"></status>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<arguments>
+<arg>${TITLE_STATUSDAGOV}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:52:06.427" endtime="20210708 19:52:06.436"></status>
+</kw>
+<status status="PASS" starttime="20210708 19:51:59.685" endtime="20210708 19:52:06.436"></status>
+</kw>
+<kw name="Inserir parâmetros de busca da governança">
+<kw name="Move Mouse" library="WhiteLibrary">
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<arguments>
+<arg>73</arg>
+<arg>113</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:52:06.437" endtime="20210708 19:52:06.438"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click</doc>
+<arguments>
+<arg>${IMAGE_STATUSDAUH}</arg>
+</arguments>
+<msg timestamp="20210708 19:52:07.303" level="INFO">Params: [statusdauh.png]</msg>
+<msg timestamp="20210708 19:52:07.303" level="INFO" html="yes">&lt;img src='sikuli_captured/sikuliximage-1625784726614.png'/&gt;
+[log] CLICK on L[74,148]@S(0) (542 msec)</msg>
+<status status="PASS" starttime="20210708 19:52:06.438" endtime="20210708 19:52:07.303"></status>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<doc>Clicks mouse at given position.</doc>
+<arguments>
+<arg>60</arg>
+<arg>218</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:52:07.303" endtime="20210708 19:52:07.319"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<msg timestamp="20210708 19:52:10.319" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210708 19:52:07.319" endtime="20210708 19:52:10.319"></status>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<arguments>
+<arg>210</arg>
+<arg>120</arg>
+</arguments>
+<status status="PASS" starttime="20210708 19:52:10.319" endtime="20210708 19:52:10.320"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click</doc>
+<arguments>
+<arg>${IMAGE_STATUSDAGOV}</arg>
+</arguments>
+<msg timestamp="20210708 19:52:13.533" level="INFO">Params: [statusdagov.png]
+[error] ImagePath: find: not there: statusdagov.png</msg>
+<msg timestamp="20210708 19:52:13.533" level="INFO" html="yes">&lt;img src='sikuli_captured/sikuliximage-1625784733385.png'/&gt;
+[error] ImagePath: find: not there: statusdagov.png</msg>
+<msg timestamp="20210708 19:52:13.534" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happend, could not find P(statusdagov.png -- not valid!) S: 0.699999988079071</msg>
+<status status="FAIL" starttime="20210708 19:52:10.320" endtime="20210708 19:52:13.534"></status>
+</kw>
+<status status="FAIL" starttime="20210708 19:52:06.437" endtime="20210708 19:52:13.535"></status>
+</kw>
+<status status="FAIL" starttime="20210708 19:51:06.021" endtime="20210708 19:52:13.536" critical="yes">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happend, could not find P(statusdagov.png -- not valid!) S: 0.699999988079071</status>
+</test>
+<kw name="Stop Remote Server" library="SikuliLibrary" type="teardown">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20210708 19:52:13.545" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20210708 19:52:13.538" endtime="20210708 19:52:13.545"></status>
+</kw>
+<doc>Sikuli Library Demo</doc>
+<status status="FAIL" starttime="20210708 19:50:58.982" endtime="20210708 19:52:13.545"></status>
+</suite>
+<status status="FAIL" starttime="20210708 19:50:58.943" endtime="20210708 19:52:13.548"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="CT 09 StatusdaGovernanca">CT 09 StatusdaGovernanca</stat>
+<stat pass="0" fail="1" id="s1-s1" name="CN 09.01 AlterarOStatusDaGovernaça">CT 09 StatusdaGovernanca.CN 09.01 AlterarOStatusDaGovernaça</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

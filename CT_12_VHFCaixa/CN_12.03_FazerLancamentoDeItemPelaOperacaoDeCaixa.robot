@@ -9,7 +9,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-Test Teardown   Fechar Modulo
+# Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -39,7 +39,7 @@ Add Needed Image Path
 
 ### Ações ###
 Acessar a tela de Consulta Geral
-    Click                           ${IMAGE_CONSULTAGERAL}
+    Click                           ${IMAGE_CONSULTAGERAL1}
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
     Sleep                           2 seconds

@@ -17,6 +17,7 @@ ${DESCNOVACONTA}                     NOVACONTA_HOSP
 
 *** Test Case ***
 Test Case 12.01: Transferir lançamentos para outra conta (Diárias, PDV, Etc.)
+    Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
     Realizar login na aplicação - SQL

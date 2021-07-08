@@ -10,7 +10,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-Test Teardown   Fechar Modulo
+# Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -47,8 +47,7 @@ Inserir parâmetros de busca da governança
     Move Mouse                      73    113
     Click                           ${IMAGE_STATUSDAUH}
     Mouse Click                     60    218
-    Sleep                           1 seconds
-    Move Mouse                      180   130
+    Sleep                           3 seconds
     Click                           ${IMAGE_STATUSDAGOV}
     Mouse Click                     157   247
     # Move Mouse                      287   197

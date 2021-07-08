@@ -1,5 +1,3 @@
-Documentation   Desenvolver!
-
 *** Settings ***
 Resource        ../Resource/ResourceDesktop.robot
 Resource        ../Resource/ImagesDesktop.robot
@@ -19,6 +17,7 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 12.04: Encerrar a faturar usando dois modelos de notas (Serviço e Produto) que tenha depósito antecipado e outra forma de pagamento (dinheiro, cartão).
+    Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
     Realizar login na aplicação - SQL
@@ -28,7 +27,7 @@ Test Case 12.04: Encerrar a faturar usando dois modelos de notas (Serviço e Pro
     Preencher os campos necessários para buscar o resultado esperado
     Acessar a Operação de Caixa da Reserva
     Realizar Lançamento do Item de PDV na Conta
-    Realizar Lançamento de Diária Antecipada
+    # Realizar Lançamento de Diária Antecipada
     Realizar Lançamento da Forma de Pgto Dinheiro
     Realizar Lançamento da Forma de Pgto Cartão de Crédito
     Realizar o Encerramento de Conta
@@ -43,7 +42,7 @@ Add Needed Image Path
 
 ### Ações ###
 Acessar a tela de Consulta Geral
-    Click                           ${IMAGE_CONSULTAGERAL1}
+    Click                           ${IMAGE_CONSULTAGERAL}
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
     Sleep                           2 seconds
@@ -76,6 +75,8 @@ Realizar Lançamento do Item de PDV na Conta
     Mouse Click                     102    222
     Screen Should Contain           ${IMAGE_SALDOCAIXA}
     Sleep                           2 seconds
+    Mouse Click                     236    220
+    Sleep                           1 seconds
     Click Button                    ${BUTTON_LANCAR}
     Mouse Click                     58     350
     Sleep                           4 seconds
@@ -96,16 +97,16 @@ Realizar Lançamento do Item de PDV na Conta
     @{OPERCAIXALANC}                Get Application Windows
     Attach Window                   ${OPERCAIXALANC[0]}
 
-Realizar Lançamento de Diária Antecipada
-    Mouse Click                     148    350
-    Sleep                           2 seconds
-    Mouse Click                     246    433
-    Sleep                           4 seconds
-    Move Mouse                      1012   364
-    Input Text                      ${IMAGE_VALORITEMCAIXA}  ${DADOS_RES.valordiar}
-    Sleep                           2 seconds
-    Click Button                    ${BUTTON_LANCAR}
-    Sleep                           4 seconds
+# Realizar Lançamento de Diária Antecipada
+#     Mouse Click                     148    350
+#     Sleep                           2 seconds
+#     Mouse Click                     246    433
+#     Sleep                           4 seconds
+#     Move Mouse                      1012   364
+#     Input Text                      ${IMAGE_VALORITEMCAIXA}  ${DADOS_RES.valordiar}
+#     Sleep                           2 seconds
+#     Click Button                    ${BUTTON_LANCAR}
+#     Sleep                           4 seconds
 
 Realizar Lançamento da Forma de Pgto Dinheiro
     Mouse Click                     58    390
@@ -118,7 +119,7 @@ Realizar Lançamento da Forma de Pgto Dinheiro
     Click Button                    ${BUTTON_LANCAR}
     Sleep                           4 seconds
 
-Realizar Lançamento da Forma de Pgto Dinheiro
+Realizar Lançamento da Forma de Pgto Cartão de Crédito
     Mouse Click                     58    390
     Sleep                           2 seconds
     Mouse Click                     246    473
@@ -132,12 +133,24 @@ Realizar Lançamento da Forma de Pgto Dinheiro
     Attach Window                   ${NUMEROPARCCC[0]}
     Click Button                    ${BUTTON_CONFIRMAR}
     Sleep                           2 seconds
+    @{OPERCAIXALANC}                Get Application Windows
+    Attach Window                   ${OPERCAIXALANC[0]}
+    Sleep                           1 seconds
     Click Button                    ${BUTTON_VOLTAR}
 
 Realizar o Encerramento de Conta
     Sleep                           2 seconds
     Screen Should Contain           ${IMAGE_SALDOCAIXA}
     Click Button                    ${BUTTON_ENCERCONTAS}
+    Sleep                           1 seconds
+    Get Application Windows
+    Attach Window                   ${SCREEN_OPERACAOLANCENC}
+    Window Title Should Contain     ${TITLE_ENCERCONTAS}
+    Sleep                           2 seconds
+    Click                           ${IMAGE_FORMAPAGAFATURAR}
+    Sleep                           2 seconds
+    Click Button                    ${BUTTON_LANCAR}
+    Sleep                           6 seconds
     @{ATENCAOCONFIRCHECKOUT}        Get Application Windows
     Attach Window                   ${ATENCAOCONFIRCHECKOUT[0]}
     Click Button                    ${BUTTON_SIM}
@@ -146,7 +159,7 @@ Realizar o Encerramento de Conta
     Attach Window                   ${SCREEN_OPERACAOLANCENC}
     Window Title Should Contain     ${TITLE_ENCERCONTAS}
     Sleep                           2 seconds
-    Click                           ${IMAGE_FORMAPAGAFATURAR}
+    Click                           ${IMAGE_FORMAPAGDIN}
     Sleep                           2 seconds
     Click Button                    ${BUTTON_LANCAR}
     Sleep                           6 seconds
