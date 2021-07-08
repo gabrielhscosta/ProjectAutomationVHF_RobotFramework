@@ -1,4 +1,2 @@
-C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\Results
-Results/
 Results\
 *.txt
