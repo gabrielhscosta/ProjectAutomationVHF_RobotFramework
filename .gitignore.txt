@@ -1,3 +1,4 @@
+.\Results
 Results\
 Results/
 Results/*.txt
