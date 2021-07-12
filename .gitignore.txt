@@ -1,5 +1,5 @@
-.\Results
-Results\
+/Results
 Results/
 Results/*.txt
+Results/**/*.txt
 *.txt
