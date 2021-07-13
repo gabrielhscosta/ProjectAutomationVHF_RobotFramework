@@ -10,7 +10,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-# Test Teardown   Fechar Modulo
+Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -27,6 +27,7 @@ Test Case 09.01: Alterar o Status de Governança da UH
     Acessar a tela de status da governança
     Inserir parâmetros de busca da governança
     Realizar ação para alterar status da governança
+    Verificar se a alteração do item acima foi gravada corretamente
     Conferir se a tela principal do modulo VHF foi exibida
 
 
@@ -46,10 +47,10 @@ Acessar a tela de status da governança
 Inserir parâmetros de busca da governança
     Move Mouse                      73    113
     Click                           ${IMAGE_STATUSDAUH}
-    Mouse Click                     60    218
-    Sleep                           3 seconds
+    Mouse Click                     60    224
+    Sleep                           2 seconds
     Click                           ${IMAGE_STATUSDAGOV}
-    Mouse Click                     157   247
+    Mouse Click                     165   253
     # Move Mouse                      287   197
     # Mouse Click                     327   197
     # Input Text                      ${IMAGE_TEXTUHGOV}      ${DADOS_RES.uh070101}
@@ -61,12 +62,20 @@ Realizar ação para alterar status da governança
     Sleep                           2 seconds
     Click Button                    ${BUTTON_SELECTODASGOV}
     Sleep                           1 seconds
-    Click Button                    ${BUTTON_LIMPOGOV}
+    Click Item                      ${BUTTON_LIMPOGOV}
     Sleep                           2 seconds
-    Click Button                    ${BUTTON_SAIR}
 
-# ### Conferência ###
-# Conferir o status da UH
-#     Sleep                           2 seconds
-#     Screen Should Contain           ${IMAGE_UHOCUPADA}
-#     Click Button                    ${BUTTON_SAIR}
+### Conferência ###
+Verificar se a alteração do item acima foi gravada corretamente
+    Click Button                    ${BUTTON_DESFPROCGOV}
+    Sleep                           1 seconds
+    Move Mouse                      73    113
+    Click                           ${IMAGE_STATUSDAUH}
+    Mouse Click                     60    224
+    Sleep                           2 seconds
+    Click                           ${IMAGE_STATUSDAGOV}
+    Mouse Click                     165   253
+    Sleep                           1 seconds
+    Wait For Image                  ${IMAGE_SELEC0GOV}  ${IMAGE_NOTWATENDGOV}  2
+    Sleep                           1 seconds
+    Click Button                    ${BUTTON_SAIR}

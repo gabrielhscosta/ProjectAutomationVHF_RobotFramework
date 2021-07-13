@@ -1,0 +1,7 @@
+/Results
+Results/
+Results/*.txt
+Results/**/*.txt
+*.txt
+Results/*.html
+Results/*.xml

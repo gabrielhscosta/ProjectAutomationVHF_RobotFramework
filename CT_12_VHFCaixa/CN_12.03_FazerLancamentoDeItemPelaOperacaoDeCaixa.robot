@@ -9,20 +9,20 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-# Test Teardown   Fechar Modulo
+Test Teardown   Fechar Modulo
 
 
 *** Variable ***
 
 
 *** Test Case ***
-
 Test Case 12.03: Fazer Lançamentos de Itens de PDV
-    # Abrir Modulo VHF
-    # Acessar a página de login da aplicação - SQL
-    # Realizar login na aplicação - SQL
-    # Selecionar Empresa - VHF
-    # Conferir se a tela principal do modulo VHF foi exibida
+    Disables automatic screenshot capturing on failure
+    Abrir Modulo VHF
+    Acessar a página de login da aplicação - SQL
+    Realizar login na aplicação - SQL
+    Selecionar Empresa - VHF
+    Conferir se a tela principal do modulo VHF foi exibida
     Acessar a tela de Consulta Geral
     Preencher os campos necessários para buscar o resultado esperado
     Acessar a Operação de Caixa da Reserva
@@ -39,7 +39,7 @@ Add Needed Image Path
 
 ### Ações ###
 Acessar a tela de Consulta Geral
-    Click                           ${IMAGE_CONSULTAGERAL1}
+    Click                           ${IMAGE_CONSULTAGERAL}
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
     Sleep                           2 seconds

@@ -5,7 +5,7 @@ Library                          SikuliLibrary
 
 *** Variable ***
 ### Diretório das Imagens ###
-${IMAGE_DIR}                      C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\Img
+${IMAGE_DIR}                      C:/Users/gabriel.dacosta/github/ProjectAutomationVHF/Img
 
 ### Imagens Sikuli ###
 ${IMAGE_RESINDIV}                 resindividual.png
@@ -57,7 +57,6 @@ ${IMAGE_LANCARREQUERIMENTOS}      lancarrequerimentos.png
 ${IMAGE_GOVERNANCA}               governanca.png
 ${IMAGE_STATUSDAUH}               statusdauh.png
 ${IMAGE_TEXTUHGOV}                textuhgov.png
-${IMAGE_UHOCUPADA}                uhocupada.png
 ${IMAGE_SLIP}                     slip.png
 ${IMAGE_SLIPEXTERNO}              slipexterno.png
 ${IMAGE_ADULTO}                   adulto.png
@@ -79,4 +78,6 @@ ${IMAGE_DESIGNACAOCONTA}          designacaocontacaixa.png
 ${IMAGE_FORMAPAGDIN}              formpagdinheirocaixa.png
 ${IMAGE_CONTAENCERCAIXA}          contaencerradacaixa.png
 ${IMAGE_FORMAPAGAFATURAR}         formpagafaturarcaixa.png
-${IMAGE_STATUSDAGOV}              statusdagov.PNG
+${IMAGE_STATUSDAGOV}              statusdagov.png
+${IMAGE_SELEC0GOV}                selecionados0gov.png
+${IMAGE_NOTWATENDGOV}             notwantedgov.png

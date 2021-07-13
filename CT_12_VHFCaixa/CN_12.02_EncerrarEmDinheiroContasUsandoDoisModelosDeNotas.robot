@@ -9,7 +9,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-# Test Teardown   Fechar Modulo
+Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -17,11 +17,12 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 12.02: Encerrar em Dinheiro contas usando dois Modelos de Notas
-    # Abrir Modulo VHF
-    # Acessar a página de login da aplicação - SQL
-    # Realizar login na aplicação - SQL
-    # Selecionar Empresa - VHF
-    # Conferir se a tela principal do modulo VHF foi exibida
+    Disables automatic screenshot capturing on failure
+    Abrir Modulo VHF
+    Acessar a página de login da aplicação - SQL
+    Realizar login na aplicação - SQL
+    Selecionar Empresa - VHF
+    Conferir se a tela principal do modulo VHF foi exibida
     Acessar a tela de Consulta Geral
     Preencher os campos necessários para buscar o resultado esperado
     Acessar a Operação de Caixa da Reserva
@@ -39,7 +40,7 @@ Add Needed Image Path
 
 ### Ações ###
 Acessar a tela de Consulta Geral
-    Click                           ${IMAGE_CONSULTAGERAL1}
+    Click                           ${IMAGE_CONSULTAGERAL}
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
     Sleep                           2 seconds
@@ -54,7 +55,7 @@ Preencher os campos necessários para buscar o resultado esperado
     Mouse Click                     248    232
     Sleep                           1 seconds
     Mouse Click                     345    175
-    Input Text                      ${IMAGE_NUMEROUHCG}    ${DADOS_RES.uh070102}
+    Input Text                      ${IMAGE_NUMEROUHCG}    ${DADOS_RES.uh070101}
     Mouse Click                     1122   652
     Click Button                    ${BUTTON_PROCURAR}
 
