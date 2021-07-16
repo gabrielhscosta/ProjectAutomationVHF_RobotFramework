@@ -51,12 +51,6 @@ Inserir parâmetros de busca da governança
     Sleep                           2 seconds
     Click                           ${IMAGE_STATUSDAGOV}
     Mouse Click                     165   253
-    # Move Mouse                      287   197
-    # Mouse Click                     327   197
-    # Input Text                      ${IMAGE_TEXTUHGOV}      ${DADOS_RES.uh070101}
-    # Sleep                           1 seconds
-    # Mouse Click                     410   197
-    # Input Text                      ${IMAGE_TEXTUHGOV}      ${DADOS_RES.uh070101}
 
 Realizar ação para alterar status da governança
     Sleep                           2 seconds

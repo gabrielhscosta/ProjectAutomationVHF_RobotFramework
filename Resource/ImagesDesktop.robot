@@ -74,6 +74,7 @@ ${IMAGE_ITEMPDV}                  itemdepdv.png
 ${IMAGE_QTDLANC1}                 qtdlanc1.png
 ${IMAGE_VALORITEMCAIXA}           valoritemcaixa.png
 ${IMAGE_LANCREST}                 lancrestaurante.png
+${IMAGE_LANCREST1}                lancrestaurante1.png
 ${IMAGE_DESIGNACAOCONTA}          designacaocontacaixa.png
 ${IMAGE_FORMAPAGDIN}              formpagdinheirocaixa.png
 ${IMAGE_CONTAENCERCAIXA}          contaencerradacaixa.png

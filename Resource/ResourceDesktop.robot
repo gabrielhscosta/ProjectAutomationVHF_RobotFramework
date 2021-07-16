@@ -25,7 +25,7 @@ Library                          SikuliLibrary       mode=NEW
 &{DADOS_RES}                      noites=3        adultos=2       cria1=1         cria2=1         categ=STND      categ1=FRUA
 ...                               uh070101=607    uh070102=705    uh070103=706    uh070104=707    uh070105=805
 ...                               uh070106=806    uh070107=807    uh070108=905    uh070109=906    uh070110=907
-...                               valordiar=609   valorpgtodin=20  valorpgtocc=120  uhextra1=605  uhextra2=606
+...                               valordiar=609   valorpgtodin=10  valorpgtocc=120  uhextra1=605  uhextra2=606
 
 ### Titles ###
 ${TITLE_RESINDIVID}                 Reserva Individual
@@ -76,7 +76,9 @@ ${SCREEN_OPERACAOLANCENC}           class_name:TfrmCxOperacaoLancEncerra
 ${SCREEN_DETALHESLANCPDV}           class_name:TfrmDetalheLancamentoPDV
 ${ITEM_ATUALIZARVALPERIO}           text:Clique para atualizar os valores do período
 ${ITEM_DADOSCOMPLEMENT}             text:Dados complementares
-
+### Textos ###
+${TEXT_RESTAURANTE}                 Restaurante
+${TEXT_DIARIAANTEC}                 Diaria Antecipada
 
 *** Keywords ***
 ### SETUP ###

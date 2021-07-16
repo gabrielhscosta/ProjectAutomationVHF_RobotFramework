@@ -108,7 +108,7 @@ Conferir se o Lançamento foi Efetuado
     Click Button                    ${BUTTON_SAIR}
 
 Sair da Tela de Operação de Caixa
-    Sleep                           1 seconds
+    Sleep                           2 seconds
     @{OPERCAIXA}                    Get Application Windows
     Attach Window                   ${OPERCAIXA[0]}
     Click Button                    ${BUTTON_SAIR}
@@ -117,7 +117,7 @@ Sair da Tela de Operação de Caixa
     Click Button                    ${BUTTON_SIM}
 
 Sair da Tela de Consulta Geral
-    Sleep                           2 seconds
+    Sleep                           4 seconds
     Attach Application By Name      VHF
     Attach Window                   ${SCREEN_TELAPRINCIPAL}
     Sleep                           1 seconds

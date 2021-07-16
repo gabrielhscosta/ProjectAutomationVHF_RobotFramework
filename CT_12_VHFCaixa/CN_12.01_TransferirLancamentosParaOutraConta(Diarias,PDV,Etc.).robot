@@ -96,7 +96,7 @@ Realizar Lançamento do Item de PDV na Conta
 
 Realizar Lançamento de Diária Antecipada
     Mouse Click                     148    350
-    Sleep                           2 seconds
+    Sleep                           4 seconds
     Mouse Click                     246    433
     Sleep                           4 seconds
     Move Mouse                      1012   364
@@ -112,9 +112,10 @@ Transferir Lançamentos para Outra Conta
     Attach Window                   ${OPERCAIXA[0]}
     Screen Should Contain           ${IMAGE_LANCREST}
     Sleep                           1 seconds
-    Mouse Click                     302    302
+    Click Text                      ${TEXT_RESTAURANTE}
     Sleep                           2 seconds
-    Mouse Click                     302    372
+    # Mouse Click                     302    372
+    Click Text                      ${TEXT_DIARIAANTEC}
     Sleep                           2 seconds
     Mouse Click                     1280   430
     Sleep                           1 seconds
@@ -137,7 +138,7 @@ Sair da Tela de Operação de Caixa
     Click Button                    ${BUTTON_SIM}
 
 Sair da Tela de Consulta Geral
-    Sleep                           2 seconds
+    Sleep                           4 seconds
     Attach Application By Name      VHF
     Attach Window                   ${SCREEN_TELAPRINCIPAL}
     Sleep                           1 seconds

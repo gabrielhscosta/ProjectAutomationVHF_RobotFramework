@@ -30,7 +30,7 @@ Library                          SikuliLibrary            mode=NEW
 
 ### Reserva Walk-In ###
 &{DADOSHOSPREGU_WALKIN}           nome=Maite Betina       sobrenome=Baptista  cpf=93209771359
-&{DADOSHOSPNOVO_WALKIN}           nome=Lucia Stella       sobrenome=Baptista  cpf=45133501480    email=luciastella2021@automation.com
+&{DADOSHOSPNOVO_WALKIN}           nome=Eloa Melissa       sobrenome=Sales    cpf=36128642705    email=eloamelissasales@automation.com
 ...                               cidade=Maceio           idioma=Portug      datanasc=24031990    doc=EM    cep=57062422    numend=757     razaosocialemp=4U TURISMO
 &{HOSP_WALKIN_0702}               cpf=41664906304
 &{HOSP_WALKIN_0703}               cpf=80773811621
