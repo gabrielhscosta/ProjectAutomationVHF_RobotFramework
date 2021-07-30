@@ -157,7 +157,9 @@ Realizar o Encerramento de Conta
     Click                           ${IMAGE_FORMAPAGDIN}
     Sleep                           2 seconds
     Click Button                    ${BUTTON_LANCAR}
-    Sleep                           8 seconds
+    Sleep                           6 seconds
+    @{OPERCAIXA}                    Get Application Windows
+    Attach Window                   ${OPERCAIXA[0]}
     Get Application Windows
     Attach Window                   ${SCREEN_VHFCAIXA}
     Sleep                           1 seconds
