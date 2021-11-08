@@ -62,6 +62,7 @@ ${BUTTON_EDITAR}                    text:Editar
 ${BUTTON_SELECTODASGOV}             text:Seleciona todas
 ${BUTTON_LIMPOGOV}                  text:Limpo
 ${BUTTON_DESFPROCGOV}               text:Desfazer procura
+${BUTTON_IMPREXTRATO}               text:Imprimir extrato
 ### Screens ###
 ${SCREEN_TELAPRINCIPAL}             class_name:TfrmPrincipal
 ${SCREEN_VHFCAIXA}                  class_name:TfrmPrincipalCAIXA

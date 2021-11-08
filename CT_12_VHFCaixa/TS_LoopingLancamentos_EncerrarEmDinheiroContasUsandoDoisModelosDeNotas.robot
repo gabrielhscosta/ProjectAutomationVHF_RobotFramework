@@ -13,12 +13,10 @@ Test Teardown   Fechar Modulo
 
 
 *** Variable ***
-@{WANTED_IMAGES}                     ${IMAGE_LANCREST}     ${IMAGE_LANCREST1}
-@{NOTWANTED_IMAGES}                  ${IMAGE_CONTAENCERCAIXA}
 
 
 *** Test Case ***
-Test Case 12.06: Selecionar alguns Lançamentos e efetuar Encerramento dos Selecionados
+Test Case Looping Lançamentos e Encerrar em Dinheiro contas usando dois Modelos de Notas
     Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
@@ -28,10 +26,8 @@ Test Case 12.06: Selecionar alguns Lançamentos e efetuar Encerramento dos Selec
     Acessar a tela de Consulta Geral
     Preencher os campos necessários para buscar o resultado esperado
     Acessar a Operação de Caixa da Reserva
-    Realizar Lançamento do Item de PDV na Conta
-    Realizar Lançamento de Diária Antecipada
-    Realizar o Encerramento dos Selecionados
-    Conferir Se a Conta foi Encerrada Corretamente
+    Looping Lançamentos na Contas
+    Realizar o Encerramento de Conta
     Sair da Tela de Operação de Caixa
     Sair da Tela de Consulta Geral
     Conferir se a tela principal do modulo VHF foi exibida
@@ -58,7 +54,7 @@ Preencher os campos necessários para buscar o resultado esperado
     Mouse Click                     248    232
     Sleep                           1 seconds
     Mouse Click                     345    175
-    Input Text                      ${IMAGE_NUMEROUHCG}    ${DADOS_RES.uh070101}
+    Input Text                      ${IMAGE_NUMEROUHCG}    ${DADOS_RES.uh070102}
     Mouse Click                     1122   652
     Click Button                    ${BUTTON_PROCURAR}
 
@@ -68,8 +64,17 @@ Acessar a Operação de Caixa da Reserva
     Mouse Click                     1015   170
     Click Button                    ${BUTTON_CAIXA}
 
-Realizar Lançamento do Item de PDV na Conta
-    Sleep                           25 seconds
+Looping Lançamentos na Contas
+    [Documentation]                 Percorre de 0 até 9
+    ${VAR}                          Set Variable      ${9}
+    FOR                             ${ENCERCONTAS}    IN RANGE    ${VAR} + 1
+      Realizar Lançamentos na Conta                   ${ENCERCONTAS}
+    END
+
+Realizar Lançamentos na Conta
+    [Arguments]                     ${CONTLOOPING}
+    Log                             Contagem do Looping ${CONTLOOPING}
+    Sleep                           15 seconds
     Attach Application By Name      VHFCaixa
     Attach Window                   ${SCREEN_VHFCAIXA}
     Sleep                           1 seconds
@@ -95,10 +100,9 @@ Realizar Lançamento do Item de PDV na Conta
     Sleep                           4 seconds
     @{OPERCAIXALANC}                Get Application Windows
     Attach Window                   ${OPERCAIXALANC[0]}
-
-Realizar Lançamento de Diária Antecipada
+    Sleep                           1 seconds
     Mouse Click                     148    350
-    Sleep                           4 seconds
+    Sleep                           2 seconds
     Mouse Click                     246    433
     Sleep                           4 seconds
     Move Mouse                      1012   364
@@ -108,30 +112,34 @@ Realizar Lançamento de Diária Antecipada
     Sleep                           4 seconds
     Click Button                    ${BUTTON_VOLTAR}
 
-Realizar o Encerramento dos Selecionados
+Realizar o Encerramento de Conta
     Sleep                           2 seconds
-    @{OPERCAIXA}                    Get Application Windows
-    Attach Window                   ${OPERCAIXA[0]}
-    Wait For Multiple Images	      4	 8  ${WANTED_IMAGES} 	${NOTWANTED_IMAGES}
-    Sleep                           1 seconds
-    Click Text                      ${TEXT_RESTAURANTE}
-    Sleep                           2 seconds
-    Mouse Click                     1280   386
-    Sleep                           3 seconds
+    Screen Should Contain           ${IMAGE_SALDOCAIXA}
+    Click Button                    ${BUTTON_ENCERCONTAS}
+    @{ATENCAOCONFIRCHECKOUT}        Get Application Windows
+    Attach Window                   ${ATENCAOCONFIRCHECKOUT[0]}
+    Click Button                    ${BUTTON_SIM}
+    Sleep                           5 seconds
     Get Application Windows
     Attach Window                   ${SCREEN_OPERACAOLANCENC}
-    Maximize Window                 ${SCREEN_OPERACAOLANCENC}
     Window Title Should Contain     ${TITLE_ENCERCONTAS}
     Sleep                           2 seconds
     Click                           ${IMAGE_FORMAPAGDIN}
     Sleep                           2 seconds
     Click Button                    ${BUTTON_LANCAR}
-    Sleep                           6 seconds
+    Sleep                           10 seconds
     Get Application Windows
     Attach Window                   ${SCREEN_VHFCAIXA}
+    Sleep                           1 seconds
+    @{INFOPROCESSFINAL}             Get Application Windows
+    Attach Window                   ${INFOPROCESSFINAL[0]}
+    Click Button                    ${BUTTON_OK}
 
 Sair da Tela de Operação de Caixa
     Sleep                           2 seconds
+    @{OPERCAIXA}                    Get Application Windows
+    Attach Window                   ${OPERCAIXA[0]}
+    Screen Should Contain           ${IMAGE_CONTAENCERCAIXA}
     Click Button                    ${BUTTON_SAIR}
     @{ATENCAOSAIRCAIXA}             Get Application Windows
     Attach Window                   ${ATENCAOSAIRCAIXA[0]}
@@ -144,14 +152,4 @@ Sair da Tela de Consulta Geral
     Sleep                           1 seconds
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
-    Sleep                           1 seconds
     Click Button                    ${BUTTON_SAIR}
-
-### Conferência ###
-Conferir Se a Conta foi Encerrada Corretamente
-    Sleep                           2 seconds
-    @{OPERCAIXA}                    Get Application Windows
-    Attach Window                   ${OPERCAIXA[0]}
-    Mouse Click                     236    220
-    Sleep                           4 seconds
-    Screen Should Contain           ${IMAGE_CONTAENCERCAIXA}

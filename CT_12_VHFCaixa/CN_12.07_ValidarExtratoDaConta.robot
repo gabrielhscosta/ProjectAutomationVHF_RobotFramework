@@ -9,16 +9,14 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-Test Teardown   Fechar Modulo
+# Test Teardown   Fechar Modulo
 
 
 *** Variable ***
-@{WANTED_IMAGES}                     ${IMAGE_LANCREST}     ${IMAGE_LANCREST1}
-@{NOTWANTED_IMAGES}                  ${IMAGE_CONTAENCERCAIXA}
 
 
 *** Test Case ***
-Test Case 12.06: Selecionar alguns Lançamentos e efetuar Encerramento dos Selecionados
+Test Case 12.07: Validar Extrato da Conta
     Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
@@ -30,8 +28,9 @@ Test Case 12.06: Selecionar alguns Lançamentos e efetuar Encerramento dos Selec
     Acessar a Operação de Caixa da Reserva
     Realizar Lançamento do Item de PDV na Conta
     Realizar Lançamento de Diária Antecipada
-    Realizar o Encerramento dos Selecionados
-    Conferir Se a Conta foi Encerrada Corretamente
+    Validar Extrato da Conta
+
+    # Realizar o Encerramento de Conta
     Sair da Tela de Operação de Caixa
     Sair da Tela de Consulta Geral
     Conferir se a tela principal do modulo VHF foi exibida
@@ -98,7 +97,7 @@ Realizar Lançamento do Item de PDV na Conta
 
 Realizar Lançamento de Diária Antecipada
     Mouse Click                     148    350
-    Sleep                           4 seconds
+    Sleep                           2 seconds
     Mouse Click                     246    433
     Sleep                           4 seconds
     Move Mouse                      1012   364
@@ -108,30 +107,43 @@ Realizar Lançamento de Diária Antecipada
     Sleep                           4 seconds
     Click Button                    ${BUTTON_VOLTAR}
 
-Realizar o Encerramento dos Selecionados
+Validar Extrato da Conta
     Sleep                           2 seconds
-    @{OPERCAIXA}                    Get Application Windows
-    Attach Window                   ${OPERCAIXA[0]}
-    Wait For Multiple Images	      4	 8  ${WANTED_IMAGES} 	${NOTWANTED_IMAGES}
-    Sleep                           1 seconds
-    Click Text                      ${TEXT_RESTAURANTE}
-    Sleep                           2 seconds
-    Mouse Click                     1280   386
-    Sleep                           3 seconds
-    Get Application Windows
-    Attach Window                   ${SCREEN_OPERACAOLANCENC}
-    Maximize Window                 ${SCREEN_OPERACAOLANCENC}
-    Window Title Should Contain     ${TITLE_ENCERCONTAS}
-    Sleep                           2 seconds
-    Click                           ${IMAGE_FORMAPAGDIN}
-    Sleep                           2 seconds
-    Click Button                    ${BUTTON_LANCAR}
-    Sleep                           6 seconds
-    Get Application Windows
-    Attach Window                   ${SCREEN_VHFCAIXA}
+    Screen Should Contain           ${IMAGE_SALDOCAIXA}
+    Click Button                    ${BUTTON_IMPREXTRATO}
+    @{OCIMPRIMIREXTRATO}            Get Application Windows
+    Attach Window                   ${OCIMPRIMIREXTRATO}
+
+
+
+# Realizar o Encerramento de Conta
+#     Sleep                           2 seconds
+#     Screen Should Contain           ${IMAGE_SALDOCAIXA}
+#     Click Button                    ${BUTTON_ENCERCONTAS}
+#     @{ATENCAOCONFIRCHECKOUT}        Get Application Windows
+#     Attach Window                   ${ATENCAOCONFIRCHECKOUT[0]}
+#     Click Button                    ${BUTTON_SIM}
+#     Sleep                           5 seconds
+#     Get Application Windows
+#     Attach Window                   ${SCREEN_OPERACAOLANCENC}
+#     Window Title Should Contain     ${TITLE_ENCERCONTAS}
+#     Sleep                           2 seconds
+#     Click                           ${IMAGE_FORMAPAGDIN}
+#     Sleep                           2 seconds
+#     Click Button                    ${BUTTON_LANCAR}
+#     Sleep                           6 seconds
+#     Get Application Windows
+#     Attach Window                   ${SCREEN_VHFCAIXA}
+#     Sleep                           1 seconds
+#     @{INFOPROCESSFINAL}             Get Application Windows
+#     Attach Window                   ${INFOPROCESSFINAL[0]}
+#     Click Button                    ${BUTTON_OK}
 
 Sair da Tela de Operação de Caixa
     Sleep                           2 seconds
+    @{OPERCAIXA}                    Get Application Windows
+    Attach Window                   ${OPERCAIXA[0]}
+    Screen Should Contain           ${IMAGE_CONTAENCERCAIXA}
     Click Button                    ${BUTTON_SAIR}
     @{ATENCAOSAIRCAIXA}             Get Application Windows
     Attach Window                   ${ATENCAOSAIRCAIXA[0]}
@@ -144,14 +156,4 @@ Sair da Tela de Consulta Geral
     Sleep                           1 seconds
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
-    Sleep                           1 seconds
     Click Button                    ${BUTTON_SAIR}
-
-### Conferência ###
-Conferir Se a Conta foi Encerrada Corretamente
-    Sleep                           2 seconds
-    @{OPERCAIXA}                    Get Application Windows
-    Attach Window                   ${OPERCAIXA[0]}
-    Mouse Click                     236    220
-    Sleep                           4 seconds
-    Screen Should Contain           ${IMAGE_CONTAENCERCAIXA}

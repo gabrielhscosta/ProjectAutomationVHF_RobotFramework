@@ -9,7 +9,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-# Test Teardown   Fechar Modulo
+Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -180,8 +180,8 @@ Sair da Tela de Operação de Caixa
 Sair da Tela de Consulta Geral
     Sleep                           4 seconds
     Attach Application By Name      VHF
-    Attach Window                   ${SCREEN_TELAPRINCIPAL}
     Sleep                           1 seconds
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
+    Sleep                           2 seconds
     Click Button                    ${BUTTON_SAIR}

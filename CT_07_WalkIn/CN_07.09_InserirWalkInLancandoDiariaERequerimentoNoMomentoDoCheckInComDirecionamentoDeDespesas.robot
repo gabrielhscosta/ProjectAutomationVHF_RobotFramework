@@ -45,6 +45,7 @@ Inserir Cliente(Empresa) com Contrato
     Move Mouse                      75      145
     Mouse Click                     190     165
     Attach Window                   ${SCREEN_MONTASELEC}
+    Sleep                           1 seconds
     Mouse Move                      ${IMAGE_RAZAOSOCIALEMP}
     Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPNOVO_WALKIN.razaosocialemp}
     Click Button                    ${BUTTON_PROCURAR}
@@ -79,6 +80,7 @@ Preencher os campos obrigatórios para gerar orçamento da reserva
     Attach Window                   ${WALKIN[0]}
     Mouse Click                     756     279
     Attach Window                   ${SCREEN_MONTASELEC}
+    Sleep                           1 seconds
     Mouse Move                      ${IMAGE_DESCUH}
     Input Text                      ${IMAGE_TEXT}       ${DADOS_RES.uh070109}
     Click Button                    ${BUTTON_PROCURAR}
