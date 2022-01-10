@@ -1,0 +1,13 @@
+/Results
+Results/
+Results/*.txt
+Results/**/*.txt
+*.txt
+Results/*.html
+Results/*.xml
+.\Results
+\Results
+*.txt
+\sikuli_captured
+/sikuli_captured
+sikuli_captured/*.png
