@@ -145,28 +145,26 @@ Cadastrar informações do hóspede
     Input Text                      ${IMAGE_NUMEROEND}  ${DADOSHOSPNOVO_WALKIN.numend}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_ULTIMAPROC}
-    Mouse Click                     460    422
+    Mouse Click                     460   422
     @{ULTPROC}                      Get Application Windows
     Attach Window                   ${ULTPROC[0]}
     Sleep                           2 seconds
-    Move Mouse                      690    360
+    Move Mouse                      690   360
     Sleep                           1 seconds
-    Mouse Click                     680    543
+    Click                           ${IMAGE_CONFIRMAR}
     Set White Busy Timeout          10 seconds
     @{FNRHSIMPL}                    Get Application Windows
     Attach Window                   ${FNRHSIMPL[0]}
     Sleep                           3 seconds
     Mouse Move                      ${IMAGE_PROXIMAPROC}
     Sleep                           3 seconds
-    Move Mouse                      854    420
-    Sleep                           3 seconds
-    Mouse Click                     858    422
+    Mouse Click                     858   422
     @{PROXDEST}                     Get Application Windows
     Attach Window                   ${PROXDEST[0]}
     Get White Busy Timeout
-    Move Mouse                      540    252
-    Sleep                           2 seconds
-    Click                           ${IMAGE_CONFIRMAR}
+    Move Mouse                      540   252
+    Sleep                           1 seconds
+    Click                           ${IMAGE_BUTTONCONFIRMAR}
     @{FNRHSIMPL}                    Get Application Windows
     Attach Window                   ${FNRHSIMPL[0]}
     Sleep                           2 seconds

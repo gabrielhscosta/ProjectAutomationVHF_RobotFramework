@@ -30,7 +30,6 @@ ${IMAGE_CEP}                      cep.png
 ${IMAGE_NUMEROEND}                numeroend.png
 ${IMAGE_ULTIMAPROC}               ultimaproc.png
 ${IMAGE_PROXIMAPROC}              proximaproc.png
-${IMAGE_CONFIRMAR}                confirmar.png
 ${IMAGE_MOTIVOVIAGEM}             motivoviagem.png
 ${IMAGE_MEIOTRANSPOR}             meiotransporte.png
 ${IMAGE_CONFIRMACAORES}           confirmacaores.png
@@ -84,3 +83,4 @@ ${IMAGE_FORMAPAGAFATURAR}         formpagafaturarcaixa.png
 ${IMAGE_STATUSDAGOV}              statusdagov.png
 ${IMAGE_SELEC0GOV}                selecionados0gov.png
 ${IMAGE_NOTWATENDGOV}             notwantedgov.png
+${IMAGE_BUTTONEDITAR}             editar.png

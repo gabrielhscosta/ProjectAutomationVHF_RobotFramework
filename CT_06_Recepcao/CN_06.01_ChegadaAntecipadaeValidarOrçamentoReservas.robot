@@ -10,11 +10,10 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-# Test Teardown   Fechar Modulo
+Test Teardown   Fechar Modulo
 
 
 *** Variable ***
-# ${IMAGE_DIR}        ${CURDIR}\\Img
 
 
 *** Test Case ***
@@ -125,17 +124,6 @@ Preencher informações e confirmar a reserva
     Click Item                      ${ITEM_ATUALIZARVALPERIO}
     Click Button                    ${BUTTON_CONFIRMAR}
 
-### Conferência ###
-Conferir se a tela de conclusão da reserva foi exibida
-    Set White Busy Timeout          10 seconds
-    Move Mouse                      610   210
-    @{SITUACAORES}                  Get Application Windows
-    Attach Window                   ${SITUACAORES[0]}
-    Sleep                           2 seconds
-    Screen Should Contain           ${IMAGE_CONFIRMACAORES}
-    Sleep                           1 seconds
-    Click                           ${IMAGE_SAIRRES}
-
 Acessar a tela de Consulta Geral
     Click                           ${IMAGE_CONSULTAGERAL}
     @{CONSULTAGERAL}                Get Application Windows
@@ -179,8 +167,8 @@ Cadastrar informações do hóspede
     Attach Window                   ${FNRHSIMPL[0]}
     Maximize Window                 ${SCREEN_TELAFNRH}
     Get Window Title
-    Sleep                           3 seconds
-    Click Button                    ${BUTTON_EDITAR}
+    Sleep                           2 seconds
+    Click                           ${IMAGE_BUTTONEDITAR}
     Screen Should Contain           ${IMAGE_FEMININO}
     Mouse Move                      ${IMAGE_FEMININO}
     Mouse Click                     476   148
@@ -200,7 +188,7 @@ Cadastrar informações do hóspede
     Sleep                           2 seconds
     Move Mouse                      690   360
     Sleep                           1 seconds
-    Click                           ${IMAGE_CONFIRMAR}
+    Click                           ${IMAGE_BUTTONCONFIRMAR}
     Set White Busy Timeout          10 seconds
     @{FNRHSIMPL}                    Get Application Windows
     Attach Window                   ${FNRHSIMPL[0]}
@@ -213,7 +201,7 @@ Cadastrar informações do hóspede
     Get White Busy Timeout
     Move Mouse                      540   252
     Sleep                           1 seconds
-    Click                           ${IMAGE_CONFIRMAR}
+    Click                           ${IMAGE_BUTTONCONFIRMAR}
     @{FNRHSIMPL}                    Get Application Windows
     Attach Window                   ${FNRHSIMPL[0]}
     Sleep                           2 seconds
@@ -226,10 +214,25 @@ Cadastrar informações do hóspede
     Click Button                    ${BUTTON_CONFIRMAR}
     Click Button                    ${BUTTON_SAIR}
 
+### Conferência ###
+Conferir se a tela de conclusão da reserva foi exibida
+    Set White Busy Timeout          10 seconds
+    Move Mouse                      610   210
+    @{SITUACAORES}                  Get Application Windows
+    Attach Window                   ${SITUACAORES[0]}
+    Sleep                           2 seconds
+    Screen Should Contain           ${IMAGE_CONFIRMACAORES}
+    Sleep                           1 seconds
+    Click                           ${IMAGE_SAIRRES}
+
 Conferir se a tela de conclusão do check-in foi exibida
-    Sleep                           4 seconds
+    Sleep                           2 seconds
+    @{CONFIRMACAO}                  Get Application Windows
+    Attach Window                   ${CONFIRMACAO[0]}
+    Click Button                    ${BUTTON_SIM}
+    Sleep                           2 seconds
     @{CARTAOCONS}                   Get Application Windows
-    Attach Window                   ${CARTAOCONS[1]}
+    Attach Window                   ${CARTAOCONS[0]}
     Click Button                    ${BUTTON_NAO}
     Sleep                           2 seconds
     @{CHECKINRES}                   Get Application Windows
@@ -244,4 +247,6 @@ Conferir se a tela de conclusão do check-in foi exibida
 
 Sair da Tela de Consulta Geral
     Set White Busy Timeout          10 seconds
+    @{CONSULTAGERAL2}               Get Application Windows
+    Attach Window                   ${CONSULTAGERAL2[0]}
     Click Button                    ${BUTTON_SAIR}

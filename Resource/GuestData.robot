@@ -47,7 +47,7 @@ Library                          SikuliLibrary            mode=NEW
 &{HOSP_WALKIN_0710}               cpf=25636118813
 
 ### Alteracao de Reserva ###
-&{HOSP_RECEP_0601}                nome=Aurora Mirella     sobrenome=da Rosa   cpf=62438103728     email=auroramirelladarosa@automation.com
+&{HOSP_RECEP_0601}                nome=Caroline Sueli     sobrenome=Silva     cpf=06085764847     email=carolsuelisilva@automation.com
 ...                               cidade=Maceio           idioma=Portug       datanasc=24031990   doc=EM    cep=57062422    numend=757     razaosocialemp=4U TURISMO
 ...                               datapartida=13012022    datachegada=12012022
 &{HOSP_RECEP_0606}                cpf=09818385454         email=lunaheloisasilvanacampos-75@automation.com
