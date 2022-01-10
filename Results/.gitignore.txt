@@ -1,14 +1,10 @@
-/Results
-Results/
 Results/*.txt
 Results/**/*.txt
 *.txt
-Results/*.html
-Results/*.xml
-.\Results
-\Results
 \sikuli_captured
 /sikuli_captured
+.\sikuli_captured
+./sikuli_captured
 sikuli_captured/*.png
 /sikuli_captured/*.png
 \sikuli_captured/*.png
