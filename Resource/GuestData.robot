@@ -5,10 +5,10 @@ Library                          SikuliLibrary            mode=NEW
 
 *** Variable ***
 ### Reserva Individual ###
-&{DADOSHOSPNOVO_RESIND}           nome=Sueli Yasmin       sobrenome=Gomes     email=sueliyagomes@automation.com
+&{DADOSHOSPNOVO_RESIND}           nome=Francisca Daiane   sobrenome=Dias      email=frandaianedias@automation.com
 ...                               cidade=Maceio           idioma=Portug       datanasc=24031990   doc=EM     razaosocialemp=4U TURISMO
 &{HOSP_RESIND_0102}               cpf=51233681672
-
+&{HOSP_RESIND_0103}               cpf=15911094851
 &{DADOSHOSPCORT_RESIND}           nome=Sara Andrea        sobrenome=Campos    email=saraandreacampos@automation.com
 ...                               cidade=Arapiraca        idioma=Portug       datanasc=26101990   doc=EM     numend=411     motdesc=Autorizado pela Gerencia
 &{DADOSHOSPUKSA_RESIND}           nome=Sandra Emily       sobrenome=Lima      email=sandraemilylima@automation.com       func=Gabriel
