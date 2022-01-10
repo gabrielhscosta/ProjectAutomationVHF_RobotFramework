@@ -68,7 +68,7 @@ ${SCREEN_TELAPRINCIPAL}             class_name:TfrmPrincipal
 ${SCREEN_VHFCAIXA}                  class_name:TfrmPrincipalCAIXA
 ${SCREEN_SELECGERAL}                class_name:TfrmSelecaoGeral
 ${SCREEN_MONTASELEC}                class_name:TfrmMontaSelect
-${WALKIN_TELAFNRH}                  class_name:TfrmFNRHSimplificada
+${SCREEN_TELAFNRH}                  class_name:TfrmFNRHSimplificada
 ${SCREEN_MOSTCONTRATOS}             class_name:TfrmMostraContratos
 ${SCREEN_SUGESTARIFA}               class_name:TfrmSugereTarifa
 ${SCREEN_DIRECIONADESP}             class_name:TfrmCxDirecionaDesp

@@ -121,7 +121,7 @@ Cadastrar informações do hóspede
     Set White Busy Timeout          10 seconds
     @{FNRHSIMPL}                    Get Application Windows
     Attach Window                   ${FNRHSIMPL[0]}
-    Maximize Window                 ${WALKIN_TELAFNRH}
+    Maximize Window                 ${SCREEN_TELAFNRH}
     Get Window Title
     Sleep                           1 seconds
     Screen Should Contain           ${IMAGE_FEMININO}

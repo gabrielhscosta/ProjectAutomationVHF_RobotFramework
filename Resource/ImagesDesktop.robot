@@ -12,6 +12,8 @@ ${IMAGE_RESINDIV}                 resindividual.png
 ${IMAGE_RESINDIV1}                resindividual1.png
 ${IMAGE_WALKIN}                   walkin.png
 ${IMAGE_WALKIN1}                  walkin1.png
+${IMAGE_DATACHEGADA}              datachegada.png
+${IMAGE_DATAPARTIDA}              datapartida.png
 ${IMAGE_NOITES}                   noites.png
 ${IMAGE_DESCUH}                   descuh.png
 ${IMAGE_TEXT}                     text.png

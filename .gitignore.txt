@@ -5,3 +5,5 @@ Results/**/*.txt
 *.txt
 Results/*.html
 Results/*.xml
+.\Results
+\Results

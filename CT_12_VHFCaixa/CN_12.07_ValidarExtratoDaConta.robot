@@ -16,6 +16,8 @@ Test Setup      Add Needed Image Path
 
 
 *** Test Case ***
+
+### EM CODIFICAÇÃO ###
 Test Case 12.07: Validar Extrato da Conta
     Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
