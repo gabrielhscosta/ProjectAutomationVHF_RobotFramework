@@ -9,7 +9,6 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-# Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -17,6 +16,7 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 12.01.01: Encerramento de Contas Sem Saldo(Check-Out)
+    Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
     Realizar login na aplicação - SQL
@@ -54,8 +54,8 @@ Preencher os campos necessários para buscar o resultado esperado
     Click Button                    ${BUTTON_PROCURAR}
 
 Looping Encerramento de Contas
-    [Documentation]                 Percorre de 0 até 5
-    ${VAR}                          Set Variable      ${5}
+    [Documentation]                 Percorre de 0 até 1
+    ${VAR}                          Set Variable      ${1}
     FOR                             ${ENCERCONTAS}    IN RANGE    ${VAR} + 1
       Realizar o Encerramento de Conta                ${ENCERCONTAS}
     END

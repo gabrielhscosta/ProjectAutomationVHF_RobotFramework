@@ -124,14 +124,14 @@ Conferir se a tela de conclusão da reserva foi exibida
     Sleep                           4 seconds
     @{VISUALIMPRESS}                Get Application Windows
     Attach Window                   ${VISUALIMPRESS[0]}
-    Sleep                           2 seconds
     Maximize Window
     Get Window Title
     Take Desktop Screenshot
     Sleep                           1 seconds
     Click Button                    ${BUTTON_FECHAR}
-    @{DIALIMPRESSLIP}               Get Application Windows
-    Attach Window                   ${DIALIMPRESSLIP[0]}
+    @{DIALIMPRESSLIP1}               Get Application Windows
+    Attach Window                   ${DIALIMPRESSLIP1[0]}
+    Sleep                           1 seconds
     Click Button                    ${BUTTON_SAIR}
     @{SITUACAORES}                  Get Application Windows
     Attach Window                   ${SITUACAORES[0]}

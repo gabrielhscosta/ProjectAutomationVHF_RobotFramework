@@ -77,6 +77,7 @@ ${SCREEN_OPERACAOLANCENC}           class_name:TfrmCxOperacaoLancEncerra
 ${SCREEN_DETALHESLANCPDV}           class_name:TfrmDetalheLancamentoPDV
 ${ITEM_ATUALIZARVALPERIO}           text:Clique para atualizar os valores do período
 ${ITEM_DADOSCOMPLEMENT}             text:Dados complementares
+
 ### Textos ###
 ${TEXT_RESTAURANTE}                 Restaurante
 ${TEXT_DIARIAANTEC}                 Diaria Antecipada

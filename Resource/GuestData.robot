@@ -5,7 +5,7 @@ Library                          SikuliLibrary            mode=NEW
 
 *** Variable ***
 ### Reserva Individual ###
-&{DADOSHOSPNOVO_RESIND}           nome=Francisca Daiane   sobrenome=Dias      email=frandaianedias@automation.com
+&{DADOSHOSPNOVO_RESIND}           nome=Jessica Debora     sobrenome=Assuncao  email=jessicadeboraassuncao@automation.com
 ...                               cidade=Maceio           idioma=Portug       datanasc=24031990   doc=EM     razaosocialemp=4U TURISMO
 &{HOSP_RESIND_0102}               cpf=51233681672
 &{HOSP_RESIND_0103}               cpf=15911094851
@@ -49,6 +49,6 @@ Library                          SikuliLibrary            mode=NEW
 ### Alteracao de Reserva ###
 &{HOSP_RECEP_0601}                nome=Caroline Sueli     sobrenome=Silva     cpf=06085764847     email=carolsuelisilva@automation.com
 ...                               cidade=Maceio           idioma=Portug       datanasc=24031990   doc=EM    cep=57062422    numend=757     razaosocialemp=4U TURISMO
-...                               datapartida=13012022    datachegada=12012022
+...                               datapartida=16012022    datachegada=14012022
 &{HOSP_RECEP_0606}                cpf=09818385454         email=lunaheloisasilvanacampos-75@automation.com
 ...                               cidade=Maceio           idioma=Portug       datanasc=27021990   doc=EM    cep=57010368    numend=555

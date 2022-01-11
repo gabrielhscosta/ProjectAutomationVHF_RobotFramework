@@ -17,6 +17,7 @@ Test Teardown   Fechar Modulo
 
 *** Test Case ***
 Test Case 01.01.01: Cancelar Reserva Individual
+    Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
     Realizar login na aplicação - SQL
@@ -52,8 +53,8 @@ Preencher os campos necessários para buscar o resultado esperado
     Click Button                    ${BUTTON_PROCURAR}
 
 Looping Cancelamento de Reservas
-    [Documentation]                 Percorre de 0 até 11
-    ${VAR}                          Set Variable      ${11}
+    [Documentation]                 Percorre de 0 até 4
+    ${VAR}                          Set Variable      ${4}
     FOR                             ${CANCELARRES}    IN RANGE    ${VAR} + 1
       Cancelar Reservas             ${CANCELARRES}
     END
@@ -79,7 +80,7 @@ Cancelar Reservas
     Click                           ${IMAGE_CANCELCMNET}
     Sleep                           1 seconds
     Click Button                    ${BUTTON_CONFIRMAR}
-    Sleep                           4 seconds
+    Sleep                           2 seconds
     @{CANCELAMENTOOK}               Get Application Windows
     Attach Window                   ${CANCELAMENTOOK[0]}
     Get Window Title

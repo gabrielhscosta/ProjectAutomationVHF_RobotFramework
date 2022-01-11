@@ -1,6 +1,8 @@
 Results/*.txt
 Results/**/*.txt
+Results/
 *.txt
+sikuli_captured/
 \sikuli_captured
 /sikuli_captured
 .\sikuli_captured
