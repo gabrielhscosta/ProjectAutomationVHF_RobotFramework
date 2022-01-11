@@ -5,3 +5,4 @@ Results/
 *.txt
 sikuli_captured/
 sikuli_captured/*.png
+sikuli_captured/*.txt
