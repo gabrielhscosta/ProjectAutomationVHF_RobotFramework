@@ -1,12 +1,7 @@
 Results/*.txt
 Results/**/*.txt
 Results/
+.\Results/*.txt
 *.txt
 sikuli_captured/
-\sikuli_captured
-/sikuli_captured
-.\sikuli_captured
-./sikuli_captured
 sikuli_captured/*.png
-/sikuli_captured/*.png
-\sikuli_captured/*.png
