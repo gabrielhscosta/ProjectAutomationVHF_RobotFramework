@@ -5,8 +5,6 @@ Library                          SikuliLibrary       mode=NEW
 
 *** Variable ***
 ### Diretório do Sistema ###
-#_PrePubli
-#_PreBuild
 &{DIR}                            Global=C:/Totvs/Hoteis/GlobalCM.exe
 ...                               VHF=C:/Totvs/Hoteis/VHF.exe
 ...                               VHFCaixa=C:/Totvs/Hoteis/VHFCaixa.exe
@@ -114,6 +112,7 @@ Abrir Modulo Telefonia
 Abrir Modulo TimeSharing
     Launch Application            ${DIR.TS}
 
+### Desativar a captura de imagens de falhas ###
 Disables automatic screenshot capturing on failure
     Take Screenshots On Failure   FALSE
 

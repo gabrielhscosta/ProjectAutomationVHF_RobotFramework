@@ -16,7 +16,6 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 01.02: Inserir Reserva com 01 Pax com histórico de Hospede e com Empresa e Contrato (Validar FRNH)
-    [Tags]  CT1
     Disables automatic screenshot capturing on failure
     Acessar a tela de Reserva Individual
     Inserir Cliente(Empresa) com Contrato

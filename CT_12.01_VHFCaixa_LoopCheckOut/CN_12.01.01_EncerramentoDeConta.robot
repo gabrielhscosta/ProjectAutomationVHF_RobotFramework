@@ -54,8 +54,8 @@ Preencher os campos necessários para buscar o resultado esperado
     Click Button                    ${BUTTON_PROCURAR}
 
 Looping Encerramento de Contas
-    [Documentation]                 Percorre de 0 até 1
-    ${VAR}                          Set Variable      ${1}
+    [Documentation]                 Percorre de 0 até 5
+    ${VAR}                          Set Variable      ${5}
     FOR                             ${ENCERCONTAS}    IN RANGE    ${VAR} + 1
       Realizar o Encerramento de Conta                ${ENCERCONTAS}
     END
