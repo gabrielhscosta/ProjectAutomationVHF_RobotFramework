@@ -18,7 +18,6 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 01.01: Inserir Reserva com 01 Hospede novo sem histórico e Empresa (Validar FRNH)
-    [Tags] CT1
     Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
