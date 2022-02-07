@@ -1,12 +1,12 @@
 *** Settings ***
 Library                          WhiteLibrary
 Library                          SikuliLibrary            mode=NEW
+Library                          FakerLibrary
 
 
 *** Variable ***
 ### Reserva Individual ###
-&{DADOSHOSPNOVO_RESIND}           nome=Alice Juliana      sobrenome=Monteiro  email=alicejulianamonteiro@automation.com
-...                               cidade=Maceio           idioma=Portug       datanasc=24031990   doc=EM     razaosocialemp=4U TURISMO
+&{DADOSHOSPNOVO_RESIND}           cidade=Maceio           idioma=Portug       datanasc=24031990   doc=EM     razaosocialemp=4U TURISMO
 &{HOSP_RESIND_0102}               cpf=51233681672
 &{HOSP_RESIND_0103}               cpf=15911094851
 &{DADOSHOSPCORT_RESIND}           nome=Emanuelly Sueli    sobrenome=Melo      email=emanusuelimelo@automation.com
