@@ -5,6 +5,7 @@ Resource        ../Resource/GuestData.robot
 Resource        ../Resource/LoginDesktop.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -18,6 +19,7 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 06.06: Check-In Preenchendo Ficha Expressa
+    Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
     Realizar login na aplicação - SQL

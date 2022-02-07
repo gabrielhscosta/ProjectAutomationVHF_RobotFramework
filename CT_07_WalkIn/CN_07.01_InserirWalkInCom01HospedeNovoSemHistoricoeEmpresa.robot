@@ -5,6 +5,7 @@ Resource        ../Resource/GuestData.robot
 Resource        ../Resource/LoginDesktop.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary        Locale=pt_BR
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -18,7 +19,6 @@ Test Setup      Add Needed Image Path
 
 *** Test Case ***
 Test Case 07.01: Inserir um Walk-in com 01 Hospede novo sem histórico e Empresa (Validar FRNH)
-    [Tags]  TS
     Disables automatic screenshot capturing on failure
     Abrir Modulo VHF
     Acessar a página de login da aplicação - SQL
@@ -73,12 +73,15 @@ Inserir hóspede novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           3 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSPNOVO_WALKIN.sobrenome}
+    ${SOBRENOME_WALKIN}             Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME_WALKIN}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSPNOVO_WALKIN.nome}
+    ${NOME_WALKIN}                  First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME_WALKIN}
     Sleep                           1 seconds
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSPNOVO_WALKIN.email}
+    ${EMAIL_WALKIN}                 Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL_WALKIN}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TRATAMENTO}
     Click                           ${IMAGE_TRATAMENTO}
@@ -117,7 +120,8 @@ Preencher informações e confirmar a reserva
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPNOVO_WALKIN.email}
+    ${EMAIL_WALKIN}                 Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_WALKIN}
     Click Item                      ${ITEM_ATUALIZARVALPERIO}
     Click Button                    ${BUTTON_CONFIRMAR}
 

@@ -63,12 +63,10 @@ Inserir hóspede novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           3 seconds
     Move Mouse                      208    331
-    # Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSPNOVO_RESIND.sobrenome}
     ${SOBRENOME_RESIND}             Last Name Female
     Input Text                      ${IMAGE_SOBRENOME}    ${SOBRENOME_RESIND}
     Move Mouse                      323    331
     ${NOME_RESIND}                  First Name Female
-    # Input Text                      ${IMAGE_NOME}       ${DADOSHOSPNOVO_RESIND.nome}
     Input Text                      ${IMAGE_NOME}         ${NOME_RESIND}
     Sleep                           1 seconds
     Move Mouse                      434    331

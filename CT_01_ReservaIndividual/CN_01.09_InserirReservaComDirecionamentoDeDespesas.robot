@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -43,7 +44,7 @@ Inserir Cliente(Empresa) com Contrato
     Attach Window                   ${SCREEN_MONTASELEC}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_RAZAOSOCIALEMP}
-    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPNOVO_WALKIN.razaosocialemp}
+    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPNOVO_RESIND.razaosocialemp}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
@@ -103,7 +104,8 @@ Preencher informações e confirmar a reserva
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPNOVO_RESIND.email}
+    ${EMAIL_RESIND}                 Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_RESIND}
     Click Item                      ${ITEM_ATUALIZARVALPERIO}
     @{ATENCAO}                      Get Application Windows
     Attach Window                   ${ATENCAO[0]}

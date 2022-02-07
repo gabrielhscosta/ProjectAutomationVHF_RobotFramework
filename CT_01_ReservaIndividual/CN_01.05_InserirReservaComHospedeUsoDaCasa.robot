@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -54,11 +55,14 @@ Inserir hóspede uso da casa novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           2 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSPUKSA_RESIND.sobrenome}
+    ${SOBRENOME_HOSPUKSA_RESIND}    Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME_HOSPUKSA_RESIND}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSPUKSA_RESIND.nome}
+    ${NOME_HOSPUKSA_RESIND}         First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME_HOSPUKSA_RESIND}
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSPUKSA_RESIND.email}
+    ${EMAIL_HOSPUKSA_RESIND}        Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL_HOSPUKSA_RESIND}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TIPOHOSPEDE}
     Click                           ${IMAGE_TIPOHOSPEDE}
@@ -73,7 +77,7 @@ Inserir hóspede uso da casa novo sem histórico estada
     Attach Window                   ${SCREEN_MONTASELEC}
     Sleep                           2 seconds
     Mouse Move                      campocidade.png
-    Input Text                      text.png            ${DADOSHOSPUKSA_RESIND.cidade}
+    Input Text                      text.png            ${DADOSHOSPNOVO_RESIND.cidade}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
@@ -82,12 +86,12 @@ Inserir hóspede uso da casa novo sem histórico estada
     Attach Window                   ${SCREEN_SELECGERAL}
     @{IDIOMA}                       Get Items           control_type:Edit
     Mouse Click                     686    237
-    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPUKSA_RESIND.idioma}
+    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_RESIND.idioma}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      409    409
-    Input Text                      datanasc.png        ${DADOSHOSPUKSA_RESIND.datanasc}
+    Input Text                      datanasc.png        ${DADOSHOSPNOVO_RESIND.datanasc}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Mouse Move                      funcionariodacasa.png
@@ -95,7 +99,7 @@ Inserir hóspede uso da casa novo sem histórico estada
     Attach Window                   ${SCREEN_MONTASELEC}
     Sleep                           1 seconds
     Mouse Move                      ${IMAGE_FUNCIONARIO}
-    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPUKSA_RESIND.func}
+    Input Text                      ${IMAGE_TEXT}       ${DADOS_RES.func}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
@@ -106,12 +110,13 @@ Preencher informações e confirmar a reserva
     Move Mouse                      633    203
     Attach Window                   ${SCREEN_SELECGERAL}
     @{DOC_CONFIRM}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPUKSA_RESIND.doc}
+    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPNOVO_RESIND.doc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPUKSA_RESIND.email}
+    ${EMAIL_HOSPUKSA_RESIND}        Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_HOSPUKSA_RESIND}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_SEGMENTO}
     Click                           ${IMAGE_LUPA}
@@ -122,7 +127,7 @@ Preencher informações e confirmar a reserva
     Mouse Click                     251    181
     Attach Window                   ${SCREEN_SELECGERAL}
     @{MOTIVO_DESC}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${MOTIVO_DESC[0]}   ${DADOSHOSPUKSA_RESIND.motdesc}
+    Input Text To Textbox           ${MOTIVO_DESC[0]}   ${DADOS_RES.motdesc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}

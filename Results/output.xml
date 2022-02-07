@@ -1,219 +1,2716 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.8.6 on win32)" generated="20220121 09:55:17.393" rpa="false" schemaversion="2">
-<suite id="s1" name="CT 00 ValidarLoginModulos" source="C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\CT_00_ValidarLoginModulos">
-<suite id="s1-s1" name="CN 00.01 AcessarSistema" source="C:\Users\gabriel.dacosta\github\ProjectAutomationVHF\CT_00_ValidarLoginModulos\CN_00.01_AcessarSistema.robot">
-<test id="s1-s1-t1" name="Test Case 02: Acessar Modulo VHF">
+<robot generator="Robot 4.1.3 (Python 3.8.6 on win32)" generated="20220207 18:06:19.886" rpa="false" schemaversion="2">
+<suite id="s1" name="CT 01 ReservaIndividual" source="C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\CT_01_ReservaIndividual">
+<suite id="s1-s1" name="CN 01.01 InserirReservaCom01HospedeNovoSemHistoricoeEmpresa" source="C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\CT_01_ReservaIndividual\CN_01.01_InserirReservaCom01HospedeNovoSemHistoricoeEmpresa.robot">
+<kw name="Start Sikuli Process" library="SikuliLibrary" type="SETUP">
+<msg timestamp="20220207 18:06:25.486" level="INFO">Starting process:
+java -jar c:\users\gabriel.dacosta\appdata\local\programs\python\python38\lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar 1125 C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\results</msg>
+<msg timestamp="20220207 18:06:25.495" level="INFO">Start sikuli java process on port 1125</msg>
+<msg timestamp="20220207 18:06:26.804" level="INFO">Sikuli java process is started</msg>
+<status status="PASS" starttime="20220207 18:06:25.484" endtime="20220207 18:06:29.701"/>
+</kw>
+<test id="s1-s1-t1" name="Test Case 01.01: Inserir Reserva com 01 Hospede novo sem histórico e Empresa (Validar FRNH)">
+<kw name="Add Needed Image Path" type="SETUP">
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${IMAGE_DIR}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220207 18:06:29.704" endtime="20220207 18:06:29.732"/>
+</kw>
+<status status="PASS" starttime="20220207 18:06:29.702" endtime="20220207 18:06:29.733"/>
+</kw>
+<kw name="Disables automatic screenshot capturing on failure" library="ResourceDesktop">
+<kw name="Take Screenshots On Failure" library="WhiteLibrary">
+<arg>FALSE</arg>
+<doc>Disables or enables automatic screenshot capturing on failure.</doc>
+<status status="PASS" starttime="20220207 18:06:29.733" endtime="20220207 18:06:29.733"/>
+</kw>
+<status status="PASS" starttime="20220207 18:06:29.733" endtime="20220207 18:06:29.734"/>
+</kw>
 <kw name="Abrir Modulo VHF" library="ResourceDesktop">
 <kw name="Launch Application" library="WhiteLibrary">
 <arg>${DIR.VHF}</arg>
 <doc>Launches an application.</doc>
-<status status="PASS" starttime="20220121 09:55:18.395" endtime="20220121 09:55:19.534"/>
+<status status="PASS" starttime="20220207 18:06:29.734" endtime="20220207 18:06:29.887"/>
 </kw>
-<status status="PASS" starttime="20220121 09:55:18.394" endtime="20220121 09:55:19.555"/>
+<status status="PASS" starttime="20220207 18:06:29.734" endtime="20220207 18:06:29.888"/>
 </kw>
 <kw name="Acessar a página de login da aplicação - SQL" library="LoginDesktop">
 <kw name="Attach Window" library="WhiteLibrary">
 <arg>class_name:TFrmParamSysPadrao</arg>
 <doc>Attaches WhiteLibrary to a window.</doc>
-<status status="PASS" starttime="20220121 09:55:19.556" endtime="20220121 09:55:21.584"/>
+<status status="PASS" starttime="20220207 18:06:29.889" endtime="20220207 18:06:31.782"/>
 </kw>
 <kw name="Wait Until Item Exists" library="WhiteLibrary">
 <arg>${LOGIN_PARAMCONEX0}</arg>
 <arg>5</arg>
 <doc>Waits until an item with given locator exists in the attached window.</doc>
-<status status="PASS" starttime="20220121 09:55:21.585" endtime="20220121 09:55:22.163"/>
+<status status="PASS" starttime="20220207 18:06:31.782" endtime="20220207 18:06:32.044"/>
 </kw>
 <kw name="Double Click Item" library="WhiteLibrary">
 <arg>${LOGIN_PARAMCONEX1}</arg>
 <doc>Double clicks an item.</doc>
-<status status="PASS" starttime="20220121 09:55:22.163" endtime="20220121 09:55:22.555"/>
+<status status="PASS" starttime="20220207 18:06:32.044" endtime="20220207 18:06:32.213"/>
 </kw>
 <kw name="Double Click Item" library="WhiteLibrary">
 <arg>text:Configurações</arg>
 <doc>Double clicks an item.</doc>
-<status status="PASS" starttime="20220121 09:55:22.555" endtime="20220121 09:55:22.727"/>
+<status status="PASS" starttime="20220207 18:06:32.213" endtime="20220207 18:06:32.361"/>
 </kw>
 <kw name="Click Item" library="WhiteLibrary">
 <arg>text:SQL Server</arg>
 <doc>Clicks an item.</doc>
-<status status="PASS" starttime="20220121 09:55:22.727" endtime="20220121 09:55:22.943"/>
+<status status="PASS" starttime="20220207 18:06:32.362" endtime="20220207 18:06:32.511"/>
 </kw>
 <kw name="Button Text Should Be" library="WhiteLibrary">
 <arg>${LOGIN_BUTTONCONFIR}</arg>
 <arg>Confirmar</arg>
 <doc>Verifies exact text in a button.</doc>
-<status status="PASS" starttime="20220121 09:55:22.944" endtime="20220121 09:55:23.015"/>
+<status status="PASS" starttime="20220207 18:06:32.511" endtime="20220207 18:06:32.550"/>
 </kw>
 <kw name="Click Button" library="WhiteLibrary">
 <arg>${LOGIN_BUTTONCONFIR}</arg>
 <doc>Clicks a button.</doc>
-<status status="PASS" starttime="20220121 09:55:23.015" endtime="20220121 09:55:23.407"/>
+<status status="PASS" starttime="20220207 18:06:32.550" endtime="20220207 18:06:32.748"/>
 </kw>
-<status status="PASS" starttime="20220121 09:55:19.556" endtime="20220121 09:55:23.407"/>
+<status status="PASS" starttime="20220207 18:06:29.889" endtime="20220207 18:06:32.750"/>
 </kw>
 <kw name="Realizar login na aplicação - SQL" library="LoginDesktop">
 <kw name="Set White Busy Timeout" library="WhiteLibrary">
 <arg>10 seconds</arg>
 <doc>Sets BusyTimeout for White and returns original value.</doc>
-<msg timestamp="20220121 09:55:23.410" level="INFO">White Busy Timeout set to 10000</msg>
-<status status="PASS" starttime="20220121 09:55:23.409" endtime="20220121 09:55:23.411"/>
+<msg timestamp="20220207 18:06:32.755" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:06:32.753" endtime="20220207 18:06:32.755"/>
 </kw>
 <kw name="Attach Window" library="WhiteLibrary">
 <arg>${LOGIN_TELALOGIN}</arg>
 <doc>Attaches WhiteLibrary to a window.</doc>
-<status status="PASS" starttime="20220121 09:55:23.411" endtime="20220121 09:55:24.219"/>
+<status status="PASS" starttime="20220207 18:06:32.756" endtime="20220207 18:06:34.833"/>
 </kw>
 <kw name="Window Title Should Be" library="WhiteLibrary">
 <arg>${LOGIN_TITLELOGIN}</arg>
 <doc>Verifies that the title of the currently attached window is ``expected``.</doc>
-<status status="PASS" starttime="20220121 09:55:24.220" endtime="20220121 09:55:24.232"/>
+<status status="PASS" starttime="20220207 18:06:34.833" endtime="20220207 18:06:34.847"/>
 </kw>
 <kw name="Get Items" library="WhiteLibrary">
 <var>@{CAIXA_LOGIN}</var>
 <arg>class_name:TEdit</arg>
 <doc>Returns a list of items that match the given ``locator``.</doc>
-<msg timestamp="20220121 09:55:24.360" level="INFO">@{CAIXA_LOGIN} = [ TextBox. AutomationId:206068, Name:, ControlType:editar, FrameworkId:Win32 | TextBox. AutomationId:206036, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
-<status status="PASS" starttime="20220121 09:55:24.232" endtime="20220121 09:55:24.360"/>
+<msg timestamp="20220207 18:06:34.932" level="INFO">@{CAIXA_LOGIN} = [ TextBox. AutomationId:2886668, Name:, ControlType:editar, FrameworkId:Win32 | TextBox. AutomationId:1118184, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:06:34.847" endtime="20220207 18:06:34.932"/>
 </kw>
 <kw name="Mouse Click" library="WhiteLibrary">
 <doc>Clicks mouse at given position.</doc>
-<status status="PASS" starttime="20220121 09:55:24.360" endtime="20220121 09:55:24.651"/>
+<status status="PASS" starttime="20220207 18:06:34.932" endtime="20220207 18:06:35.155"/>
 </kw>
 <kw name="Input Text To Textbox" library="WhiteLibrary">
 <arg>${CAIXA_LOGIN[0]}</arg>
 <arg>${LOGIN.usersql}</arg>
 <doc>Writes text to a textbox.</doc>
-<status status="PASS" starttime="20220121 09:55:24.651" endtime="20220121 09:55:24.796"/>
+<status status="PASS" starttime="20220207 18:06:35.155" endtime="20220207 18:06:35.293"/>
 </kw>
 <kw name="Move Mouse" library="WhiteLibrary">
 <arg>704</arg>
 <arg>375</arg>
 <doc>Add (``x``, ``y``) to current mouse location.</doc>
-<status status="PASS" starttime="20220121 09:55:24.796" endtime="20220121 09:55:24.853"/>
+<status status="PASS" starttime="20220207 18:06:35.293" endtime="20220207 18:06:35.297"/>
 </kw>
 <kw name="Input Text To Textbox" library="WhiteLibrary">
 <arg>${CAIXA_LOGIN[1]}</arg>
 <arg>${LOGIN.senhasql}</arg>
 <doc>Writes text to a textbox.</doc>
-<status status="PASS" starttime="20220121 09:55:24.853" endtime="20220121 09:55:25.104"/>
+<status status="PASS" starttime="20220207 18:06:35.297" endtime="20220207 18:06:35.382"/>
 </kw>
 <kw name="Click Button" library="WhiteLibrary">
 <arg>${LOGIN_BUTTONCONFIR}</arg>
 <doc>Clicks a button.</doc>
-<status status="PASS" starttime="20220121 09:55:25.104" endtime="20220121 09:55:25.435"/>
+<status status="PASS" starttime="20220207 18:06:35.382" endtime="20220207 18:06:36.080"/>
 </kw>
-<status status="PASS" starttime="20220121 09:55:23.408" endtime="20220121 09:55:25.436"/>
+<status status="PASS" starttime="20220207 18:06:32.752" endtime="20220207 18:06:36.080"/>
 </kw>
 <kw name="Selecionar Empresa - VHF" library="LoginDesktop">
 <kw name="Attach Window" library="WhiteLibrary">
 <arg>${LOGIN_SELECEMPRESA}</arg>
 <doc>Attaches WhiteLibrary to a window.</doc>
-<status status="PASS" starttime="20220121 09:55:25.439" endtime="20220121 09:55:25.443"/>
+<status status="PASS" starttime="20220207 18:06:36.082" endtime="20220207 18:06:36.088"/>
 </kw>
 <kw name="Window Title Should Be" library="WhiteLibrary">
 <arg>${LOGIN_TITLEEMPRESA}</arg>
 <doc>Verifies that the title of the currently attached window is ``expected``.</doc>
-<status status="PASS" starttime="20220121 09:55:25.443" endtime="20220121 09:55:25.465"/>
+<status status="PASS" starttime="20220207 18:06:36.088" endtime="20220207 18:06:36.103"/>
 </kw>
 <kw name="Mouse Click" library="WhiteLibrary">
 <arg>909</arg>
 <arg>363</arg>
 <doc>Clicks mouse at given position.</doc>
-<status status="PASS" starttime="20220121 09:55:25.465" endtime="20220121 09:55:25.486"/>
+<status status="PASS" starttime="20220207 18:06:36.103" endtime="20220207 18:06:36.122"/>
 </kw>
 <kw name="Click Item" library="WhiteLibrary">
 <arg>${LOGIN_COMBOEMPRESA}</arg>
 <doc>Clicks an item.</doc>
-<status status="PASS" starttime="20220121 09:55:25.487" endtime="20220121 09:55:25.581"/>
+<status status="PASS" starttime="20220207 18:06:36.123" endtime="20220207 18:06:36.219"/>
 </kw>
 <kw name="Mouse Click" library="WhiteLibrary">
 <arg>546</arg>
 <arg>400</arg>
 <doc>Clicks mouse at given position.</doc>
-<status status="PASS" starttime="20220121 09:55:25.582" endtime="20220121 09:55:25.602"/>
+<status status="PASS" starttime="20220207 18:06:36.220" endtime="20220207 18:06:36.238"/>
 </kw>
 <kw name="Verify Text In Textbox" library="WhiteLibrary">
 <arg>${LOGIN_DESCREMPRESA}</arg>
 <arg>${LOGIN_EMPRESA_QA_FRONT}</arg>
 <doc>Verifies text in a text box.</doc>
-<status status="PASS" starttime="20220121 09:55:25.604" endtime="20220121 09:55:25.715"/>
+<status status="PASS" starttime="20220207 18:06:36.241" endtime="20220207 18:06:36.324"/>
 </kw>
 <kw name="Click Button" library="WhiteLibrary">
 <arg>${LOGIN_BUTTONCONFIR}</arg>
 <doc>Clicks a button.</doc>
-<status status="PASS" starttime="20220121 09:55:25.715" endtime="20220121 09:55:26.028"/>
+<status status="PASS" starttime="20220207 18:06:36.325" endtime="20220207 18:06:37.334"/>
 </kw>
 <kw name="Set White Busy Timeout" library="WhiteLibrary">
 <arg>120 seconds</arg>
 <doc>Sets BusyTimeout for White and returns original value.</doc>
-<msg timestamp="20220121 09:55:26.029" level="INFO">White Busy Timeout set to 120000</msg>
-<status status="PASS" starttime="20220121 09:55:26.028" endtime="20220121 09:55:26.029"/>
+<msg timestamp="20220207 18:06:37.335" level="INFO">White Busy Timeout set to 120000</msg>
+<status status="PASS" starttime="20220207 18:06:37.335" endtime="20220207 18:06:37.335"/>
 </kw>
 <kw name="Get Application Windows" library="WhiteLibrary">
 <var>@{ATENCAO}</var>
 <doc>Returns a list of windows belonging to the currently attached application.</doc>
-<msg timestamp="20220121 09:55:41.982" level="INFO">@{ATENCAO} = [ Visual Hotal FrontOffice v6.11.30.00 ]</msg>
-<status status="PASS" starttime="20220121 09:55:26.029" endtime="20220121 09:55:41.982"/>
+<msg timestamp="20220207 18:07:39.871" level="INFO">@{ATENCAO} = [ Visual Hotal FrontOffice v6.11.31.00 ]</msg>
+<status status="PASS" starttime="20220207 18:06:37.335" endtime="20220207 18:07:39.871"/>
 </kw>
 <kw name="Attach Window" library="WhiteLibrary">
 <arg>${ATENCAO[0]}</arg>
 <doc>Attaches WhiteLibrary to a window.</doc>
-<status status="PASS" starttime="20220121 09:55:41.982" endtime="20220121 09:55:41.988"/>
+<status status="PASS" starttime="20220207 18:07:39.872" endtime="20220207 18:07:39.879"/>
 </kw>
 <kw name="Click Button" library="WhiteLibrary">
 <arg>${BUTTON_OK}</arg>
 <doc>Clicks a button.</doc>
-<status status="PASS" starttime="20220121 09:55:41.990" endtime="20220121 09:55:43.210"/>
+<status status="PASS" starttime="20220207 18:07:39.880" endtime="20220207 18:07:43.027"/>
 </kw>
-<status status="PASS" starttime="20220121 09:55:25.438" endtime="20220121 09:55:43.211"/>
+<status status="PASS" starttime="20220207 18:06:36.081" endtime="20220207 18:07:43.027"/>
 </kw>
 <kw name="Conferir se a tela principal do modulo VHF foi exibida" library="ConferenceDesktop">
 <kw name="Set White Busy Timeout" library="WhiteLibrary">
 <arg>${CONFERENCIA_TIMEOUT}</arg>
 <doc>Sets BusyTimeout for White and returns original value.</doc>
-<msg timestamp="20220121 09:55:43.213" level="INFO">White Busy Timeout set to 10000</msg>
-<status status="PASS" starttime="20220121 09:55:43.212" endtime="20220121 09:55:43.213"/>
+<msg timestamp="20220207 18:07:43.029" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:07:43.028" endtime="20220207 18:07:43.029"/>
 </kw>
 <kw name="Attach Window" library="WhiteLibrary">
 <arg>${SCREEN_TELAPRINCIPAL}</arg>
 <doc>Attaches WhiteLibrary to a window.</doc>
-<status status="PASS" starttime="20220121 09:55:43.213" endtime="20220121 09:55:43.230"/>
+<status status="PASS" starttime="20220207 18:07:43.029" endtime="20220207 18:07:43.049"/>
 </kw>
 <kw name="Window Title Should Contain" library="WhiteLibrary">
 <arg>Visual Hotal FrontOffice</arg>
 <doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
-<status status="PASS" starttime="20220121 09:55:43.231" endtime="20220121 09:55:43.237"/>
+<status status="PASS" starttime="20220207 18:07:43.049" endtime="20220207 18:07:43.060"/>
 </kw>
-<status status="PASS" starttime="20220121 09:55:43.212" endtime="20220121 09:55:43.237"/>
+<status status="PASS" starttime="20220207 18:07:43.028" endtime="20220207 18:07:43.060"/>
+</kw>
+<kw name="Acessar a tela de Reserva Individual">
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_RESINDIV}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:07:44.340" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268063594.png'/&gt;
+[log] CLICK on L[388,65]@S(0) (539 msec)</msg>
+<status status="PASS" starttime="20220207 18:07:43.061" endtime="20220207 18:07:44.341"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:07:54.625" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:07:44.341" endtime="20220207 18:07:54.625"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:07:54.626" endtime="20220207 18:07:54.631"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:07:56.640" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:07:54.631" endtime="20220207 18:07:56.640"/>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<arg>${TITLE_RESINDIVID}</arg>
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<status status="PASS" starttime="20220207 18:07:56.640" endtime="20220207 18:07:56.650"/>
+</kw>
+<status status="PASS" starttime="20220207 18:07:43.061" endtime="20220207 18:07:56.650"/>
+</kw>
+<kw name="Preencher os campos obrigatórios para gerar orçamento da reserva">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<arg>12</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220207 18:07:56.861" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268076856.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:07:56.651" endtime="20220207 18:07:56.861"/>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<doc>Double click</doc>
+<msg timestamp="20220207 18:07:57.868" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268077093.png'/&gt;
+[log] DOUBLE CLICK on L[179,273]@S(0) (575 msec)</msg>
+<status status="PASS" starttime="20220207 18:07:56.862" endtime="20220207 18:07:57.868"/>
+</kw>
+<kw name="Press Special Key" library="WhiteLibrary">
+<arg>DELETE</arg>
+<doc>Press a special key (Ctrl, tab, alt for example).</doc>
+<status status="PASS" starttime="20220207 18:07:57.869" endtime="20220207 18:07:57.905"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<arg>${DADOS_RES.noites}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:07:58.480" level="INFO">Input Text:
+3</msg>
+<msg timestamp="20220207 18:07:58.481" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268078117.png'/&gt;
+[log] CLICK on L[179,273]@S(0) (29 msec)
+[log]  TYPE "3"</msg>
+<status status="PASS" starttime="20220207 18:07:57.906" endtime="20220207 18:07:58.481"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>587</arg>
+<arg>276</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:07:58.481" endtime="20220207 18:07:58.483"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:07:58.483" endtime="20220207 18:07:58.969"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{TIPOUH}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:07:59.000" level="INFO">@{TIPOUH} = [ TextBox. AutomationId:1379530, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:07:58.970" endtime="20220207 18:07:59.000"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>708</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:07:59.000" endtime="20220207 18:07:59.002"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${TIPOUH[0]}</arg>
+<arg>${DADOS_RES.categ}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:07:59.004" endtime="20220207 18:07:59.080"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:07:59.080" endtime="20220207 18:07:59.223"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:07:59.372" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:07:59.225" endtime="20220207 18:07:59.372"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:07:59.372" endtime="20220207 18:07:59.377"/>
+</kw>
+<status status="PASS" starttime="20220207 18:07:56.651" endtime="20220207 18:07:59.377"/>
+</kw>
+<kw name="Inserir hóspede novo sem histórico estada">
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:07:59.379" endtime="20220207 18:07:59.387"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:02.404" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220207 18:07:59.388" endtime="20220207 18:08:02.404"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:08:02.404" endtime="20220207 18:08:02.405"/>
+</kw>
+<kw name="Last Name Female" library="FakerLibrary">
+<var>${SOBRENOME_RESIND}</var>
+<msg timestamp="20220207 18:08:02.406" level="INFO">${SOBRENOME_RESIND} = Parsons</msg>
+<status status="PASS" starttime="20220207 18:08:02.405" endtime="20220207 18:08:02.406"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_SOBRENOME}</arg>
+<arg>${SOBRENOME_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:08:03.775" level="INFO">Input Text:
+Parsons</msg>
+<msg timestamp="20220207 18:08:03.775" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268082561.png'/&gt;
+[log] CLICK on L[211,326]@S(0) (545 msec)
+[log]  TYPE "Parsons"</msg>
+<status status="PASS" starttime="20220207 18:08:02.406" endtime="20220207 18:08:03.775"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>323</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:08:03.776" endtime="20220207 18:08:03.776"/>
+</kw>
+<kw name="First Name Female" library="FakerLibrary">
+<var>${NOME_RESIND}</var>
+<msg timestamp="20220207 18:08:03.777" level="INFO">${NOME_RESIND} = Cindy</msg>
+<status status="PASS" starttime="20220207 18:08:03.776" endtime="20220207 18:08:03.777"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOME}</arg>
+<arg>${NOME_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:08:05.026" level="INFO">Input Text:
+Cindy</msg>
+<msg timestamp="20220207 18:08:05.026" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268083964.png'/&gt;
+[log] CLICK on L[325,325]@S(0) (535 msec)
+[log]  TYPE "Cindy"</msg>
+<status status="PASS" starttime="20220207 18:08:03.777" endtime="20220207 18:08:05.026"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:06.042" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:08:05.027" endtime="20220207 18:08:06.042"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>434</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:08:06.042" endtime="20220207 18:08:06.042"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL_RESIND}</var>
+<msg timestamp="20220207 18:08:06.043" level="INFO">${EMAIL_RESIND} = simmonsamanda@example.org</msg>
+<status status="PASS" starttime="20220207 18:08:06.043" endtime="20220207 18:08:06.043"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_EMAIL}</arg>
+<arg>${EMAIL_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:08:08.670" level="INFO">Input Text:
+simmonsamanda@example.org</msg>
+<msg timestamp="20220207 18:08:08.670" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268086276.png'/&gt;
+[log] CLICK on L[441,324]@S(0) (540 msec)
+[log]  TYPE "simmonsamanda@example.org"</msg>
+<status status="PASS" starttime="20220207 18:08:06.043" endtime="20220207 18:08:08.670"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:10.679" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:08:08.671" endtime="20220207 18:08:10.679"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:08:11.340" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268090819.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:08:10.680" endtime="20220207 18:08:11.340"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:08:11.781" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268091556.png'/&gt;
+[log] CLICK on L[68,365]@S(0) (46 msec)</msg>
+<status status="PASS" starttime="20220207 18:08:11.340" endtime="20220207 18:08:11.781"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:13.792" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:08:11.781" endtime="20220207 18:08:13.792"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>47</arg>
+<arg>471</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:08:13.792" endtime="20220207 18:08:13.806"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:15.808" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:08:13.806" endtime="20220207 18:08:15.808"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>325</arg>
+<arg>369</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:08:15.808" endtime="20220207 18:08:15.821"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_MONTASELEC}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:15.821" endtime="20220207 18:08:16.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:18.508" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:08:16.508" endtime="20220207 18:08:18.509"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_CAMPOCIDADE}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:08:19.206" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268098681.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:08:18.510" endtime="20220207 18:08:19.206"/>
+</kw>
+<kw name="City" library="FakerLibrary">
+<var>${CIDADE_RESIND}</var>
+<doc>:example: 'Sashabury'</doc>
+<msg timestamp="20220207 18:08:19.207" level="INFO">${CIDADE_RESIND} = East Travismouth</msg>
+<status status="PASS" starttime="20220207 18:08:19.207" endtime="20220207 18:08:19.207"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_TEXT}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.cidade}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:08:20.685" level="INFO">Input Text:
+Maceio</msg>
+<msg timestamp="20220207 18:08:20.685" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268099444.png'/&gt;
+[log] CLICK on L[783,237]@S(0) (542 msec)
+[log]  TYPE "Maceio"</msg>
+<status status="PASS" starttime="20220207 18:08:19.208" endtime="20220207 18:08:20.685"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_PROCURAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:08:20.686" endtime="20220207 18:08:20.908"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:08:20.908" endtime="20220207 18:08:22.863"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:08:22.955" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:08:22.863" endtime="20220207 18:08:22.955"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:22.955" endtime="20220207 18:08:22.957"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>515</arg>
+<arg>370</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:08:22.957" endtime="20220207 18:08:22.964"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:22.964" endtime="20220207 18:08:23.239"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{IDIOMA}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:08:23.290" level="INFO">@{IDIOMA} = [ TextBox. AutomationId:2756502, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:08:23.240" endtime="20220207 18:08:23.290"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>686</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:08:23.291" endtime="20220207 18:08:23.300"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${IDIOMA[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.idioma}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:08:23.302" endtime="20220207 18:08:23.389"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:08:23.389" endtime="20220207 18:08:23.637"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:08:23.710" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:08:23.638" endtime="20220207 18:08:23.710"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:23.710" endtime="20220207 18:08:23.713"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>409</arg>
+<arg>409</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:08:23.713" endtime="20220207 18:08:23.714"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_DATANASC}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.datanasc}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:08:25.146" level="INFO">Input Text:
+24031990</msg>
+<msg timestamp="20220207 18:08:25.146" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268103910.png'/&gt;
+[log] CLICK on L[421,404]@S(0) (534 msec)
+[log]  TYPE "24031990"</msg>
+<status status="PASS" starttime="20220207 18:08:23.714" endtime="20220207 18:08:25.146"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:08:25.146" endtime="20220207 18:08:25.162"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:08:27.659" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:08:25.162" endtime="20220207 18:08:27.659"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:27.659" endtime="20220207 18:08:27.666"/>
+</kw>
+<status status="PASS" starttime="20220207 18:07:59.378" endtime="20220207 18:08:27.667"/>
+</kw>
+<kw name="Preencher informações e confirmar a reserva">
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>87</arg>
+<arg>508</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:08:27.669" endtime="20220207 18:08:27.681"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:27.684" endtime="20220207 18:08:27.690"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{DOC_CONFIRM}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:08:27.748" level="INFO">@{DOC_CONFIRM} = [ TextBox. AutomationId:2822038, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:08:27.690" endtime="20220207 18:08:27.749"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${DOC_CONFIRM[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.doc}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:08:27.751" endtime="20220207 18:08:27.991"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:08:27.992" endtime="20220207 18:08:28.205"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:08:28.334" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:08:28.206" endtime="20220207 18:08:28.334"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:28.334" endtime="20220207 18:08:28.338"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>508</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:08:28.338" endtime="20220207 18:08:28.338"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL_RESIND}</var>
+<msg timestamp="20220207 18:08:28.339" level="INFO">${EMAIL_RESIND} = mariah71@example.org</msg>
+<status status="PASS" starttime="20220207 18:08:28.339" endtime="20220207 18:08:28.339"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NUMERO}</arg>
+<arg>${EMAIL_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:08:30.663" level="INFO">Input Text:
+mariah71@example.org</msg>
+<msg timestamp="20220207 18:08:30.663" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268108573.png'/&gt;
+[log] CLICK on L[206,504]@S(0) (555 msec)
+[log]  TYPE "mariah71@example.org"</msg>
+<status status="PASS" starttime="20220207 18:08:28.340" endtime="20220207 18:08:30.663"/>
+</kw>
+<kw name="Click Item" library="WhiteLibrary">
+<arg>${ITEM_ATUALIZARVALPERIO}</arg>
+<doc>Clicks an item.</doc>
+<status status="PASS" starttime="20220207 18:08:30.664" endtime="20220207 18:08:33.948"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:08:33.948" endtime="20220207 18:08:44.093"/>
+</kw>
+<status status="PASS" starttime="20220207 18:08:27.668" endtime="20220207 18:08:44.094"/>
+</kw>
+<kw name="Conferir se a tela de conclusão da reserva foi exibida">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<arg>10 seconds</arg>
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<msg timestamp="20220207 18:08:44.100" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:08:44.097" endtime="20220207 18:08:44.101"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>610</arg>
+<arg>210</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:08:44.102" endtime="20220207 18:08:44.103"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{SITUACAORES}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:08:44.284" level="INFO">@{SITUACAORES} = [ Situação da Reserva | Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:08:44.103" endtime="20220207 18:08:44.285"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SITUACAORES[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:44.285" endtime="20220207 18:08:44.287"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:46.297" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:08:44.287" endtime="20220207 18:08:46.297"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${IMAGE_CONFIRMACAORES}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220207 18:08:46.515" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268126503.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:08:46.298" endtime="20220207 18:08:46.515"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:08:47.529" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:08:46.515" endtime="20220207 18:08:47.529"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_SAIRRES}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:08:48.416" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268127700.png'/&gt;
+[log] CLICK on L[890,420]@S(0) (553 msec)</msg>
+<status status="PASS" starttime="20220207 18:08:47.529" endtime="20220207 18:08:48.417"/>
+</kw>
+<status status="PASS" starttime="20220207 18:08:44.095" endtime="20220207 18:08:48.417"/>
+</kw>
+<kw name="Conferir se a tela principal do modulo VHF foi exibida" library="ConferenceDesktop">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<arg>${CONFERENCIA_TIMEOUT}</arg>
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<msg timestamp="20220207 18:08:48.418" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:08:48.418" endtime="20220207 18:08:48.418"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_TELAPRINCIPAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:08:48.419" endtime="20220207 18:08:48.775"/>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<arg>Visual Hotal FrontOffice</arg>
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<status status="PASS" starttime="20220207 18:08:48.775" endtime="20220207 18:08:48.788"/>
+</kw>
+<status status="PASS" starttime="20220207 18:08:48.418" endtime="20220207 18:08:48.789"/>
+</kw>
+<tag>CT1</tag>
+<status status="PASS" starttime="20220207 18:06:29.701" endtime="20220207 18:08:48.790"/>
+</test>
+<kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20220207 18:08:48.800" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20220207 18:08:48.792" endtime="20220207 18:08:48.800"/>
+</kw>
+<doc>Sikuli Library Demo</doc>
+<status status="PASS" starttime="20220207 18:06:19.911" endtime="20220207 18:08:48.800"/>
+</suite>
+<suite id="s1-s2" name="CN 01.11 InserirReservaCom02HospedesNovosSemHistoricoeEmpresa" source="C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\CT_01_ReservaIndividual\CN_01.11_InserirReservaCom02HospedesNovosSemHistoricoeEmpresa.robot">
+<kw name="Start Sikuli Process" library="SikuliLibrary" type="SETUP">
+<msg timestamp="20220207 18:08:48.844" level="INFO">Starting process:
+java -jar c:\users\gabriel.dacosta\appdata\local\programs\python\python38\lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar 26493 C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\results</msg>
+<msg timestamp="20220207 18:08:48.857" level="INFO">Start sikuli java process on port 26493</msg>
+<msg timestamp="20220207 18:08:50.423" level="INFO">Sikuli java process is started</msg>
+<status status="PASS" starttime="20220207 18:08:48.833" endtime="20220207 18:08:53.913"/>
+</kw>
+<test id="s1-s2-t1" name="Test Case 01.11: Inserir Reserva com 02 Hospedes novos sem histórico e Empresa (Validar FRNH)">
+<kw name="Add Needed Image Path" type="SETUP">
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${IMAGE_DIR}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220207 18:08:53.915" endtime="20220207 18:08:53.940"/>
+</kw>
+<status status="PASS" starttime="20220207 18:08:53.914" endtime="20220207 18:08:53.940"/>
+</kw>
+<kw name="Disables automatic screenshot capturing on failure" library="ResourceDesktop">
+<kw name="Take Screenshots On Failure" library="WhiteLibrary">
+<arg>FALSE</arg>
+<doc>Disables or enables automatic screenshot capturing on failure.</doc>
+<status status="PASS" starttime="20220207 18:08:53.941" endtime="20220207 18:08:53.942"/>
+</kw>
+<status status="PASS" starttime="20220207 18:08:53.941" endtime="20220207 18:08:53.942"/>
+</kw>
+<kw name="Acessar a tela de Reserva Individual">
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_RESINDIV1}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:08:55.220" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268134501.png'/&gt;
+[log] CLICK on L[387,65]@S(0) (537 msec)</msg>
+<status status="PASS" starttime="20220207 18:08:53.943" endtime="20220207 18:08:55.220"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:00.044" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:08:55.221" endtime="20220207 18:09:00.044"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:00.045" endtime="20220207 18:09:00.048"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:02.056" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:00.048" endtime="20220207 18:09:02.056"/>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<arg>${TITLE_RESINDIVID}</arg>
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<status status="PASS" starttime="20220207 18:09:02.056" endtime="20220207 18:09:02.065"/>
+</kw>
+<status status="PASS" starttime="20220207 18:08:53.943" endtime="20220207 18:09:02.065"/>
+</kw>
+<kw name="Preencher os campos obrigatórios para gerar orçamento da reserva">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<arg>12</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220207 18:09:02.250" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268142245.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:09:02.066" endtime="20220207 18:09:02.250"/>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<doc>Double click</doc>
+<msg timestamp="20220207 18:09:03.246" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268142435.png'/&gt;
+[log] DOUBLE CLICK on L[179,273]@S(0) (607 msec)</msg>
+<status status="PASS" starttime="20220207 18:09:02.250" endtime="20220207 18:09:03.246"/>
+</kw>
+<kw name="Press Special Key" library="WhiteLibrary">
+<arg>DELETE</arg>
+<doc>Press a special key (Ctrl, tab, alt for example).</doc>
+<status status="PASS" starttime="20220207 18:09:03.247" endtime="20220207 18:09:03.277"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<arg>${DADOS_RES.noites}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:03.845" level="INFO">Input Text:
+3</msg>
+<msg timestamp="20220207 18:09:03.845" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268143512.png'/&gt;
+[log] CLICK on L[179,273]@S(0) (32 msec)
+[log]  TYPE "3"</msg>
+<status status="PASS" starttime="20220207 18:09:03.277" endtime="20220207 18:09:03.845"/>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${IMAGE_ADULTO}</arg>
+<doc>Double click</doc>
+<msg timestamp="20220207 18:09:04.796" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268144033.png'/&gt;
+[log] DOUBLE CLICK on L[366,270]@S(0) (591 msec)</msg>
+<status status="PASS" starttime="20220207 18:09:03.846" endtime="20220207 18:09:04.796"/>
+</kw>
+<kw name="Press Special Key" library="WhiteLibrary">
+<arg>DELETE</arg>
+<doc>Press a special key (Ctrl, tab, alt for example).</doc>
+<status status="PASS" starttime="20220207 18:09:04.797" endtime="20220207 18:09:04.823"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_ADULTO}</arg>
+<arg>${DADOS_RES.adultos}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:05.302" level="INFO">Input Text:
+2</msg>
+<msg timestamp="20220207 18:09:05.302" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268144999.png'/&gt;
+[log] CLICK on L[366,270]@S(0) (32 msec)
+[log]  TYPE "2"</msg>
+<status status="PASS" starttime="20220207 18:09:04.823" endtime="20220207 18:09:05.302"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>587</arg>
+<arg>276</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:05.303" endtime="20220207 18:09:05.304"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:05.305" endtime="20220207 18:09:05.732"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{TIPOUH}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:09:05.765" level="INFO">@{TIPOUH} = [ TextBox. AutomationId:987392, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:09:05.733" endtime="20220207 18:09:05.765"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>708</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:05.765" endtime="20220207 18:09:05.773"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${TIPOUH[0]}</arg>
+<arg>${DADOS_RES.categ}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:09:05.774" endtime="20220207 18:09:05.841"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:05.841" endtime="20220207 18:09:05.996"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:06.146" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:09:05.996" endtime="20220207 18:09:06.146"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:06.148" endtime="20220207 18:09:06.152"/>
+</kw>
+<status status="PASS" starttime="20220207 18:09:02.065" endtime="20220207 18:09:06.152"/>
+</kw>
+<kw name="Inserir hóspede novo sem histórico estada">
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:06.153" endtime="20220207 18:09:06.174"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:08.183" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:06.174" endtime="20220207 18:09:08.183"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:08.183" endtime="20220207 18:09:08.184"/>
+</kw>
+<kw name="Last Name Female" library="FakerLibrary">
+<var>${SOBRENOME1_0111_RESIND}</var>
+<msg timestamp="20220207 18:09:08.185" level="INFO">${SOBRENOME1_0111_RESIND} = Nguyen</msg>
+<status status="PASS" starttime="20220207 18:09:08.184" endtime="20220207 18:09:08.185"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_SOBRENOME}</arg>
+<arg>${SOBRENOME1_0111_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:09.474" level="INFO">Input Text:
+Nguyen</msg>
+<msg timestamp="20220207 18:09:09.474" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268148358.png'/&gt;
+[log] CLICK on L[211,326]@S(0) (544 msec)
+[log]  TYPE "Nguyen"</msg>
+<status status="PASS" starttime="20220207 18:09:08.185" endtime="20220207 18:09:09.474"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>323</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:09.475" endtime="20220207 18:09:09.475"/>
+</kw>
+<kw name="First Name Female" library="FakerLibrary">
+<var>${NOME1_0111_RESIND}</var>
+<msg timestamp="20220207 18:09:09.475" level="INFO">${NOME1_0111_RESIND} = Dawn</msg>
+<status status="PASS" starttime="20220207 18:09:09.475" endtime="20220207 18:09:09.475"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOME}</arg>
+<arg>${NOME1_0111_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:10.711" level="INFO">Input Text:
+Dawn</msg>
+<msg timestamp="20220207 18:09:10.712" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268149647.png'/&gt;
+[log] CLICK on L[325,325]@S(0) (546 msec)
+[log]  TYPE "Dawn"</msg>
+<status status="PASS" starttime="20220207 18:09:09.475" endtime="20220207 18:09:10.712"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:11.715" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:09:10.712" endtime="20220207 18:09:11.715"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>434</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:11.715" endtime="20220207 18:09:11.716"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL1_0111_RESIND}</var>
+<msg timestamp="20220207 18:09:11.716" level="INFO">${EMAIL1_0111_RESIND} = vadams@example.net</msg>
+<status status="PASS" starttime="20220207 18:09:11.716" endtime="20220207 18:09:11.716"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_EMAIL}</arg>
+<arg>${EMAIL1_0111_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:13.860" level="INFO">Input Text:
+vadams@example.net</msg>
+<msg timestamp="20220207 18:09:13.860" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268151917.png'/&gt;
+[log] CLICK on L[441,324]@S(0) (549 msec)
+[log]  TYPE "vadams@example.net"</msg>
+<status status="PASS" starttime="20220207 18:09:11.716" endtime="20220207 18:09:13.860"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:15.870" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:13.861" endtime="20220207 18:09:15.870"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:09:16.549" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268156028.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:09:15.870" endtime="20220207 18:09:16.549"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:09:17.112" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268156840.png'/&gt;
+[log] CLICK on L[68,365]@S(0) (40 msec)</msg>
+<status status="PASS" starttime="20220207 18:09:16.550" endtime="20220207 18:09:17.113"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:18.117" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:09:17.113" endtime="20220207 18:09:18.117"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>47</arg>
+<arg>471</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:18.117" endtime="20220207 18:09:18.126"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:20.127" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:18.126" endtime="20220207 18:09:20.127"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>325</arg>
+<arg>369</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:20.127" endtime="20220207 18:09:20.141"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_MONTASELEC}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:20.141" endtime="20220207 18:09:20.733"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:22.741" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:20.734" endtime="20220207 18:09:22.741"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_CAMPOCIDADE}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:09:23.408" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268162895.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:09:22.741" endtime="20220207 18:09:23.408"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_TEXT}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.cidade}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:24.866" level="INFO">Input Text:
+Maceio</msg>
+<msg timestamp="20220207 18:09:24.866" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268163656.png'/&gt;
+[log] CLICK on L[783,237]@S(0) (554 msec)
+[log]  TYPE "Maceio"</msg>
+<status status="PASS" starttime="20220207 18:09:23.408" endtime="20220207 18:09:24.866"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_PROCURAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:24.866" endtime="20220207 18:09:25.095"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:25.095" endtime="20220207 18:09:27.291"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:27.382" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:09:27.291" endtime="20220207 18:09:27.382"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:27.383" endtime="20220207 18:09:27.384"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>515</arg>
+<arg>370</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:27.384" endtime="20220207 18:09:27.403"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:27.403" endtime="20220207 18:09:27.660"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{IDIOMA}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:09:27.694" level="INFO">@{IDIOMA} = [ TextBox. AutomationId:4853496, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:09:27.660" endtime="20220207 18:09:27.694"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>686</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:27.694" endtime="20220207 18:09:27.704"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${IDIOMA[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.idioma}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:09:27.706" endtime="20220207 18:09:27.811"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:27.811" endtime="20220207 18:09:28.100"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:28.168" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:09:28.101" endtime="20220207 18:09:28.169"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:28.169" endtime="20220207 18:09:28.173"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>409</arg>
+<arg>409</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:28.173" endtime="20220207 18:09:28.174"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_DATANASC}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.datanasc}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:29.644" level="INFO">Input Text:
+24031990</msg>
+<msg timestamp="20220207 18:09:29.644" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268168395.png'/&gt;
+[log] CLICK on L[421,404]@S(0) (547 msec)
+[log]  TYPE "24031990"</msg>
+<status status="PASS" starttime="20220207 18:09:28.174" endtime="20220207 18:09:29.644"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:29.645" endtime="20220207 18:09:29.649"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:33.658" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:29.649" endtime="20220207 18:09:33.658"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:33.658" endtime="20220207 18:09:33.659"/>
+</kw>
+<kw name="Last Name Female" library="FakerLibrary">
+<var>${SOBRENOME2_0111_RESIND}</var>
+<msg timestamp="20220207 18:09:33.659" level="INFO">${SOBRENOME2_0111_RESIND} = Nguyen</msg>
+<status status="PASS" starttime="20220207 18:09:33.659" endtime="20220207 18:09:33.659"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_SOBRENOME}</arg>
+<arg>${SOBRENOME2_0111_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:34.968" level="INFO">Input Text:
+Nguyen</msg>
+<msg timestamp="20220207 18:09:34.968" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268173829.png'/&gt;
+[log] CLICK on L[211,326]@S(0) (548 msec)
+[log]  TYPE "Nguyen"</msg>
+<status status="PASS" starttime="20220207 18:09:33.659" endtime="20220207 18:09:34.968"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>323</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:34.968" endtime="20220207 18:09:34.968"/>
+</kw>
+<kw name="First Name Female" library="FakerLibrary">
+<var>${NOME2_0111_RESIND}</var>
+<msg timestamp="20220207 18:09:34.969" level="INFO">${NOME2_0111_RESIND} = Jennifer</msg>
+<status status="PASS" starttime="20220207 18:09:34.969" endtime="20220207 18:09:34.969"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOME}</arg>
+<arg>${NOME2_0111_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:36.375" level="INFO">Input Text:
+Jennifer</msg>
+<msg timestamp="20220207 18:09:36.375" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268175120.png'/&gt;
+[log] CLICK on L[325,325]@S(0) (552 msec)
+[log]  TYPE "Jennifer"</msg>
+<status status="PASS" starttime="20220207 18:09:34.969" endtime="20220207 18:09:36.375"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:37.391" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:09:36.376" endtime="20220207 18:09:37.391"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>434</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:37.391" endtime="20220207 18:09:37.391"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL2_0111_RESIND}</var>
+<msg timestamp="20220207 18:09:37.392" level="INFO">${EMAIL2_0111_RESIND} = kathleen24@example.org</msg>
+<status status="PASS" starttime="20220207 18:09:37.392" endtime="20220207 18:09:37.392"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_EMAIL}</arg>
+<arg>${EMAIL2_0111_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:39.778" level="INFO">Input Text:
+kathleen24@example.org</msg>
+<msg timestamp="20220207 18:09:39.778" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268177608.png'/&gt;
+[log] CLICK on L[441,324]@S(0) (547 msec)
+[log]  TYPE "kathleen24@example.org"</msg>
+<status status="PASS" starttime="20220207 18:09:37.392" endtime="20220207 18:09:39.778"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:41.791" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:39.779" endtime="20220207 18:09:41.791"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:09:42.456" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268181933.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:09:41.791" endtime="20220207 18:09:42.456"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:09:42.887" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268182629.png'/&gt;
+[log] CLICK on L[68,365]@S(0) (68 msec)</msg>
+<status status="PASS" starttime="20220207 18:09:42.456" endtime="20220207 18:09:42.888"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:43.890" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:09:42.888" endtime="20220207 18:09:43.890"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>47</arg>
+<arg>471</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:43.890" endtime="20220207 18:09:43.901"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:45.909" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:43.902" endtime="20220207 18:09:45.909"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>325</arg>
+<arg>369</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:45.909" endtime="20220207 18:09:45.915"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_MONTASELEC}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:45.915" endtime="20220207 18:09:46.212"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:09:48.214" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:09:46.212" endtime="20220207 18:09:48.214"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_CAMPOCIDADE}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:09:48.883" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268188373.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:09:48.214" endtime="20220207 18:09:48.883"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_PROCURAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:48.883" endtime="20220207 18:09:49.111"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:49.111" endtime="20220207 18:09:50.925"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:50.983" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:09:50.925" endtime="20220207 18:09:50.983"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:50.983" endtime="20220207 18:09:50.985"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>515</arg>
+<arg>370</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:50.985" endtime="20220207 18:09:50.994"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:50.995" endtime="20220207 18:09:51.429"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{IDIOMA}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:09:51.455" level="INFO">@{IDIOMA} = [ TextBox. AutomationId:8260888, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:09:51.429" endtime="20220207 18:09:51.455"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>686</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:51.455" endtime="20220207 18:09:51.459"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${IDIOMA[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.idioma}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:09:51.460" endtime="20220207 18:09:51.542"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:51.543" endtime="20220207 18:09:51.868"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:51.955" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:09:51.868" endtime="20220207 18:09:51.955"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:51.955" endtime="20220207 18:09:51.958"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>409</arg>
+<arg>409</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:51.958" endtime="20220207 18:09:51.959"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_DATANASC}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.datanasc}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:53.452" level="INFO">Input Text:
+24031990</msg>
+<msg timestamp="20220207 18:09:53.452" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268192183.png'/&gt;
+[log] CLICK on L[421,404]@S(0) (545 msec)
+[log]  TYPE "24031990"</msg>
+<status status="PASS" starttime="20220207 18:09:51.959" endtime="20220207 18:09:53.452"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:53.453" endtime="20220207 18:09:53.458"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:55.879" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:09:53.458" endtime="20220207 18:09:55.879"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:55.880" endtime="20220207 18:09:55.883"/>
+</kw>
+<status status="PASS" starttime="20220207 18:09:06.153" endtime="20220207 18:09:55.883"/>
+</kw>
+<kw name="Preencher informações e confirmar a reserva">
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>87</arg>
+<arg>508</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:09:55.885" endtime="20220207 18:09:55.893"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:55.895" endtime="20220207 18:09:55.901"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{DOC_CONFIRM}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:09:55.967" level="INFO">@{DOC_CONFIRM} = [ TextBox. AutomationId:8326424, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:09:55.901" endtime="20220207 18:09:55.967"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${DOC_CONFIRM[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.doc}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:09:55.967" endtime="20220207 18:09:56.057"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:09:56.057" endtime="20220207 18:09:56.251"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:09:56.397" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:09:56.251" endtime="20220207 18:09:56.398"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:09:56.398" endtime="20220207 18:09:56.400"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>508</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:09:56.401" endtime="20220207 18:09:56.401"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL_RESIND}</var>
+<msg timestamp="20220207 18:09:56.402" level="INFO">${EMAIL_RESIND} = albert38@example.com</msg>
+<status status="PASS" starttime="20220207 18:09:56.401" endtime="20220207 18:09:56.402"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NUMERO}</arg>
+<arg>${EMAIL_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:09:58.690" level="INFO">Input Text:
+albert38@example.com</msg>
+<msg timestamp="20220207 18:09:58.690" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268196630.png'/&gt;
+[log] CLICK on L[206,504]@S(0) (558 msec)
+[log]  TYPE "albert38@example.com"</msg>
+<status status="PASS" starttime="20220207 18:09:56.402" endtime="20220207 18:09:58.690"/>
+</kw>
+<kw name="Click Item" library="WhiteLibrary">
+<arg>${ITEM_ATUALIZARVALPERIO}</arg>
+<doc>Clicks an item.</doc>
+<status status="PASS" starttime="20220207 18:09:58.690" endtime="20220207 18:10:02.108"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:10:02.108" endtime="20220207 18:10:13.481"/>
+</kw>
+<status status="PASS" starttime="20220207 18:09:55.884" endtime="20220207 18:10:13.482"/>
+</kw>
+<kw name="Conferir se a tela de conclusão da reserva foi exibida">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<arg>10 seconds</arg>
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<msg timestamp="20220207 18:10:13.485" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:10:13.484" endtime="20220207 18:10:13.485"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>610</arg>
+<arg>210</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:10:13.485" endtime="20220207 18:10:13.485"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{SITUACAORES}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:10:13.763" level="INFO">@{SITUACAORES} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:10:13.486" endtime="20220207 18:10:13.763"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SITUACAORES[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:13.764" endtime="20220207 18:10:13.766"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:15.771" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:10:13.766" endtime="20220207 18:10:15.771"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${IMAGE_CONFIRMACAORES}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220207 18:10:15.972" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268215959.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:10:15.771" endtime="20220207 18:10:15.972"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:16.982" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:10:15.973" endtime="20220207 18:10:16.982"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_SAIRRES}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:10:17.860" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268217155.png'/&gt;
+[log] CLICK on L[890,420]@S(0) (558 msec)</msg>
+<status status="PASS" starttime="20220207 18:10:16.982" endtime="20220207 18:10:17.861"/>
+</kw>
+<status status="PASS" starttime="20220207 18:10:13.483" endtime="20220207 18:10:17.862"/>
+</kw>
+<kw name="Conferir se a tela principal do modulo VHF foi exibida" library="ConferenceDesktop">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<arg>${CONFERENCIA_TIMEOUT}</arg>
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<msg timestamp="20220207 18:10:17.870" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:10:17.869" endtime="20220207 18:10:17.870"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_TELAPRINCIPAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:17.870" endtime="20220207 18:10:18.162"/>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<arg>Visual Hotal FrontOffice</arg>
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<status status="PASS" starttime="20220207 18:10:18.163" endtime="20220207 18:10:18.175"/>
+</kw>
+<status status="PASS" starttime="20220207 18:10:17.867" endtime="20220207 18:10:18.175"/>
+</kw>
+<tag>CT1</tag>
+<status status="PASS" starttime="20220207 18:08:53.913" endtime="20220207 18:10:18.176"/>
+</test>
+<kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20220207 18:10:18.187" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20220207 18:10:18.177" endtime="20220207 18:10:18.188"/>
+</kw>
+<doc>Sikuli Library Demo</doc>
+<status status="PASS" starttime="20220207 18:08:48.803" endtime="20220207 18:10:18.188"/>
+</suite>
+<suite id="s1-s3" name="CN 01.12 InserirReservaCom02HospedesNovosE01Cria1SemHistoricoeEmpresa" source="C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\CT_01_ReservaIndividual\CN_01.12_InserirReservaCom02HospedesNovosE01Cria1SemHistoricoeEmpresa.robot">
+<kw name="Start Sikuli Process" library="SikuliLibrary" type="SETUP">
+<msg timestamp="20220207 18:10:18.229" level="INFO">Starting process:
+java -jar c:\users\gabriel.dacosta\appdata\local\programs\python\python38\lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar 26548 C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\results</msg>
+<msg timestamp="20220207 18:10:18.245" level="INFO">Start sikuli java process on port 26548</msg>
+<msg timestamp="20220207 18:10:19.956" level="INFO">Sikuli java process is started</msg>
+<status status="PASS" starttime="20220207 18:10:18.226" endtime="20220207 18:10:23.655"/>
+</kw>
+<test id="s1-s3-t1" name="Test Case 01.12: Inserir Reserva com 02 Hospedes novos E 01 Criança1 sem histórico e Empresa (Validar FRNH)">
+<kw name="Add Needed Image Path" type="SETUP">
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${IMAGE_DIR}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220207 18:10:23.656" endtime="20220207 18:10:23.684"/>
+</kw>
+<status status="PASS" starttime="20220207 18:10:23.656" endtime="20220207 18:10:23.685"/>
+</kw>
+<kw name="Disables automatic screenshot capturing on failure" library="ResourceDesktop">
+<kw name="Take Screenshots On Failure" library="WhiteLibrary">
+<arg>FALSE</arg>
+<doc>Disables or enables automatic screenshot capturing on failure.</doc>
+<status status="PASS" starttime="20220207 18:10:23.686" endtime="20220207 18:10:23.686"/>
+</kw>
+<status status="PASS" starttime="20220207 18:10:23.685" endtime="20220207 18:10:23.686"/>
+</kw>
+<kw name="Acessar a tela de Reserva Individual">
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_RESINDIV1}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:10:24.990" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268224238.png'/&gt;
+[log] CLICK on L[387,65]@S(0) (557 msec)</msg>
+<status status="PASS" starttime="20220207 18:10:23.687" endtime="20220207 18:10:24.990"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:10:28.869" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:10:24.991" endtime="20220207 18:10:28.869"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:28.870" endtime="20220207 18:10:28.872"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:30.879" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:10:28.872" endtime="20220207 18:10:30.879"/>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<arg>${TITLE_RESINDIVID}</arg>
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<status status="PASS" starttime="20220207 18:10:30.879" endtime="20220207 18:10:30.887"/>
+</kw>
+<status status="PASS" starttime="20220207 18:10:23.687" endtime="20220207 18:10:30.887"/>
+</kw>
+<kw name="Preencher os campos obrigatórios para gerar orçamento da reserva">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<arg>12</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220207 18:10:31.070" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268231066.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:10:30.888" endtime="20220207 18:10:31.071"/>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<doc>Double click</doc>
+<msg timestamp="20220207 18:10:32.033" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268231270.png'/&gt;
+[log] DOUBLE CLICK on L[179,273]@S(0) (567 msec)</msg>
+<status status="PASS" starttime="20220207 18:10:31.071" endtime="20220207 18:10:32.033"/>
+</kw>
+<kw name="Press Special Key" library="WhiteLibrary">
+<arg>DELETE</arg>
+<doc>Press a special key (Ctrl, tab, alt for example).</doc>
+<status status="PASS" starttime="20220207 18:10:32.033" endtime="20220207 18:10:32.060"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOITES}</arg>
+<arg>${DADOS_RES.noites}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:10:32.616" level="INFO">Input Text:
+3</msg>
+<msg timestamp="20220207 18:10:32.616" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268232265.png'/&gt;
+[log] CLICK on L[179,273]@S(0) (41 msec)
+[log]  TYPE "3"</msg>
+<status status="PASS" starttime="20220207 18:10:32.060" endtime="20220207 18:10:32.617"/>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${IMAGE_ADULTO}</arg>
+<doc>Double click</doc>
+<msg timestamp="20220207 18:10:33.628" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268232788.png'/&gt;
+[log] DOUBLE CLICK on L[366,270]@S(0) (576 msec)</msg>
+<status status="PASS" starttime="20220207 18:10:32.617" endtime="20220207 18:10:33.629"/>
+</kw>
+<kw name="Press Special Key" library="WhiteLibrary">
+<arg>DELETE</arg>
+<doc>Press a special key (Ctrl, tab, alt for example).</doc>
+<status status="PASS" starttime="20220207 18:10:33.629" endtime="20220207 18:10:33.657"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_ADULTO}</arg>
+<arg>${DADOS_RES.adultos}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:10:34.198" level="INFO">Input Text:
+2</msg>
+<msg timestamp="20220207 18:10:34.198" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268233864.png'/&gt;
+[log] CLICK on L[366,270]@S(0) (41 msec)
+[log]  TYPE "2"</msg>
+<status status="PASS" starttime="20220207 18:10:33.657" endtime="20220207 18:10:34.199"/>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${IMAGE_CRIA1}</arg>
+<doc>Double click</doc>
+<msg timestamp="20220207 18:10:35.223" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268234419.png'/&gt;
+[log] DOUBLE CLICK on L[416,272]@S(0) (585 msec)</msg>
+<status status="PASS" starttime="20220207 18:10:34.199" endtime="20220207 18:10:35.223"/>
+</kw>
+<kw name="Press Special Key" library="WhiteLibrary">
+<arg>DELETE</arg>
+<doc>Press a special key (Ctrl, tab, alt for example).</doc>
+<status status="PASS" starttime="20220207 18:10:35.223" endtime="20220207 18:10:35.249"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_CRIA1}</arg>
+<arg>${DADOS_RES.cria1}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:10:35.710" level="INFO">Input Text:
+1</msg>
+<msg timestamp="20220207 18:10:35.710" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268235439.png'/&gt;
+[log] CLICK on L[416,272]@S(0) (28 msec)
+[log]  TYPE "1"</msg>
+<status status="PASS" starttime="20220207 18:10:35.250" endtime="20220207 18:10:35.710"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>587</arg>
+<arg>276</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:10:35.710" endtime="20220207 18:10:35.712"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:35.712" endtime="20220207 18:10:36.011"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{TIPOUH}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:10:36.049" level="INFO">@{TIPOUH} = [ TextBox. AutomationId:1314180, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:10:36.012" endtime="20220207 18:10:36.049"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>708</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:10:36.050" endtime="20220207 18:10:36.069"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${TIPOUH[0]}</arg>
+<arg>${DADOS_RES.categ1}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:10:36.069" endtime="20220207 18:10:36.158"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:10:36.159" endtime="20220207 18:10:36.293"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:10:36.402" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:10:36.293" endtime="20220207 18:10:36.402"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:36.403" endtime="20220207 18:10:36.411"/>
+</kw>
+<status status="PASS" starttime="20220207 18:10:30.888" endtime="20220207 18:10:36.411"/>
+</kw>
+<kw name="Inserir hóspede novo sem histórico estada">
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:10:36.413" endtime="20220207 18:10:36.435"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:38.444" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:10:36.435" endtime="20220207 18:10:38.444"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:10:38.444" endtime="20220207 18:10:38.445"/>
+</kw>
+<kw name="Last Name Female" library="FakerLibrary">
+<var>${SOBRENOME1_0112_RESIND}</var>
+<msg timestamp="20220207 18:10:38.445" level="INFO">${SOBRENOME1_0112_RESIND} = Melendez</msg>
+<status status="PASS" starttime="20220207 18:10:38.445" endtime="20220207 18:10:38.445"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_SOBRENOME}</arg>
+<arg>${SOBRENOME1_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:10:39.853" level="INFO">Input Text:
+Melendez</msg>
+<msg timestamp="20220207 18:10:39.853" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268238615.png'/&gt;
+[log] CLICK on L[211,326]@S(0) (544 msec)
+[log]  TYPE "Melendez"</msg>
+<status status="PASS" starttime="20220207 18:10:38.445" endtime="20220207 18:10:39.853"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>323</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:10:39.854" endtime="20220207 18:10:39.854"/>
+</kw>
+<kw name="First Name Female" library="FakerLibrary">
+<var>${NOME1_0112_RESIND}</var>
+<msg timestamp="20220207 18:10:39.855" level="INFO">${NOME1_0112_RESIND} = Shirley</msg>
+<status status="PASS" starttime="20220207 18:10:39.855" endtime="20220207 18:10:39.855"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOME}</arg>
+<arg>${NOME1_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:10:41.210" level="INFO">Input Text:
+Shirley</msg>
+<msg timestamp="20220207 18:10:41.210" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268240022.png'/&gt;
+[log] CLICK on L[325,325]@S(0) (534 msec)
+[log]  TYPE "Shirley"</msg>
+<status status="PASS" starttime="20220207 18:10:39.855" endtime="20220207 18:10:41.210"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:42.224" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:10:41.211" endtime="20220207 18:10:42.224"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>434</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:10:42.224" endtime="20220207 18:10:42.225"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL1_0112_RESIND}</var>
+<msg timestamp="20220207 18:10:42.225" level="INFO">${EMAIL1_0112_RESIND} = stantonchristopher@example.net</msg>
+<status status="PASS" starttime="20220207 18:10:42.225" endtime="20220207 18:10:42.225"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_EMAIL}</arg>
+<arg>${EMAIL1_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:10:45.089" level="INFO">Input Text:
+stantonchristopher@example.net</msg>
+<msg timestamp="20220207 18:10:45.089" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268242408.png'/&gt;
+[log] CLICK on L[441,324]@S(0) (543 msec)
+[log]  TYPE "stantonchristopher@example.net"</msg>
+<status status="PASS" starttime="20220207 18:10:42.226" endtime="20220207 18:10:45.089"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:47.103" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:10:45.090" endtime="20220207 18:10:47.103"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:10:47.791" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268247276.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:10:47.103" endtime="20220207 18:10:47.791"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:10:48.189" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268247968.png'/&gt;
+[log] CLICK on L[68,365]@S(0) (37 msec)</msg>
+<status status="PASS" starttime="20220207 18:10:47.791" endtime="20220207 18:10:48.190"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:49.208" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:10:48.190" endtime="20220207 18:10:49.209"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>47</arg>
+<arg>471</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:10:49.210" endtime="20220207 18:10:49.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:51.226" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:10:49.220" endtime="20220207 18:10:51.226"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>325</arg>
+<arg>369</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:10:51.226" endtime="20220207 18:10:51.235"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_MONTASELEC}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:51.235" endtime="20220207 18:10:51.861"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:10:53.864" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:10:51.861" endtime="20220207 18:10:53.864"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_CAMPOCIDADE}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:10:54.537" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268254021.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:10:53.864" endtime="20220207 18:10:54.537"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_TEXT}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.cidade}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:10:55.988" level="INFO">Input Text:
+Maceio</msg>
+<msg timestamp="20220207 18:10:55.988" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268254801.png'/&gt;
+[log] CLICK on L[783,237]@S(0) (555 msec)
+[log]  TYPE "Maceio"</msg>
+<status status="PASS" starttime="20220207 18:10:54.537" endtime="20220207 18:10:55.988"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_PROCURAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:10:55.988" endtime="20220207 18:10:56.338"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:10:56.338" endtime="20220207 18:10:58.160"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:10:58.216" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:10:58.160" endtime="20220207 18:10:58.216"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:58.216" endtime="20220207 18:10:58.218"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>515</arg>
+<arg>370</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:10:58.218" endtime="20220207 18:10:58.227"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:58.227" endtime="20220207 18:10:58.525"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{IDIOMA}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:10:58.574" level="INFO">@{IDIOMA} = [ TextBox. AutomationId:2363318, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:10:58.525" endtime="20220207 18:10:58.574"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>686</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:10:58.574" endtime="20220207 18:10:58.582"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${IDIOMA[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.idioma}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:10:58.585" endtime="20220207 18:10:58.682"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:10:58.682" endtime="20220207 18:10:59.001"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:10:59.074" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:10:59.001" endtime="20220207 18:10:59.074"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:10:59.075" endtime="20220207 18:10:59.078"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>409</arg>
+<arg>409</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:10:59.079" endtime="20220207 18:10:59.079"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_DATANASC}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.datanasc}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:00.551" level="INFO">Input Text:
+24031990</msg>
+<msg timestamp="20220207 18:11:00.551" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268259275.png'/&gt;
+[log] CLICK on L[421,404]@S(0) (547 msec)
+[log]  TYPE "24031990"</msg>
+<status status="PASS" starttime="20220207 18:10:59.080" endtime="20220207 18:11:00.551"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:00.552" endtime="20220207 18:11:00.559"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:04.566" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:00.560" endtime="20220207 18:11:04.566"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:04.567" endtime="20220207 18:11:04.567"/>
+</kw>
+<kw name="Last Name Female" library="FakerLibrary">
+<var>${SOBRENOME2_0112_RESIND}</var>
+<msg timestamp="20220207 18:11:04.568" level="INFO">${SOBRENOME2_0112_RESIND} = Moore</msg>
+<status status="PASS" starttime="20220207 18:11:04.567" endtime="20220207 18:11:04.568"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_SOBRENOME}</arg>
+<arg>${SOBRENOME2_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:05.785" level="INFO">Input Text:
+Moore</msg>
+<msg timestamp="20220207 18:11:05.785" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268264723.png'/&gt;
+[log] CLICK on L[211,326]@S(0) (540 msec)
+[log]  TYPE "Moore"</msg>
+<status status="PASS" starttime="20220207 18:11:04.568" endtime="20220207 18:11:05.785"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>323</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:05.786" endtime="20220207 18:11:05.786"/>
+</kw>
+<kw name="First Name Female" library="FakerLibrary">
+<var>${NOME2_0112_RESIND}</var>
+<msg timestamp="20220207 18:11:05.786" level="INFO">${NOME2_0112_RESIND} = Christine</msg>
+<status status="PASS" starttime="20220207 18:11:05.786" endtime="20220207 18:11:05.786"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOME}</arg>
+<arg>${NOME2_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:07.250" level="INFO">Input Text:
+Christine</msg>
+<msg timestamp="20220207 18:11:07.250" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268265959.png'/&gt;
+[log] CLICK on L[325,325]@S(0) (555 msec)
+[log]  TYPE "Christine"</msg>
+<status status="PASS" starttime="20220207 18:11:05.787" endtime="20220207 18:11:07.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:08.262" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:07.251" endtime="20220207 18:11:08.262"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>434</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:08.264" endtime="20220207 18:11:08.266"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL2_0112_RESIND}</var>
+<msg timestamp="20220207 18:11:08.268" level="INFO">${EMAIL2_0112_RESIND} = thuffman@example.net</msg>
+<status status="PASS" starttime="20220207 18:11:08.267" endtime="20220207 18:11:08.268"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_EMAIL}</arg>
+<arg>${EMAIL2_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:10.544" level="INFO">Input Text:
+thuffman@example.net</msg>
+<msg timestamp="20220207 18:11:10.544" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268268448.png'/&gt;
+[log] CLICK on L[441,324]@S(0) (543 msec)
+[log]  TYPE "thuffman@example.net"</msg>
+<status status="PASS" starttime="20220207 18:11:08.268" endtime="20220207 18:11:10.544"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:12.555" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:10.545" endtime="20220207 18:11:12.555"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:11:13.218" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268272695.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:11:12.555" endtime="20220207 18:11:13.218"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:11:13.609" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268273402.png'/&gt;
+[log] CLICK on L[68,365]@S(0) (39 msec)</msg>
+<status status="PASS" starttime="20220207 18:11:13.218" endtime="20220207 18:11:13.609"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:14.620" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:13.609" endtime="20220207 18:11:14.620"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>47</arg>
+<arg>471</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:14.620" endtime="20220207 18:11:14.627"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:16.633" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:14.628" endtime="20220207 18:11:16.633"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>325</arg>
+<arg>369</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:16.633" endtime="20220207 18:11:16.643"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_MONTASELEC}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:16.643" endtime="20220207 18:11:16.919"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:18.921" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:16.919" endtime="20220207 18:11:18.921"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_CAMPOCIDADE}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:11:19.594" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268279079.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:11:18.921" endtime="20220207 18:11:19.594"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_PROCURAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:11:19.594" endtime="20220207 18:11:19.870"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:11:19.870" endtime="20220207 18:11:21.694"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:11:21.791" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:11:21.694" endtime="20220207 18:11:21.791"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:21.791" endtime="20220207 18:11:21.794"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>515</arg>
+<arg>370</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:21.795" endtime="20220207 18:11:21.804"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:21.805" endtime="20220207 18:11:22.089"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{IDIOMA}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:11:22.127" level="INFO">@{IDIOMA} = [ TextBox. AutomationId:1118446, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:11:22.089" endtime="20220207 18:11:22.127"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>686</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:22.127" endtime="20220207 18:11:22.140"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${IDIOMA[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.idioma}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:11:22.142" endtime="20220207 18:11:22.236"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:11:22.236" endtime="20220207 18:11:22.741"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:11:22.842" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:11:22.741" endtime="20220207 18:11:22.842"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:22.842" endtime="20220207 18:11:22.845"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>409</arg>
+<arg>409</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:22.845" endtime="20220207 18:11:22.845"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_DATANASC}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.datanasc}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:24.322" level="INFO">Input Text:
+24031990</msg>
+<msg timestamp="20220207 18:11:24.322" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268283090.png'/&gt;
+[log] CLICK on L[421,404]@S(0) (541 msec)
+[log]  TYPE "24031990"</msg>
+<status status="PASS" starttime="20220207 18:11:22.845" endtime="20220207 18:11:24.322"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:24.322" endtime="20220207 18:11:24.336"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:29.343" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:24.336" endtime="20220207 18:11:29.343"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:29.343" endtime="20220207 18:11:29.344"/>
+</kw>
+<kw name="Last Name Female" library="FakerLibrary">
+<var>${SOBRENOME3_0112_RESIND}</var>
+<msg timestamp="20220207 18:11:29.345" level="INFO">${SOBRENOME3_0112_RESIND} = Moore</msg>
+<status status="PASS" starttime="20220207 18:11:29.344" endtime="20220207 18:11:29.345"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_SOBRENOME}</arg>
+<arg>${SOBRENOME3_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:30.597" level="INFO">Input Text:
+Moore</msg>
+<msg timestamp="20220207 18:11:30.597" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268289499.png'/&gt;
+[log] CLICK on L[211,326]@S(0) (553 msec)
+[log]  TYPE "Moore"</msg>
+<status status="PASS" starttime="20220207 18:11:29.345" endtime="20220207 18:11:30.597"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>323</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:30.598" endtime="20220207 18:11:30.598"/>
+</kw>
+<kw name="First Name Female" library="FakerLibrary">
+<var>${NOME3_0112_RESIND}</var>
+<msg timestamp="20220207 18:11:30.599" level="INFO">${NOME3_0112_RESIND} = Claudia</msg>
+<status status="PASS" starttime="20220207 18:11:30.598" endtime="20220207 18:11:30.599"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NOME}</arg>
+<arg>${NOME3_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:31.960" level="INFO">Input Text:
+Claudia</msg>
+<msg timestamp="20220207 18:11:31.960" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268290785.png'/&gt;
+[log] CLICK on L[325,325]@S(0) (532 msec)
+[log]  TYPE "Claudia"</msg>
+<status status="PASS" starttime="20220207 18:11:30.599" endtime="20220207 18:11:31.960"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:32.964" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:31.961" endtime="20220207 18:11:32.964"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>434</arg>
+<arg>331</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:32.964" endtime="20220207 18:11:32.965"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL3_0112_RESIND}</var>
+<msg timestamp="20220207 18:11:32.965" level="INFO">${EMAIL3_0112_RESIND} = evanskristin@example.net</msg>
+<status status="PASS" starttime="20220207 18:11:32.965" endtime="20220207 18:11:32.965"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_EMAIL}</arg>
+<arg>${EMAIL3_0112_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:35.517" level="INFO">Input Text:
+evanskristin@example.net</msg>
+<msg timestamp="20220207 18:11:35.517" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268293155.png'/&gt;
+[log] CLICK on L[441,324]@S(0) (547 msec)
+[log]  TYPE "evanskristin@example.net"</msg>
+<status status="PASS" starttime="20220207 18:11:32.966" endtime="20220207 18:11:35.517"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:37.530" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:35.518" endtime="20220207 18:11:37.530"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:11:38.209" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268297685.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:11:37.530" endtime="20220207 18:11:38.209"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_TRATAMENTO}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:11:38.620" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268298394.png'/&gt;
+[log] CLICK on L[68,365]@S(0) (46 msec)</msg>
+<status status="PASS" starttime="20220207 18:11:38.209" endtime="20220207 18:11:38.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:39.621" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:38.620" endtime="20220207 18:11:39.621"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>47</arg>
+<arg>484</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:39.621" endtime="20220207 18:11:39.637"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:41.648" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:39.637" endtime="20220207 18:11:41.648"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_FAIXAETARIA}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:11:42.360" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268301838.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:11:41.649" endtime="20220207 18:11:42.360"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_FAIXAETARIA}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:11:42.774" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268302535.png'/&gt;
+[log] CLICK on L[157,365]@S(0) (56 msec)</msg>
+<status status="PASS" starttime="20220207 18:11:42.360" endtime="20220207 18:11:42.775"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:43.778" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:42.775" endtime="20220207 18:11:43.778"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>148</arg>
+<arg>424</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:43.778" endtime="20220207 18:11:43.783"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:44.786" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:43.783" endtime="20220207 18:11:44.786"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>325</arg>
+<arg>369</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:44.786" endtime="20220207 18:11:44.799"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_MONTASELEC}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:44.799" endtime="20220207 18:11:45.026"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:47.031" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:11:45.026" endtime="20220207 18:11:47.031"/>
+</kw>
+<kw name="Mouse Move" library="SikuliLibrary">
+<arg>${IMAGE_CAMPOCIDADE}</arg>
+<doc>Mouse moveMove the mouse pointer to the target</doc>
+<msg timestamp="20220207 18:11:47.716" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268307202.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:11:47.031" endtime="20220207 18:11:47.716"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_PROCURAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:11:47.716" endtime="20220207 18:11:47.939"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:11:47.939" endtime="20220207 18:11:49.839"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:11:49.937" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:11:49.839" endtime="20220207 18:11:49.937"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:49.937" endtime="20220207 18:11:49.940"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>515</arg>
+<arg>370</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:49.940" endtime="20220207 18:11:49.943"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:49.943" endtime="20220207 18:11:50.218"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{IDIOMA}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:11:50.252" level="INFO">@{IDIOMA} = [ TextBox. AutomationId:1184070, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:11:50.218" endtime="20220207 18:11:50.252"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>686</arg>
+<arg>237</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:50.252" endtime="20220207 18:11:50.263"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${IDIOMA[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.idioma}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:11:50.264" endtime="20220207 18:11:50.359"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:11:50.360" endtime="20220207 18:11:50.637"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:11:50.715" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:11:50.637" endtime="20220207 18:11:50.715"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:50.715" endtime="20220207 18:11:50.718"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>409</arg>
+<arg>409</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:50.718" endtime="20220207 18:11:50.719"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_DATANASC}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.datanasccria1}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:52.165" level="INFO">Input Text:
+24032018</msg>
+<msg timestamp="20220207 18:11:52.165" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268310904.png'/&gt;
+[log] CLICK on L[421,404]@S(0) (548 msec)
+[log]  TYPE "24032018"</msg>
+<status status="PASS" starttime="20220207 18:11:50.719" endtime="20220207 18:11:52.165"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:53.179" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:52.166" endtime="20220207 18:11:53.179"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>670</arg>
+<arg>372</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:53.179" endtime="20220207 18:11:53.190"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:11:54.196" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:11:53.190" endtime="20220207 18:11:54.196"/>
+</kw>
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>741</arg>
+<arg>341</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:54.196" endtime="20220207 18:11:54.206"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:11:56.530" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:11:54.207" endtime="20220207 18:11:56.530"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:56.530" endtime="20220207 18:11:56.534"/>
+</kw>
+<status status="PASS" starttime="20220207 18:10:36.412" endtime="20220207 18:11:56.535"/>
+</kw>
+<kw name="Preencher informações e confirmar a reserva">
+<kw name="Mouse Click" library="WhiteLibrary">
+<arg>87</arg>
+<arg>508</arg>
+<doc>Clicks mouse at given position.</doc>
+<status status="PASS" starttime="20220207 18:11:56.536" endtime="20220207 18:11:56.558"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_SELECGERAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:56.560" endtime="20220207 18:11:56.565"/>
+</kw>
+<kw name="Get Items" library="WhiteLibrary">
+<var>@{DOC_CONFIRM}</var>
+<arg>control_type:Edit</arg>
+<doc>Returns a list of items that match the given ``locator``.</doc>
+<msg timestamp="20220207 18:11:56.614" level="INFO">@{DOC_CONFIRM} = [ TextBox. AutomationId:1249606, Name:, ControlType:editar, FrameworkId:Win32 ]</msg>
+<status status="PASS" starttime="20220207 18:11:56.565" endtime="20220207 18:11:56.614"/>
+</kw>
+<kw name="Input Text To Textbox" library="WhiteLibrary">
+<arg>${DOC_CONFIRM[0]}</arg>
+<arg>${DADOSHOSPNOVO_RESIND.doc}</arg>
+<doc>Writes text to a textbox.</doc>
+<status status="PASS" starttime="20220207 18:11:56.615" endtime="20220207 18:11:56.718"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:11:56.719" endtime="20220207 18:11:57.118"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{RESINDIVIDUAL}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:11:57.200" level="INFO">@{RESINDIVIDUAL} = [ Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:11:57.118" endtime="20220207 18:11:57.200"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${RESINDIVIDUAL[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:11:57.200" endtime="20220207 18:11:57.203"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>208</arg>
+<arg>508</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:11:57.203" endtime="20220207 18:11:57.204"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL_RESIND}</var>
+<msg timestamp="20220207 18:11:57.205" level="INFO">${EMAIL_RESIND} = charlesshannon@example.net</msg>
+<status status="PASS" starttime="20220207 18:11:57.205" endtime="20220207 18:11:57.205"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${IMAGE_NUMERO}</arg>
+<arg>${EMAIL_RESIND}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220207 18:11:59.861" level="INFO">Input Text:
+charlesshannon@example.net</msg>
+<msg timestamp="20220207 18:11:59.861" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268317434.png'/&gt;
+[log] CLICK on L[206,504]@S(0) (557 msec)
+[log]  TYPE "charlesshannon@example.net"</msg>
+<status status="PASS" starttime="20220207 18:11:57.206" endtime="20220207 18:11:59.861"/>
+</kw>
+<kw name="Click Item" library="WhiteLibrary">
+<arg>${ITEM_ATUALIZARVALPERIO}</arg>
+<doc>Clicks an item.</doc>
+<status status="PASS" starttime="20220207 18:11:59.862" endtime="20220207 18:12:03.025"/>
+</kw>
+<kw name="Click Button" library="WhiteLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Clicks a button.</doc>
+<status status="PASS" starttime="20220207 18:12:03.025" endtime="20220207 18:12:17.214"/>
+</kw>
+<status status="PASS" starttime="20220207 18:11:56.536" endtime="20220207 18:12:17.214"/>
+</kw>
+<kw name="Conferir se a tela de conclusão da reserva foi exibida">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<arg>10 seconds</arg>
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<msg timestamp="20220207 18:12:17.215" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:12:17.215" endtime="20220207 18:12:17.215"/>
+</kw>
+<kw name="Move Mouse" library="WhiteLibrary">
+<arg>610</arg>
+<arg>210</arg>
+<doc>Add (``x``, ``y``) to current mouse location.</doc>
+<status status="PASS" starttime="20220207 18:12:17.216" endtime="20220207 18:12:17.216"/>
+</kw>
+<kw name="Get Application Windows" library="WhiteLibrary">
+<var>@{SITUACAORES}</var>
+<doc>Returns a list of windows belonging to the currently attached application.</doc>
+<msg timestamp="20220207 18:12:17.425" level="INFO">@{SITUACAORES} = [ Situação da Reserva | Visual Hotal FrontOffice v6.11.31.00 - [Reserva Individual] ]</msg>
+<status status="PASS" starttime="20220207 18:12:17.217" endtime="20220207 18:12:17.426"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SITUACAORES[0]}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:12:17.426" endtime="20220207 18:12:17.430"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:12:19.444" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220207 18:12:17.431" endtime="20220207 18:12:19.444"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>${IMAGE_CONFIRMACAORES}</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220207 18:12:19.618" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268339603.png'/&gt;</msg>
+<status status="PASS" starttime="20220207 18:12:19.444" endtime="20220207 18:12:19.618"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220207 18:12:20.634" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220207 18:12:19.618" endtime="20220207 18:12:20.634"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${IMAGE_SAIRRES}</arg>
+<doc>Click</doc>
+<msg timestamp="20220207 18:12:21.542" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1644268340838.png'/&gt;
+[log] CLICK on L[890,420]@S(0) (541 msec)</msg>
+<status status="PASS" starttime="20220207 18:12:20.634" endtime="20220207 18:12:21.542"/>
+</kw>
+<status status="PASS" starttime="20220207 18:12:17.214" endtime="20220207 18:12:21.542"/>
+</kw>
+<kw name="Conferir se a tela principal do modulo VHF foi exibida" library="ConferenceDesktop">
+<kw name="Set White Busy Timeout" library="WhiteLibrary">
+<arg>${CONFERENCIA_TIMEOUT}</arg>
+<doc>Sets BusyTimeout for White and returns original value.</doc>
+<msg timestamp="20220207 18:12:21.545" level="INFO">White Busy Timeout set to 10000</msg>
+<status status="PASS" starttime="20220207 18:12:21.544" endtime="20220207 18:12:21.545"/>
+</kw>
+<kw name="Attach Window" library="WhiteLibrary">
+<arg>${SCREEN_TELAPRINCIPAL}</arg>
+<doc>Attaches WhiteLibrary to a window.</doc>
+<status status="PASS" starttime="20220207 18:12:21.545" endtime="20220207 18:12:21.878"/>
+</kw>
+<kw name="Window Title Should Contain" library="WhiteLibrary">
+<arg>Visual Hotal FrontOffice</arg>
+<doc>Verifies that the title of the currently attached window contains text ``expected``.</doc>
+<status status="PASS" starttime="20220207 18:12:21.879" endtime="20220207 18:12:21.890"/>
+</kw>
+<status status="PASS" starttime="20220207 18:12:21.543" endtime="20220207 18:12:21.890"/>
 </kw>
 <kw name="Fechar Modulo" library="ResourceDesktop" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>4 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220121 09:55:47.251" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20220121 09:55:43.238" endtime="20220121 09:55:47.251"/>
+<msg timestamp="20220207 18:12:25.899" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220207 18:12:21.891" endtime="20220207 18:12:25.899"/>
 </kw>
 <kw name="Close Application" library="WhiteLibrary">
 <doc>Closes the attached application.</doc>
-<status status="PASS" starttime="20220121 09:55:47.251" endtime="20220121 09:55:47.677"/>
+<status status="PASS" starttime="20220207 18:12:25.899" endtime="20220207 18:12:26.678"/>
 </kw>
-<status status="PASS" starttime="20220121 09:55:43.238" endtime="20220121 09:55:47.677"/>
+<status status="PASS" starttime="20220207 18:12:21.891" endtime="20220207 18:12:26.678"/>
 </kw>
-<status status="PASS" starttime="20220121 09:55:18.393" endtime="20220121 09:55:47.678"/>
+<tag>CT1</tag>
+<status status="PASS" starttime="20220207 18:10:23.655" endtime="20220207 18:12:26.679"/>
 </test>
-<status status="PASS" starttime="20220121 09:55:17.606" endtime="20220121 09:55:47.679"/>
+<kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20220207 18:12:26.687" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20220207 18:12:26.681" endtime="20220207 18:12:26.687"/>
+</kw>
+<doc>Sikuli Library Demo</doc>
+<status status="PASS" starttime="20220207 18:10:18.191" endtime="20220207 18:12:26.687"/>
 </suite>
-<status status="PASS" starttime="20220121 09:55:17.397" endtime="20220121 09:55:47.681"/>
+<status status="PASS" starttime="20220207 18:06:19.888" endtime="20220207 18:12:26.690"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="3" fail="0" skip="0">CT1</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="CT 00 ValidarLoginModulos">CT 00 ValidarLoginModulos</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="CN 00.01 AcessarSistema">CT 00 ValidarLoginModulos.CN 00.01 AcessarSistema</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="CT 01 ReservaIndividual">CT 01 ReservaIndividual</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="CN 01.01 InserirReservaCom01HospedeNovoSemHistoricoeEmpresa">CT 01 ReservaIndividual.CN 01.01 InserirReservaCom01HospedeNovoSemHistoricoeEmpresa</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="CN 01.11 InserirReservaCom02HospedesNovosSemHistoricoeEmpresa">CT 01 ReservaIndividual.CN 01.11 InserirReservaCom02HospedesNovosSemHistoricoeEmpresa</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="CN 01.12 InserirReservaCom02HospedesNovosE01Cria1SemHistoricoeEmpresa">CT 01 ReservaIndividual.CN 01.12 InserirReservaCom02HospedesNovosE01Cria1SemHistoricoeEmpresa</stat>
 </suite>
 </statistics>
 <errors>

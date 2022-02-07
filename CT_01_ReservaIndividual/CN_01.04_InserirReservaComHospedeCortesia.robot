@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -54,11 +55,14 @@ Inserir hóspede cortesia novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           2 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSPCORT_RESIND.sobrenome}
+    ${SOBRENOME_HOSPCORT_RESIND}    Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME_HOSPCORT_RESIND}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSPCORT_RESIND.nome}
+    ${NOME_HOSPCORT_RESIND}         First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME_HOSPCORT_RESIND}
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSPCORT_RESIND.email}
+    ${EMAIL_HOSPCORT_RESIND}        Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL_HOSPCORT_RESIND}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TIPOHOSPEDE}
     Click                           ${IMAGE_TIPOHOSPEDE}
@@ -73,7 +77,7 @@ Inserir hóspede cortesia novo sem histórico estada
     Attach Window                   ${SCREEN_MONTASELEC}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_CAMPOCIDADE}
-    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPCORT_RESIND.cidade}
+    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPNOVO_RESIND.cidade}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
@@ -82,12 +86,12 @@ Inserir hóspede cortesia novo sem histórico estada
     Attach Window                   ${SCREEN_SELECGERAL}
     @{IDIOMA}                       Get Items           control_type:Edit
     Mouse Click                     686    237
-    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPCORT_RESIND.idioma}
+    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_RESIND.idioma}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      409    409
-    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSPCORT_RESIND.datanasc}
+    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSPNOVO_RESIND.datanasc}
     Mouse Click                     741    341
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
@@ -96,12 +100,13 @@ Preencher informações e confirmar a reserva
     Move Mouse                      633    203
     Attach Window                   ${SCREEN_SELECGERAL}
     @{DOC_CONFIRM}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPCORT_RESIND.doc}
+    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPNOVO_RESIND.doc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPCORT_RESIND.email}
+    ${EMAIL_HOSPCORT_RESIND}        Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_HOSPCORT_RESIND}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_SEGMENTO}
     Click                           ${IMAGE_LUPA}
@@ -112,7 +117,7 @@ Preencher informações e confirmar a reserva
     Mouse Click                     251    181
     Attach Window                   ${SCREEN_SELECGERAL}
     @{MOTIVO_DESC}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${MOTIVO_DESC[0]}   ${DADOSHOSPCORT_RESIND.motdesc}
+    Input Text To Textbox           ${MOTIVO_DESC[0]}   ${DADOS_RES.motdesc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}

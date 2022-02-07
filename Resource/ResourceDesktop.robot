@@ -1,6 +1,5 @@
 *** Settings ***
 Library                          WhiteLibrary
-Library                          SikuliLibrary       mode=NEW
 
 
 *** Variable ***
@@ -20,10 +19,11 @@ Library                          SikuliLibrary       mode=NEW
 &{LOGIN}                          usersql=QAFRONT    senhasql=QAFRONT123    userora=cm    senhaora=cmsol123
 
 ### Dados da Reserva ###
-&{DADOS_RES}                      noites=3        adultos=2       cria1=1         cria2=1         categ=STND      categ1=FRUA
-...                               uh070101=607    uh070102=705    uh070103=706    uh070104=707    uh070105=805
-...                               uh070106=806    uh070107=807    uh070108=905    uh070109=906    uh070110=907
-...                               valordiar=609   valorpgtodin=10  valorpgtocc=120  uhextra1=605  uhextra2=606
+&{DADOS_RES}                      noites=3        adultos=2         cria1=1          cria2=1       categ=STND     categ1=FRUA
+...                               uh070101=607    uh070102=705      uh070103=706     uh070104=707  uh070105=805
+...                               uh070106=806    uh070107=807      uh070108=905     uh070109=906  uh070110=907
+...                               valordiar=609   valorpgtodin=10   valorpgtocc=120  uhextra1=605  uhextra2=606
+...                               motdesc=Autorizado pela Gerencia  func=Gabriel
 
 ### Titles ###
 ${TITLE_RESINDIVID}                 Reserva Individual

@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -62,12 +63,15 @@ Inserir hóspede novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           2 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSNOVOSECRIA1_RESIND.sobrenome1}
+    ${SOBRENOME1_0112_RESIND}       Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME1_0112_RESIND}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSNOVOSECRIA1_RESIND.nome1}
+    ${NOME1_0112_RESIND}            First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME1_0112_RESIND}
     Sleep                           1 seconds
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSNOVOSECRIA1_RESIND.email1}
+    ${EMAIL1_0112_RESIND}           Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL1_0112_RESIND}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TRATAMENTO}
     Click                           ${IMAGE_TRATAMENTO}
@@ -78,7 +82,7 @@ Inserir hóspede novo sem histórico estada
     Attach Window                   ${SCREEN_MONTASELEC}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_CAMPOCIDADE}
-    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSNOVOSECRIA1_RESIND.cidade}
+    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPNOVO_RESIND.cidade}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
@@ -87,21 +91,24 @@ Inserir hóspede novo sem histórico estada
     Attach Window                   ${SCREEN_SELECGERAL}
     @{IDIOMA}                       Get Items           control_type:Edit
     Mouse Click                     686    237
-    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSNOVOSECRIA1_RESIND.idioma}
+    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_RESIND.idioma}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      409    409
-    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSNOVOSECRIA1_RESIND.datanasc}
+    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSPNOVO_RESIND.datanasc}
     Mouse Click                     741    341
     Sleep                           4 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSNOVOSECRIA1_RESIND.sobrenome2}
+    ${SOBRENOME2_0112_RESIND}       Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME2_0112_RESIND}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSNOVOSECRIA1_RESIND.nome2}
+    ${NOME2_0112_RESIND}            First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME2_0112_RESIND}
     Sleep                           1 seconds
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSNOVOSECRIA1_RESIND.email2}
+    ${EMAIL2_0112_RESIND}           Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL2_0112_RESIND}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TRATAMENTO}
     Click                           ${IMAGE_TRATAMENTO}
@@ -120,21 +127,24 @@ Inserir hóspede novo sem histórico estada
     Attach Window                   ${SCREEN_SELECGERAL}
     @{IDIOMA}                       Get Items           control_type:Edit
     Mouse Click                     686    237
-    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSNOVOSECRIA1_RESIND.idioma}
+    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_RESIND.idioma}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      409    409
-    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSNOVOSECRIA1_RESIND.datanasc}
+    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSPNOVO_RESIND.datanasc}
     Mouse Click                     741    341
     Sleep                           5 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSNOVOSECRIA1_RESIND.sobrenomecria1}
+    ${SOBRENOME3_0112_RESIND}       Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME3_0112_RESIND}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSNOVOSECRIA1_RESIND.nomecria1}
+    ${NOME3_0112_RESIND}            First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME3_0112_RESIND}
     Sleep                           1 seconds
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSNOVOSECRIA1_RESIND.emailcria1}
+    ${EMAIL3_0112_RESIND}           Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL3_0112_RESIND}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TRATAMENTO}
     Click                           ${IMAGE_TRATAMENTO}
@@ -158,12 +168,12 @@ Inserir hóspede novo sem histórico estada
     Attach Window                   ${SCREEN_SELECGERAL}
     @{IDIOMA}                       Get Items           control_type:Edit
     Mouse Click                     686    237
-    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSNOVOSECRIA1_RESIND.idioma}
+    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_RESIND.idioma}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      409    409
-    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSNOVOSECRIA1_RESIND.datanasccria1}
+    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSPNOVO_RESIND.datanasccria1}
     Sleep                           1 seconds
     Mouse Click                     670    372
     Sleep                           1 seconds
@@ -175,12 +185,13 @@ Preencher informações e confirmar a reserva
     Mouse Click                     87     508
     Attach Window                   ${SCREEN_SELECGERAL}
     @{DOC_CONFIRM}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSNOVOSECRIA1_RESIND.doc}
+    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPNOVO_RESIND.doc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{RESINDIVIDUAL}                Get Application Windows
     Attach Window                   ${RESINDIVIDUAL[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSNOVOSECRIA1_RESIND.email1}
+    ${EMAIL_RESIND}                 Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_RESIND}
     Click Item                      ${ITEM_ATUALIZARVALPERIO}
     Click Button                    ${BUTTON_CONFIRMAR}
 
