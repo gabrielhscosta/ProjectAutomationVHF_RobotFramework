@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -102,14 +103,6 @@ Inserir hóspede com histórico estada
     Click                           ${IMAGE_BUTTONCONFIRMAR}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
-    # Mouse Click                     515     370
-    # Attach Window                   ${SCREEN_SELECGERAL}
-    # @{IDIOMA}                       Get Items           control_type:Edit
-    # Mouse Click                     686     237
-    # Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_WALKIN.idioma}
-    # Click Button                    ${BUTTON_CONFIRMAR}
-    # @{WALKIN}                       Get Application Windows
-    # Attach Window                   ${WALKIN[0]}
     Mouse Click                     741     341
 
 Preencher informações e confirmar a reserva
@@ -121,7 +114,8 @@ Preencher informações e confirmar a reserva
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPNOVO_WALKIN.email}
+    ${EMAIL_WALKIN}                 Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_WALKIN}
     Click Item                      ${ITEM_ATUALIZARVALPERIO}
     Click Button                    ${BUTTON_CONFIRMAR}
 

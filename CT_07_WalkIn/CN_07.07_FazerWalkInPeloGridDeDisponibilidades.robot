@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -76,11 +77,14 @@ Inserir hóspede novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           2 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSPGRID_WALKIN.sobrenome}
+    ${SOBRENOME_HOSPGRID_WALKIN}    Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME_HOSPGRID_WALKIN}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSPGRID_WALKIN.nome}
+    ${NOME_HOSPGRID_WALKIN}         First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME_HOSPGRID_WALKIN}
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSPGRID_WALKIN.email}
+    ${EMAIL_HOSPGRID_WALKIN}        Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL_HOSPGRID_WALKIN}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TRATAMENTO}
     Click                           ${IMAGE_TRATAMENTO}
@@ -90,7 +94,7 @@ Inserir hóspede novo sem histórico estada
     Attach Window                   ${SCREEN_MONTASELEC}
     Set White Busy Timeout          30 seconds
     Mouse Move                      ${IMAGE_CAMPOCIDADE}
-    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPGRID_WALKIN.cidade}
+    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPNOVO_WALKIN.cidade}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
@@ -99,12 +103,12 @@ Inserir hóspede novo sem histórico estada
     Attach Window                   ${SCREEN_SELECGERAL}
     @{IDIOMA}                       Get Items           control_type:Edit
     Mouse Click                     686    237
-    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPGRID_WALKIN.idioma}
+    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_WALKIN.idioma}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Move Mouse                      409    409
-    Input Text                      datanasc.png        ${DADOSHOSPGRID_WALKIN.datanasc}
+    Input Text                      datanasc.png        ${DADOSHOSPNOVO_WALKIN.datanasc}
     Mouse Click                     741    341
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
@@ -113,12 +117,13 @@ Preencher informações e confirmar a reserva
     Mouse Click                     87     508
     Attach Window                   ${SCREEN_SELECGERAL}
     @{DOC_CONFIRM}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPGRID_WALKIN.doc}
+    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPNOVO_WALKIN.doc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPGRID_WALKIN.email}
+    ${EMAIL_WALKIN}                 Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_WALKIN}
     Click Item                      ${ITEM_ATUALIZARVALPERIO}
     Click Button                    ${BUTTON_CONFIRMAR}
 
@@ -140,10 +145,10 @@ Cadastrar informações do hóspede
     Mouse Click                     260    205
     Input Text                      ${IMAGE_NUMERODOC}  ${DADOSHOSPGRID_WALKIN.cpf}
     Mouse Click                     58     260
-    Input Text                      ${IMAGE_CEP}        ${DADOSHOSPGRID_WALKIN.cep}
+    Input Text                      ${IMAGE_CEP}        ${DADOSHOSPNOVO_WALKIN.cep}
     Move Mouse                      348    258
     Sleep                           1 seconds
-    Input Text                      ${IMAGE_NUMEROEND}  ${DADOSHOSPGRID_WALKIN.numend}
+    Input Text                      ${IMAGE_NUMEROEND}  ${DADOSHOSPNOVO_WALKIN.numend}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_ULTIMAPROC}
     Mouse Click                     460   422

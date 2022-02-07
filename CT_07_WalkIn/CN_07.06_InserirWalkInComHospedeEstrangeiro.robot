@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -66,11 +67,14 @@ Inserir hóspede estrangeiro novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           2 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSPESTR_WALKIN.sobrenome}
+    ${SOBRENOME_HOSPESTR_WALKIN}    Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME_HOSPESTR_WALKIN}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSPESTR_WALKIN.nome}
+    ${NOME_HOSPESTR_WALKIN}         First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME_HOSPESTR_WALKIN}
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSPESTR_WALKIN.email}
+    ${EMAIL_HOSPESTR_WALKIN}        Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL_HOSPESTR_WALKIN}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TRATAMENTO}
     Click                           ${IMAGE_TRATAMENTO}
@@ -109,7 +113,8 @@ Preencher informações e confirmar a reserva
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPESTR_WALKIN.email}
+    ${EMAIL_WALKIN}                 Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_WALKIN}
     Click Item                      ${ITEM_ATUALIZARVALPERIO}
     Click Button                    ${BUTTON_CONFIRMAR}
 

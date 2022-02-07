@@ -4,6 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
+Library         FakerLibrary
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -66,11 +67,14 @@ Inserir hóspede uso da casa novo sem histórico estada
     Mouse Click                     741    341
     Sleep                           2 seconds
     Move Mouse                      208    331
-    Input Text                      ${IMAGE_SOBRENOME}  ${DADOSHOSPUKSA_WALKIN.sobrenome}
+    ${SOBRENOME_HOSPUKSA_WALKIN}    Last Name Female
+    Input Text                      ${IMAGE_SOBRENOME}  ${SOBRENOME_HOSPUKSA_WALKIN}
     Move Mouse                      323    331
-    Input Text                      ${IMAGE_NOME}       ${DADOSHOSPUKSA_WALKIN.nome}
+    ${NOME_HOSPUKSA_WALKIN}         First Name Female
+    Input Text                      ${IMAGE_NOME}       ${NOME_HOSPUKSA_WALKIN}
     Move Mouse                      434    331
-    Input Text                      ${IMAGE_EMAIL}      ${DADOSHOSPUKSA_WALKIN.email}
+    ${EMAIL_HOSPUKSA_WALKIN}        Email
+    Input Text                      ${IMAGE_EMAIL}      ${EMAIL_HOSPUKSA_WALKIN}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_TIPOHOSPEDE}
     Click                           ${IMAGE_TIPOHOSPEDE}
@@ -85,7 +89,7 @@ Inserir hóspede uso da casa novo sem histórico estada
     Attach Window                   ${SCREEN_MONTASELEC}
     Set White Busy Timeout          30 seconds
     Mouse Move                      ${IMAGE_CAMPOCIDADE}
-    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPUKSA_WALKIN.cidade}
+    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPNOVO_WALKIN.cidade}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
@@ -94,12 +98,12 @@ Inserir hóspede uso da casa novo sem histórico estada
     Attach Window                   ${SCREEN_SELECGERAL}
     @{IDIOMA}                       Get Items           control_type:Edit
     Mouse Click                     686    237
-    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPUKSA_WALKIN.idioma}
+    Input Text To Textbox           ${IDIOMA[0]}        ${DADOSHOSPNOVO_WALKIN.idioma}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Move Mouse                      409    409
-    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSPUKSA_WALKIN.datanasc}
+    Input Text                      ${IMAGE_DATANASC}   ${DADOSHOSPNOVO_WALKIN.datanasc}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Mouse Move                      ${IMAGE_FUNCDACASA}
@@ -107,7 +111,7 @@ Inserir hóspede uso da casa novo sem histórico estada
     Attach Window                   ${SCREEN_MONTASELEC}
     Sleep                           1 seconds
     Mouse Move                      ${IMAGE_FUNCIONARIO}
-    Input Text                      ${IMAGE_TEXT}       ${DADOSHOSPUKSA_WALKIN.func}
+    Input Text                      ${IMAGE_TEXT}       ${DADOS_RES.func}
     Click Button                    ${BUTTON_PROCURAR}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
@@ -118,12 +122,13 @@ Preencher informações e confirmar a reserva
     Move Mouse                      633    203
     Attach Window                   ${SCREEN_SELECGERAL}
     @{DOC_CONFIRM}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPUKSA_WALKIN.doc}
+    Input Text To Textbox           ${DOC_CONFIRM[0]}   ${DADOSHOSPNOVO_WALKIN.doc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
     Move Mouse                      208    508
-    Input Text                      ${IMAGE_NUMERO}     ${DADOSHOSPUKSA_WALKIN.email}
+    ${EMAIL_WALKIN}                 Email
+    Input Text                      ${IMAGE_NUMERO}     ${EMAIL_WALKIN}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_SEGMENTO}
     Click                           ${IMAGE_LUPA}
@@ -134,7 +139,7 @@ Preencher informações e confirmar a reserva
     Mouse Click                     251    181
     Attach Window                   ${SCREEN_SELECGERAL}
     @{MOTIVO_DESC}                  Get Items           control_type:Edit
-    Input Text To Textbox           ${MOTIVO_DESC[0]}   ${DADOSHOSPUKSA_WALKIN.motdesc}
+    Input Text To Textbox           ${MOTIVO_DESC[0]}   ${DADOS_RES.motdesc}
     Click Button                    ${BUTTON_CONFIRMAR}
     @{WALKIN}                       Get Application Windows
     Attach Window                   ${WALKIN[0]}
@@ -159,10 +164,10 @@ Cadastrar informações do hóspede
     Mouse Click                     260    205
     Input Text                      ${IMAGE_NUMERODOC}  ${DADOSHOSPUKSA_WALKIN.cpf}
     Mouse Click                     58     260
-    Input Text                      ${IMAGE_CEP}        ${DADOSHOSPUKSA_WALKIN.cep}
+    Input Text                      ${IMAGE_CEP}        ${DADOSHOSPNOVO_WALKIN.cep}
     Move Mouse                      348    258
     Sleep                           1 seconds
-    Input Text                      ${IMAGE_NUMEROEND}  ${DADOSHOSPUKSA_WALKIN.numend}
+    Input Text                      ${IMAGE_NUMEROEND}  ${DADOSHOSPNOVO_WALKIN.numend}
     Sleep                           2 seconds
     Mouse Move                      ${IMAGE_ULTIMAPROC}
     Mouse Click                     460   422
