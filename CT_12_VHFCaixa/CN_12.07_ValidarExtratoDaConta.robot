@@ -32,6 +32,7 @@ Test Case 12.07: Validar Extrato da Conta
     Realizar Lançamento de Diária Antecipada
     Validar Extrato da Conta
 
+
     # Realizar o Encerramento de Conta
     Sair da Tela de Operação de Caixa
     Sair da Tela de Consulta Geral

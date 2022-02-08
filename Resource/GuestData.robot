@@ -14,15 +14,12 @@ Library                          SikuliLibrary            mode=NEW
 &{HOSP_RESIND_0110}               cpf=99742326355
 
 ### Reserva Walk-In ###
-&{DADOSHOSPNOVO_WALKIN}           cpf=40075747316         cidade=Maceio       idioma=Portug       datanasc=24031990       doc=EM   cep=57062422
+&{DADOSHOSPNOVO_WALKIN}           cidade=Maceio       idioma=Portug       datanasc=24031990       doc=EM   cep=57062422
 ...                               numend=757              razaosocialemp=4U TURISMO
 &{HOSP_WALKIN_0702}               cpf=41664906304
 &{HOSP_WALKIN_0703}               cpf=80773811621
-&{DADOSHOSPCORT_WALKIN}           cpf=14531826833
-&{DADOSHOSPUKSA_WALKIN}           cpf=63140129378
 &{DADOSHOSPESTR_WALKIN}           passaport=CA830632      cidade=San Diego    idioma=Ingles       datanasc=26061990       doc=EM   lograd=Goetze Street
 ...                               doc=EM                  lograd=Goetze Street  numend=2535       bairro=Paradise Hills
-&{DADOSHOSPGRID_WALKIN}           cpf=12813026000
 &{HOSP_WALKIN_0708}               cpf=20699808391
 &{HOSP_WALKIN_0709}               cpf=45226519885
 &{HOSP_WALKIN_0710}               cpf=25636118813

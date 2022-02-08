@@ -4,7 +4,7 @@ Resource        ../Resource/ImagesDesktop.robot
 Resource        ../Resource/GuestData.robot
 Resource        ../Resource/ConferenceDesktop.robot
 Library         WhiteLibrary
-Library         FakerLibrary
+Library         FakerLibrary        locale=pt_BR
 Documentation   Sikuli Library Demo
 Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
@@ -162,7 +162,8 @@ Cadastrar informações do hóspede
     Mouse Click                     476    148
     Get White Busy Timeout
     Mouse Click                     260    205
-    Input Text                      ${IMAGE_NUMERODOC}  ${DADOSHOSPUKSA_WALKIN.cpf}
+    ${CPF_HOSPUKSA_WALKIN}          FakerLibrary.cpf
+    Input Text                      ${IMAGE_NUMERODOC}  ${CPF_HOSPUKSA_WALKIN}
     Mouse Click                     58     260
     Input Text                      ${IMAGE_CEP}        ${DADOSHOSPNOVO_WALKIN.cep}
     Move Mouse                      348    258
