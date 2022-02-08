@@ -177,7 +177,7 @@ Cadastrar informações do hóspede
     Sleep                           2 seconds
     Move Mouse                      690   360
     Sleep                           1 seconds
-    Click                           ${IMAGE_CONFIRMAR}
+    Click                           ${IMAGE_BUTTONCONFIRMAR}
     Set White Busy Timeout          10 seconds
     @{FNRHSIMPL}                    Get Application Windows
     Attach Window                   ${FNRHSIMPL[0]}
