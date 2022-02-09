@@ -3,12 +3,9 @@ ProjectAutomationVHF\Results\*
 C:/Users/gabriel.dacosta/azuredevops/ProjectAutomationVHF/Results/*
 ProjectAutomationVHF/Results/*
 Results/
+Results/*
 Results/*.txt
 Results/**/*.txt
 *.txt
 Results/*.html
 Results/*.xml
-.\Results
-.\Results/*.txt
-./Results
-./Results/*.txt
