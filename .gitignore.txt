@@ -1,5 +1,7 @@
-\Results
-/Results
+C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\Results\*
+ProjectAutomationVHF\Results\*
+C:/Users/gabriel.dacosta/azuredevops/ProjectAutomationVHF/Results/*
+ProjectAutomationVHF/Results/*
 Results/
 Results/*.txt
 Results/**/*.txt
