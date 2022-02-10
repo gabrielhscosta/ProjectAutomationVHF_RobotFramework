@@ -38,6 +38,7 @@ ${TITLE_NOVACONTA}                  Operação de Caixa - Nova Conta
 ${TITLE_ENCERCONTAS}                Encerrar Contas
 ${TITLE_DETALLANC}                  Detalhes do Lançamento
 ${TITLE_CHECKIN}                    [Check-In]
+${TITLE_OPIMPREXTRATO}              Operação de Caixa - Imprimir Extrato
 ### Buttons ###
 ${BUTTON_PROCURAR}                  text:Procurar
 ${BUTTON_CONFIRMAR}                 text:Confirmar
@@ -61,6 +62,8 @@ ${BUTTON_SELECTODASGOV}             text:Seleciona todas
 ${BUTTON_LIMPOGOV}                  text:Limpo
 ${BUTTON_DESFPROCGOV}               text:Desfazer procura
 ${BUTTON_IMPREXTRATO}               text:Imprimir extrato
+${BUTTON_VISUALIZAR}                text:Visualizar
+
 ### Screens ###
 ${SCREEN_TELAPRINCIPAL}             class_name:TfrmPrincipal
 ${SCREEN_VHFCAIXA}                  class_name:TfrmPrincipalCAIXA
@@ -75,6 +78,9 @@ ${SCREEN_OPERACAOLANCENC}           class_name:TfrmCxOperacaoLancEncerra
 ${SCREEN_DETALHESLANCPDV}           class_name:TfrmDetalheLancamentoPDV
 ${ITEM_ATUALIZARVALPERIO}           text:Clique para atualizar os valores do período
 ${ITEM_DADOSCOMPLEMENT}             text:Dados complementares
+${SCREEN_OPERIMPEXTRATO}            class_name:TfrmCxOperacaoImpExtrato
+${SCREEN_VISEXTRATOCONTA}           class_name:TFrmPreview
+${SCREEN_IMPRESS}                   class_name:TppPrintDialog
 
 ### Textos ###
 ${TEXT_RESTAURANTE}                 Restaurante

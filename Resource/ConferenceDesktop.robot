@@ -25,7 +25,7 @@ Conferir se a tela principal do modulo VHF Caixa foi exibida
     Attach Window                 ${SCREEN_VHFCAIXA}
     Window Title Should Contain   Visual Hotal FrontOffice - CAIXA
     Attach Window                 class_name:TfrmCartaoConsumo
-    Click Button                  text:Fechar
+    Click Button                  ${BUTTON_FECHAR}
 
 Conferir se a tela principal do modulo Central de Reservas foi exibida
     Set White Busy Timeout        ${CONFERENCIA_TIMEOUT}
@@ -52,7 +52,7 @@ Conferir se a tela principal do modulo SPA foi exibida
     Window Title Should Contain   SPA
     @{PENDENCDIASANT}             Get Application Windows
     Attach Window                 ${PENDENCDIASANT[0]}
-    Click Button                  text:Sair
+    Click Button                  ${BUTTON_SAIR}
     @{SPA}                        Get Application Windows
     Attach Window                 ${SPA[0]}
 

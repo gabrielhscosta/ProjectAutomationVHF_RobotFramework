@@ -5,7 +5,7 @@ Library                          SikuliLibrary
 
 *** Variable ***
 ### Diretório das Imagens ###
-${IMAGE_DIR}                      C:/Users/gabriel.dacosta/github/ProjectAutomationVHF/Img
+${IMAGE_DIR}                      C:/Users/gabriel.dacosta/azuredevops/ProjectAutomationVHF/Img
 
 ### Imagens Sikuli ###
 ${IMAGE_RESINDIV}                 resindividual.png
@@ -84,3 +84,8 @@ ${IMAGE_STATUSDAGOV}              statusdagov.png
 ${IMAGE_SELEC0GOV}                selecionados0gov.png
 ${IMAGE_NOTWATENDGOV}             notwantedgov.png
 ${IMAGE_BUTTONEDITAR}             editar.png
+${IMAGE_EXIBIRDESCITENSPDV}       exbdescontoitenspdv.png
+${IMAGE_IMPRESS}                  impressora.png
+${IMAGE_IMPARQUIVO}               imprimirarquivo.png
+${IMAGE_ABRIRARQUIVO}             abrirarquivo.png
+${IMAGE_SCREENEXTRATO}            tituloextrato.png

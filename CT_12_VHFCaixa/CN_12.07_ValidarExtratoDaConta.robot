@@ -9,7 +9,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-# Test Teardown   Fechar Modulo
+Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -31,9 +31,7 @@ Test Case 12.07: Validar Extrato da Conta
     Realizar Lançamento do Item de PDV na Conta
     Realizar Lançamento de Diária Antecipada
     Validar Extrato da Conta
-
-
-    # Realizar o Encerramento de Conta
+    Realizar o Encerramento de Conta
     Sair da Tela de Operação de Caixa
     Sair da Tela de Consulta Geral
     Conferir se a tela principal do modulo VHF foi exibida
@@ -109,38 +107,63 @@ Realizar Lançamento de Diária Antecipada
     Click Button                    ${BUTTON_LANCAR}
     Sleep                           4 seconds
     Click Button                    ${BUTTON_VOLTAR}
+    @{OPERCAIXALANC}                Get Application Windows
+    Attach Window                   ${OPERCAIXALANC[0]}
 
 Validar Extrato da Conta
     Sleep                           2 seconds
     Screen Should Contain           ${IMAGE_SALDOCAIXA}
     Click Button                    ${BUTTON_IMPREXTRATO}
-    @{OCIMPRIMIREXTRATO}            Get Application Windows
-    Attach Window                   ${OCIMPRIMIREXTRATO}
+    @{OPERIMPEXTRATO}               Get Application Windows
+    Attach Window                   ${OPERIMPEXTRATO[0]}
+    Sleep                           2 seconds
+    # Click                           ${IMAGE_EXIBIRDESCITENSPDV}
+    Double Click                    ${IMAGE_EXIBIRDESCITENSPDV}
+    Click Button                    ${BUTTON_VISUALIZAR}
+    Sleep                           1 seconds
+    @{EXTRATOCONTA}                 Get Application Windows
+    Attach Window                   ${EXTRATOCONTA[0]}
+    Maximize Window                 ${SCREEN_VISEXTRATOCONTA}
+    Click                           ${IMAGE_IMPRESS}
+    @{IMPEXTRATO}                   Get Application Windows
+    Attach Window                   ${IMPEXTRATO[0]}
+    Click                           ${IMAGE_IMPARQUIVO}
+    Click                           ${IMAGE_ABRIRARQUIVO}
+    Click Button                    ${BUTTON_OK}
+    Sleep                           2 seconds
+    @{SCREEN_EXTRATOIMPRESSO}       Get Application Windows
+    Attach Window                   ${SCREEN_EXTRATOIMPRESSO[0]}
+    Screen Should Contain           ${IMAGE_SCREENEXTRATO}
+    Minimize Window
+    @{EXTRATOCONTA}                 Get Application Windows
+    Attach Window                   ${EXTRATOCONTA[0]}
+    Maximize Window                 ${SCREEN_VISEXTRATOCONTA}
+    Click Button                    ${BUTTON_SAIR}
+    @{OPERCAIXALANC}                Get Application Windows
+    Attach Window                   ${OPERCAIXALANC[0]}
 
-
-
-# Realizar o Encerramento de Conta
-#     Sleep                           2 seconds
-#     Screen Should Contain           ${IMAGE_SALDOCAIXA}
-#     Click Button                    ${BUTTON_ENCERCONTAS}
-#     @{ATENCAOCONFIRCHECKOUT}        Get Application Windows
-#     Attach Window                   ${ATENCAOCONFIRCHECKOUT[0]}
-#     Click Button                    ${BUTTON_SIM}
-#     Sleep                           5 seconds
-#     Get Application Windows
-#     Attach Window                   ${SCREEN_OPERACAOLANCENC}
-#     Window Title Should Contain     ${TITLE_ENCERCONTAS}
-#     Sleep                           2 seconds
-#     Click                           ${IMAGE_FORMAPAGDIN}
-#     Sleep                           2 seconds
-#     Click Button                    ${BUTTON_LANCAR}
-#     Sleep                           6 seconds
-#     Get Application Windows
-#     Attach Window                   ${SCREEN_VHFCAIXA}
-#     Sleep                           1 seconds
-#     @{INFOPROCESSFINAL}             Get Application Windows
-#     Attach Window                   ${INFOPROCESSFINAL[0]}
-#     Click Button                    ${BUTTON_OK}
+Realizar o Encerramento de Conta
+    Sleep                           2 seconds
+    Screen Should Contain           ${IMAGE_SALDOCAIXA}
+    Click Button                    ${BUTTON_ENCERCONTAS}
+    @{ATENCAOCONFIRCHECKOUT}        Get Application Windows
+    Attach Window                   ${ATENCAOCONFIRCHECKOUT[0]}
+    Click Button                    ${BUTTON_SIM}
+    Sleep                           5 seconds
+    Get Application Windows
+    Attach Window                   ${SCREEN_OPERACAOLANCENC}
+    Window Title Should Contain     ${TITLE_ENCERCONTAS}
+    Sleep                           2 seconds
+    Click                           ${IMAGE_FORMAPAGDIN}
+    Sleep                           2 seconds
+    Click Button                    ${BUTTON_LANCAR}
+    Sleep                           6 seconds
+    Get Application Windows
+    Attach Window                   ${SCREEN_VHFCAIXA}
+    Sleep                           1 seconds
+    @{INFOPROCESSFINAL}             Get Application Windows
+    Attach Window                   ${INFOPROCESSFINAL[0]}
+    Click Button                    ${BUTTON_OK}
 
 Sair da Tela de Operação de Caixa
     Sleep                           2 seconds

@@ -4,11 +4,10 @@ Results/*
 Results\*
 *.txt
 ProjectAutomationVHF/Results/*
+ProjectAutomationVHF\Results\*
 Results/*.txt
 Results/**/*.txt
 Results/*.html
 Results/*.xml
-C:\Users\gabriel.dacosta\azuredevops\ProjectAutomationVHF\Results\*
-ProjectAutomationVHF\Results\*
-C:/Users/gabriel.dacosta/azuredevops/ProjectAutomationVHF/Results/*
+
 
