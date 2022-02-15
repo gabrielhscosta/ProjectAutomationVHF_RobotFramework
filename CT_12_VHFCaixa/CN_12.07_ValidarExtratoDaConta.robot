@@ -9,7 +9,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-Test Teardown   Fechar Modulo
+# Test Teardown   Fechar Modulo
 
 
 *** Variable ***
@@ -86,9 +86,9 @@ Realizar Lançamento do Item de PDV na Conta
     Click                           ${IMAGE_LANCITEMP}
     Sleep                           2 seconds
     Click                           ${IMAGE_ITEMPDV}
-    Sleep                           2 seconds
+    Sleep                           1 seconds
     Click                           ${IMAGE_QTDLANC1}
-    Sleep                           2 seconds
+    Sleep                           1 seconds
     Click Button                    ${BUTTON_CONFIRMAR}
     Sleep                           4 seconds
     @{OPERCAIXALANC}                Get Application Windows
@@ -98,10 +98,10 @@ Realizar Lançamento de Diária Antecipada
     Mouse Click                     148    350
     Sleep                           2 seconds
     Mouse Click                     246    433
-    Sleep                           4 seconds
+    Sleep                           2 seconds
     Move Mouse                      1012   364
     Input Text                      ${IMAGE_VALORITEMCAIXA}  ${DADOS_RES.valordiar}
-    Sleep                           2 seconds
+    Sleep                           1 seconds
     Click Button                    ${BUTTON_LANCAR}
     Sleep                           4 seconds
     Click Button                    ${BUTTON_VOLTAR}
@@ -115,7 +115,6 @@ Validar Extrato da Conta
     @{OPERIMPEXTRATO}               Get Application Windows
     Attach Window                   ${OPERIMPEXTRATO[0]}
     Sleep                           2 seconds
-    # Click                           ${IMAGE_EXIBIRDESCITENSPDV}
     Double Click                    ${IMAGE_EXIBIRDESCITENSPDV}
     Click Button                    ${BUTTON_VISUALIZAR}
     Sleep                           1 seconds
@@ -156,8 +155,8 @@ Realizar o Encerramento de Conta
     Sleep                           2 seconds
     Click Button                    ${BUTTON_LANCAR}
     Sleep                           6 seconds
-    Get Application Windows
-    Attach Window                   ${SCREEN_VHFCAIXA}
+    @{SCREEN_VHFCAIXA}              Get Application Windows
+    Attach Window                   ${SCREEN_VHFCAIXA[0]}
     Sleep                           1 seconds
     @{INFOPROCESSFINAL}             Get Application Windows
     Attach Window                   ${INFOPROCESSFINAL[0]}
@@ -177,6 +176,7 @@ Sair da Tela de Consulta Geral
     Sleep                           4 seconds
     Attach Application By Name      VHF
     Attach Window                   ${SCREEN_TELAPRINCIPAL}
+    Maximize Window
     Sleep                           1 seconds
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}

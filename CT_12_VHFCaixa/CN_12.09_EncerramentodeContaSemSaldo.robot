@@ -51,9 +51,9 @@ Preencher os campos necessários para buscar o resultado esperado
     Mouse Click                     295    175
     Mouse Click                     248    232
     Sleep                           1 seconds
-    Mouse Click                     345    175
-    Input Text                      ${IMAGE_NUMEROUHCG}   ${DADOS_RES.uh070101}
-    Mouse Click                     1122   652
+    # Mouse Click                     345    175
+    # Input Text                      ${IMAGE_NUMEROUHCG}   ${DADOS_RES.uh070108}
+    # Mouse Click                     1122   652
     Click Button                    ${BUTTON_PROCURAR}
 
 Acessar a Operação de Caixa da Reserva

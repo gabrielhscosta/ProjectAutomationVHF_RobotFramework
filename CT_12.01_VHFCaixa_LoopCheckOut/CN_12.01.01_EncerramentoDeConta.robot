@@ -9,7 +9,7 @@ Library         SikuliLibrary       mode=NEW
 Suite Setup     Start Sikuli Process
 Suite Teardown  Stop Remote Server
 Test Setup      Add Needed Image Path
-
+Test Teardown   Fechar Modulo
 
 *** Variable ***
 
@@ -25,10 +25,9 @@ Test Case 12.01.01: Encerramento de Contas Sem Saldo(Check-Out)
     Acessar a tela de Consulta Geral
     Preencher os campos necessários para buscar o resultado esperado
     Looping Encerramento de Contas
+    Sair da Tela de Operação de Caixa
     Sair da Tela de Consulta Geral
     Conferir se a tela principal do modulo VHF foi exibida
-    Fechar Modulo
-    Encerramento Automatico VHFCaixa
 
 
 *** Keywords ***
@@ -67,7 +66,7 @@ Realizar o Encerramento de Conta
     Move Mouse                      1015   145
     Mouse Click                     1015   170
     Click Button                    ${BUTTON_CAIXA}
-    Sleep                           25 seconds
+    Sleep                           15 seconds
     Attach Application By Name      VHFCaixa
     Attach Window                   ${SCREEN_VHFCAIXA}
     Screen Should Contain           ${IMAGE_SALDOCAIXA}
@@ -85,24 +84,26 @@ Realizar o Encerramento de Conta
     Click Button                    ${BUTTON_OK}
     Sleep                           2 seconds
     Attach Application By Name      VHF
-    Attach Window                   ${SCREEN_TELAPRINCIPAL}
     Maximize Window
+    Attach Window                   ${SCREEN_TELAPRINCIPAL}
     Sleep                           1 seconds
     @{CONSULTAGERAL}                Get Application Windows
     Attach Window                   ${CONSULTAGERAL[0]}
+
+Sair da Tela de Operação de Caixa
     Sleep                           1 seconds
+    Attach Application By Name      VHFCaixa
+    Maximize Window
+    Attach Window                   ${SCREEN_VHFCAIXA}
+    Click Button                    ${BUTTON_SAIR}
+    @{ATENCAOSAIRCAIXA}             Get Application Windows
+    Attach Window                   ${ATENCAOSAIRCAIXA[0]}
+    Click Button                    ${BUTTON_SIM}
 
 Sair da Tela de Consulta Geral
-    Sleep                           2 seconds
-    Click Button                    ${BUTTON_SAIR}
-
-Fechar Modulo
-    Sleep                           4 seconds
-    WhiteLibrary.Close Application
-
-Encerramento Automatico VHFCaixa
-    @{ENCAUTOMATICOCAIXA}           Get Application Windows
-    Attach Window                   ${ENCAUTOMATICOCAIXA[0]}
-    Window Title Should Contain     Encerramento Automático
     Sleep                           1 seconds
-    Click Button                    ${BUTTON_SIM}
+    Attach Application By Name      VHF
+    Attach Window                   ${SCREEN_TELAPRINCIPAL}
+    @{CONSULTAGERAL}                Get Application Windows
+    Attach Window                   ${CONSULTAGERAL[0]}
+    Click Button                    ${BUTTON_SAIR}

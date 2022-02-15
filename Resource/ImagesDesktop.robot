@@ -89,3 +89,6 @@ ${IMAGE_IMPRESS}                  impressora.png
 ${IMAGE_IMPARQUIVO}               imprimirarquivo.png
 ${IMAGE_ABRIRARQUIVO}             abrirarquivo.png
 ${IMAGE_SCREENEXTRATO}            tituloextrato.png
+${IMAGE_NUMRESERVACG}             numreservacg.png
+${IMAGE_NUMERORESERVA}            numerodareserva.png
+${IMAGE_DIASORCAMENTRES}          diasorcamentores.png
