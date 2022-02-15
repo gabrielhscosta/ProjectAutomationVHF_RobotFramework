@@ -175,8 +175,6 @@ Cadastrar informações do hóspede
     @{ULTPROC}                      Get Application Windows
     Attach Window                   ${ULTPROC[0]}
     Sleep                           2 seconds
-    Move Mouse                      690   360
-    Sleep                           1 seconds
     Click                           ${IMAGE_BUTTONCONFIRMAR}
     Set White Busy Timeout          10 seconds
     @{FNRHSIMPL}                    Get Application Windows
@@ -188,7 +186,6 @@ Cadastrar informações do hóspede
     @{PROXDEST}                     Get Application Windows
     Attach Window                   ${PROXDEST[0]}
     Get White Busy Timeout
-    Move Mouse                      540   252
     Sleep                           1 seconds
     Click                           ${IMAGE_BUTTONCONFIRMAR}
     @{FNRHSIMPL}                    Get Application Windows

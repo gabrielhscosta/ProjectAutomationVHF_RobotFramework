@@ -23,7 +23,7 @@ Library                          WhiteLibrary
 ...                               uh070101=607    uh070102=705      uh070103=706     uh070104=707  uh070105=805
 ...                               uh070106=806    uh070107=807      uh070108=905     uh070109=906  uh070110=907
 ...                               valordiar=609   valorpgtodin=10   valorpgtocc=120  uhextra1=605  uhextra2=606
-...                               uh0602=505      uh=506            uh=507           uh=605        uh=606
+...                               uh0602=505      uh0602=506        uh=507           uh=605        uh=606
 ...                               motdesc=Autorizado pela Gerencia  func=Gabriel
 
 ### Titles ###
