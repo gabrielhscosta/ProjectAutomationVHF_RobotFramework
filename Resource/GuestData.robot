@@ -26,6 +26,6 @@ Library                          SikuliLibrary            mode=NEW
 &{HOSP_WALKIN_0710}               cpf=25636118813
 
 ### Alteracao de Reserva ###
-&{HOSP_RECEP_0601}                datapartida=19022022  datachegada=16022022
-&{HOSP_RECEP_0602}                datapartida=2022022
+&{HOSP_RECEP_0601}                datapartida=13032022  datachegada=10032022
+&{HOSP_RECEP_0602}                datapartida=13032022
 &{HOSP_RECEP_0606}                cpf=83616786622     cep=57010368    numend=555

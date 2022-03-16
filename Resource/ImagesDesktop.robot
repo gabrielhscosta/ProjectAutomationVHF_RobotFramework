@@ -43,6 +43,7 @@ ${IMAGE_BUTTONCONFIRMAR}          confirmar.png
 ${IMAGE_TIPOHOSPEDE}              tipohospede.png
 ${IMAGE_SEGMENTO}                 segmento.png
 ${IMAGE_LUPA}                     lupa.png
+${IMAGE_LUPAOCR}                  lupaocr.png
 ${IMAGE_SEGCORTESIA}              segcortesia.png
 ${IMAGE_FUNCDACASA}               funcionariodacasa.png
 ${IMAGE_FUNCIONARIO}              funcionario.png
@@ -92,3 +93,17 @@ ${IMAGE_SCREENEXTRATO}            tituloextrato.png
 ${IMAGE_NUMRESERVACG}             numreservacg.png
 ${IMAGE_NUMERORESERVA}            numerodareserva.png
 ${IMAGE_DIASORCAMENTRES}          diasorcamentores.png
+${IMAGE_CALENDRPLDATA}            calendrepldataocr.png
+${IMAGE_REPLDATAOCR_8}            8.png
+${IMAGE_REPLDATAOCR_16}           16.png
+${IMAGE_REPLDATAOCR_17}           17.png
+${IMAGE_REPLDATAOCR_18}           18.png
+${IMAGE_REPLDATAOCR_19}           19.png
+${IMAGE_REPLDATAOCR_20}           20.png
+${IMAGE_VLRMANUALOCR}             vlrmanualocr.png
+${IMAGE_DESCONTOOCR}              descontoocr.png
+${IMAGE_DIFEDIARIAOCR}            diferencadiariaocr.png
+${IMAGE_SEGPARTAUTOMACAO}         segpartautomacao.png
+${IMAGE_PENSAOOCR}                pensaoocr.png
+${IMAGE_PENSAOMEIAOCR}            pensaomeiaocr.png
+${IMAGE_SEGMENTOOCR}              segmentoocr.png

@@ -19,12 +19,12 @@ Library                          WhiteLibrary
 &{LOGIN}                          usersql=QAFRONT    senhasql=QAFRONT123    userora=cm    senhaora=cmsol123
 
 ### Dados da Reserva ###
-&{DADOS_RES}                      noites=3        adultos=2         cria1=1          cria2=1       categ=STND     categ1=FRUA
-...                               uh070101=607    uh070102=705      uh070103=706     uh070104=707  uh070105=805
-...                               uh070106=806    uh070107=807      uh070108=905     uh070109=906  uh070110=907
-...                               valordiar=609   valorpgtodin=10   valorpgtocc=120  uhextra1=605  uhextra2=606
-...                               uh0602=505      uh0602=506        uh=507           uh=605        uh=606
-...                               motdesc=Autorizado pela Gerencia  func=Gabriel
+&{DADOS_RES}                      noites=3        adultos=2         cria1=1           cria2=1         categ=STND     categ1=FRUA
+...                               uh070101=607    uh070102=705      uh070103=706      uh070104=707    uh070105=805
+...                               uh070106=806    uh070107=807      uh070108=905      uh070109=906    uh070110=907
+...                               valordiar=609   valorpgtodin=10   valorpgtocc=120   uhextra1=605    uhextra2=606
+...                               uh0602=505      uh0602=506        uh=507            uh=605          uh=606
+...                               motdesc=Autorizado pela Gerencia  func=Gabriel      vlrmanual=600   vlrdesc=10
 
 ### Titles ###
 ${TITLE_RESINDIVID}                 Reserva Individual
@@ -67,6 +67,7 @@ ${BUTTON_LIMPOGOV}                  text:Limpo
 ${BUTTON_DESFPROCGOV}               text:Desfazer procura
 ${BUTTON_IMPREXTRATO}               text:Imprimir extrato
 ${BUTTON_VISUALIZAR}                text:Visualizar
+${BUTTON_APLICAROCR}                text:Aplicar
 
 ### Screens ###
 ${SCREEN_TELAPRINCIPAL}             class_name:TfrmPrincipal
@@ -86,6 +87,7 @@ ${SCREEN_OPERIMPEXTRATO}            class_name:TfrmCxOperacaoImpExtrato
 ${SCREEN_VISEXTRATOCONTA}           class_name:TFrmPreview
 ${SCREEN_IMPRESS}                   class_name:TppPrintDialog
 ${SCREEN_CONFIRMACAO}               class_name:TMessageForm
+${SCREEN_DADOSORCAMENTO}            class_name:TfrmDadosOrcamento
 
 ### Textos ###
 ${TEXT_RESTAURANTE}                 Restaurante

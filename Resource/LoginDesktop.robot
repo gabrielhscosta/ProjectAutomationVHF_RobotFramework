@@ -48,7 +48,7 @@ Realizar login na aplicação - SQL
     @{CAIXA_LOGIN}                Get Items               class_name:TEdit
     WhiteLibrary.Mouse Click
     Input Text To Textbox         ${CAIXA_LOGIN[0]}       ${LOGIN.usersql}
-    Move Mouse                    704   375
+    WhiteLibrary.Move Mouse       704   375
     Input Text To Textbox         ${CAIXA_LOGIN[1]}       ${LOGIN.senhasql}
     Click Button                  ${LOGIN_BUTTONCONFIR}
 
@@ -59,7 +59,7 @@ Realizar login na aplicação - ORACLE
     @{CAIXA_LOGIN}                Get Items               class_name:TEdit
     WhiteLibrary.Mouse Click
     Input Text To Textbox         ${CAIXA_LOGIN[0]}       ${LOGIN.userora}
-    Move Mouse                    704   375
+    WhiteLibrary.Move Mouse       704   375
     Input Text To Textbox         ${CAIXA_LOGIN[1]}       ${LOGIN.senhaora}
     Click Button                  ${LOGIN_BUTTONCONFIR}
 
@@ -71,7 +71,7 @@ Realizar login na aplicação SPA
     @{CAIXA_LOGIN}                Get Items               class_name:TEdit
     WhiteLibrary.Mouse Click
     Input Text To Textbox         ${CAIXA_LOGIN[0]}       ${LOGIN.userora}
-    Move Mouse                    704   375
+    WhiteLibrary.Move Mouse       704   375
     Input Text To Textbox         ${CAIXA_LOGIN[1]}       ${LOGIN.senhaora}
     Click Button                  ${LOGIN_BUTTONCONFIR}
 
@@ -83,7 +83,7 @@ Realizar login na aplicação TimeSharing
     @{CAIXA_LOGIN}                Get Items               class_name:TEdit
     WhiteLibrary.Mouse Click
     Input Text To Textbox         ${CAIXA_LOGIN[0]}       ${LOGIN.usersql}
-    Move Mouse                    704   375
+    WhiteLibrary.Move Mouse       704   375
     Input Text To Textbox         ${CAIXA_LOGIN[1]}       ${LOGIN.senhasql}
     Click Button                  ${LOGIN_BUTTONCONFIR}
 

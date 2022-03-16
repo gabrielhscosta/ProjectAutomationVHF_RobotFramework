@@ -28,7 +28,8 @@ Test Case 06.02: Alterar Data de Partida e Validar Orçamento Reservas
     Conferir se a tela principal do modulo VHF foi exibida
     Acessar a tela de Consulta Geral
     Preencher os campos necessários para buscar o resultado esperado
-    Editar Dados da Reserva
+    Editar dados da reserva
+    Editar data de partida da reserva
     Conferir se a tela principal do modulo VHF foi exibida pós Edição da reserva
     Sair da Tela de Consulta Geral
     Conferir se a tela principal do modulo VHF foi exibida
@@ -202,7 +203,7 @@ Preencher os campos necessários para buscar o resultado esperado
     Leave Special Key               CONTROL
     Click Button                    ${BUTTON_PROCURAR}
 
-Editar Dados da Reserva
+Editar dados da reserva
     Sleep                           1 seconds
     Move Mouse                      1015  145
     Click Button                    ${BUTTON_EDITAR}
@@ -210,12 +211,14 @@ Editar Dados da Reserva
     @{ALTERARRESERVA}               Get Application Windows
     Attach Window                   ${ALTERARRESERVA[0]}
     Window Title Should Contain     ${TITLE_ALTERARRESERVA}
+
+Editar data de partida da reserva
     Sleep                           1 seconds
     Mouse Double Click              228    278
     SikuliLibrary.Press Special Key                     DELETE
     Input Text                      ${IMAGE_DATAPARTIDA}  ${HOSP_RECEP_0602.datapartida}
     WhiteLibrary.Press Special Key  TAB
-    Wait Until Screen Contain       ${IMAGE_DIASORCAMENTRES}    2
+    Wait Until Screen Contain       ${IMAGE_DIASORCAMENTRES}        2
     Click Button                    ${BUTTON_CONFIRMAR}
     Sleep                           1 seconds
     @{ALTERARRESERVA}               Get Application Windows
