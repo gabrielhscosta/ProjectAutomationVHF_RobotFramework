@@ -15,6 +15,9 @@ Library                          WhiteLibrary
 ...                               Telefonia=C:/Totvs/Hoteis/Telefonia.exe
 ...                               TS=C:/Totvs/Hoteis/TimeSharing.exe
 
+### IDHOTEL ###
+${IDHOTEL}                        1
+
 ### Dados de Login ###
 &{LOGIN}                          usersql=QAFRONT    senhasql=QAFRONT123    userora=cm    senhaora=cmsol123
 

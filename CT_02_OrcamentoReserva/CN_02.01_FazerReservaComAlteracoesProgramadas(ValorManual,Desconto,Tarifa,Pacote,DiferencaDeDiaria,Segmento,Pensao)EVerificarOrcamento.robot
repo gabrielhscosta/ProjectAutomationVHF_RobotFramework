@@ -46,7 +46,7 @@ Test Case 02.01: Fazer reserva com alterações programadas (Valor Manual, Desco
     Conferir se a tela principal do modulo VHF foi exibida pós Edição da reserva
     Sair da Tela de Consulta Geral
     Conectar na Base de Dados
-    ${RESULT_QUERY}       Conferir as alterações programadas na tabela orcamentoreserva    select r.IdReservasFront, r.numreserva, oc.DATA, oc.idTarifa, oc.CODPENSAO, oc.VALOR, oc.VALORTARIFA, oc.VALORMANUAL, oc.VALORCAFE, oc.VALORPENSAO, oc.CodSegmento from reservasfront r, ORCAMENTORESERVA oc where r.idhotel = 1 and r.numreserva = ${NUMRESERVA} and r.idhotel = oc.idhotel and r.idreservasfront = oc.idreservasfront order by data asc
+    ${RESULT_QUERY}       Conferir as alterações programadas na tabela orcamentoreserva    select r.IdReservasFront, r.numreserva, oc.DATA, oc.idTarifa, oc.CODPENSAO, oc.VALOR, oc.VALORTARIFA, oc.VALORMANUAL, oc.VALORCAFE, oc.VALORPENSAO, oc.CodSegmento from reservasfront r, ORCAMENTORESERVA oc where r.idhotel = ${IDHOTEL} and r.numreserva = ${NUMRESERVA} and r.idhotel = oc.idhotel and r.idreservasfront = oc.idreservasfront order by data asc
     Log                   Linha 1 ${RESULT_QUERY[0][0]} - NUMRESERVA: ${RESULT_QUERY[0][1]} - DATA: ${RESULT_QUERY[0][2]} - IDTARIFA: ${RESULT_QUERY[0][3]} - CODPENSAO: ${RESULT_QUERY[0][4]} - VALOR: ${RESULT_QUERY[0][5]} - VALORTARIFA: ${RESULT_QUERY[0][6]} - VALORMANUAL: ${RESULT_QUERY[0][7]} - VALORCAFE: ${RESULT_QUERY[0][8]} - VALORPENSAO: ${RESULT_QUERY[0][9]} - CODSEGMENTO: ${RESULT_QUERY[0][10]}
     Log                   Linha 2 ${RESULT_QUERY[1][0]} - NUMRESERVA: ${RESULT_QUERY[0][1]} - DATA: ${RESULT_QUERY[1][2]} - IDTARIFA: ${RESULT_QUERY[1][3]} - CODPENSAO: ${RESULT_QUERY[1][4]} - VALOR: ${RESULT_QUERY[1][5]} - VALORTARIFA: ${RESULT_QUERY[1][6]} - VALORMANUAL: ${RESULT_QUERY[1][7]} - VALORCAFE: ${RESULT_QUERY[1][8]} - VALORPENSAO: ${RESULT_QUERY[1][9]} - CODSEGMENTO: ${RESULT_QUERY[1][10]}
     Log                   Linha 3 ${RESULT_QUERY[2][0]} - NUMRESERVA: ${RESULT_QUERY[0][1]} - DATA: ${RESULT_QUERY[2][2]} - IDTARIFA: ${RESULT_QUERY[2][3]} - CODPENSAO: ${RESULT_QUERY[2][4]} - VALOR: ${RESULT_QUERY[2][5]} - VALORTARIFA: ${RESULT_QUERY[2][6]} - VALORMANUAL: ${RESULT_QUERY[2][7]} - VALORCAFE: ${RESULT_QUERY[2][8]} - VALORPENSAO: ${RESULT_QUERY[2][9]} - CODSEGMENTO: ${RESULT_QUERY[2][10]}
@@ -230,7 +230,6 @@ Conferir se a tela principal do modulo VHF foi exibida pós Edição da reserva
     @{SITUACAORES}                  Get Application Windows
     Attach Window                   ${SITUACAORES[0]}
     Sleep                           1 seconds
-    Window Title Should Contain     ${TITLE_SITUACAORES}
     Screen Should Contain           ${IMAGE_CONFIRMACAORES}
     SikuliLibrary.Click             ${IMAGE_SAIRRES}
 
@@ -246,8 +245,8 @@ Conferir as alterações programadas na tabela orcamentoreserva
     [Return]                        ${RESPONSE_QUERY}
 
 Conferir os valores alterados manualmente no Orcamento da Reserva
-    ${ROWCOUNT}   Row Count         selectStatement=select r.IdReservasFront, r.numreserva, oc.DATA, oc.idTarifa, oc.CODPENSAO, oc.VALOR, oc.VALORTARIFA, oc.VALORMANUAL, oc.VALORCAFE, oc.VALORPENSAO, oc.CodSegmento from reservasfront r, ORCAMENTORESERVA oc where r.idhotel = 1 and r.numreserva = ${NUMRESERVA} and r.idhotel = oc.idhotel and r.idreservasfront = oc.idreservasfront order by data asc
+    ${ROWCOUNT}   Row Count         selectStatement=select r.IdReservasFront, r.numreserva, oc.DATA, oc.idTarifa, oc.CODPENSAO, oc.VALOR, oc.VALORTARIFA, oc.VALORMANUAL, oc.VALORCAFE, oc.VALORPENSAO, oc.CodSegmento from reservasfront r, ORCAMENTORESERVA oc where r.idhotel = ${IDHOTEL} and r.numreserva = ${NUMRESERVA} and r.idhotel = oc.idhotel and r.idreservasfront = oc.idreservasfront order by data asc
     Should Be Equal As Integers     3    ${ROWCOUNT}    values=TRUE
-    Check If Exists In Database     selectStatement=select r.IdReservasFront, r.numreserva, oc.DATA, oc.idTarifa, oc.CODPENSAO, oc.VALOR, oc.VALORTARIFA, oc.VALORMANUAL, oc.VALORCAFE, oc.VALORPENSAO, oc.CodSegmento from reservasfront r, ORCAMENTORESERVA oc where r.idhotel = 1 and r.numreserva = ${NUMRESERVA} and valormanual = ${DADOS_RES.vlrmanual} and r.idhotel = oc.idhotel and r.idreservasfront = oc.idreservasfront
-    
+    Check If Exists In Database     selectStatement=select r.IdReservasFront, r.numreserva, oc.DATA, oc.idTarifa, oc.CODPENSAO, oc.VALOR, oc.VALORTARIFA, oc.VALORMANUAL, oc.VALORCAFE, oc.VALORPENSAO, oc.CodSegmento from reservasfront r, ORCAMENTORESERVA oc where r.idhotel = ${IDHOTEL} and r.numreserva = ${NUMRESERVA} and valormanual = ${DADOS_RES.vlrmanual} and r.idhotel = oc.idhotel and r.idreservasfront = oc.idreservasfront
+
     # and codpensao = ${CODPENSAO} and codsegmento = ${CODSEGMENTO}
