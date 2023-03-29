@@ -71,6 +71,7 @@ ${BUTTON_DESFPROCGOV}               text:Desfazer procura
 ${BUTTON_IMPREXTRATO}               text:Imprimir extrato
 ${BUTTON_VISUALIZAR}                text:Visualizar
 ${BUTTON_APLICAROCR}                text:Aplicar
+${BUTTON_CONTINUAR}                 text:Continuar
 
 ### Screens ###
 ${SCREEN_TELAPRINCIPAL}             class_name:TfrmPrincipal

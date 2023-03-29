@@ -53,8 +53,8 @@ Preencher os campos necessários para buscar o resultado esperado
     Click Button                    ${BUTTON_PROCURAR}
 
 Looping Cancelamento de Reservas
-    [Documentation]                 Percorre de 0 até 21
-    ${VAR}                          Set Variable      ${21}
+    [Documentation]                 Percorre de 0 até 5
+    ${VAR}                          Set Variable      ${5}
     FOR                             ${CANCELARRES}    IN RANGE    ${VAR} + 1
       Cancelar Reservas             ${CANCELARRES}
     END

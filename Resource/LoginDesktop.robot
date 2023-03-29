@@ -96,6 +96,10 @@ Selecionar Empresa - VHF
     Verify Text In Textbox        ${LOGIN_DESCREMPRESA}   ${LOGIN_EMPRESA_QA_FRONT}
     Click Button                  ${LOGIN_BUTTONCONFIR}
     Set White Busy Timeout        120 seconds
+    @{REGLICENCA}                 Get Application Windows
+    Attach Window                 ${REGLICENCA[0]}
+    Click Button                  ${BUTTON_CONTINUAR}
+    Set White Busy Timeout        120 seconds
     @{ATENCAO}                    Get Application Windows
     Attach Window                 ${ATENCAO[0]}
     Click Button                  ${BUTTON_OK}

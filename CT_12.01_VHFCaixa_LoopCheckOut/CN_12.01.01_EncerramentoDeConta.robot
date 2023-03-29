@@ -25,7 +25,7 @@ Test Case 12.01.01: Encerramento de Contas Sem Saldo(Check-Out)
     Acessar a tela de Consulta Geral
     Preencher os campos necessários para buscar o resultado esperado
     Looping Encerramento de Contas
-    Sair da Tela de Operação de Caixa
+    #Sair da Tela de Operação de Caixa
     Sair da Tela de Consulta Geral
     Conferir se a tela principal do modulo VHF foi exibida
 
@@ -65,6 +65,7 @@ Realizar o Encerramento de Conta
     Sleep                           1 seconds
     Move Mouse                      1015   145
     Mouse Click                     1015   170
+    Sleep                           2 seconds
     Click Button                    ${BUTTON_CAIXA}
     Sleep                           15 seconds
     Attach Application By Name      VHFCaixa
@@ -83,12 +84,13 @@ Realizar o Encerramento de Conta
     Attach Window                   ${INFOPROCESSFINAL[0]}
     Click Button                    ${BUTTON_OK}
     Sleep                           2 seconds
+    Click Button                    ${BUTTON_SAIR}
+    @{ATENCAOSAIR}                  Get Application Windows
+    Attach Window                   ${ATENCAOSAIR[0]}
+    Click Button                    ${BUTTON_SIM}
     Attach Application By Name      VHF
-    Maximize Window
     Attach Window                   ${SCREEN_TELAPRINCIPAL}
     Sleep                           1 seconds
-    @{CONSULTAGERAL}                Get Application Windows
-    Attach Window                   ${CONSULTAGERAL[0]}
 
 Sair da Tela de Operação de Caixa
     Sleep                           1 seconds
