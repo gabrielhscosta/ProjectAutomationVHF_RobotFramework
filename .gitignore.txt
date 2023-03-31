@@ -1,4 +1,6 @@
 Results/
-results/
 /.Results
 .Results/
+Logs/
+.\Logs/
+.Logs/
